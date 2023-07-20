@@ -1,0 +1,59 @@
+/*!
+ * Chirpy v6.1.0 (https://github.com/cotes2020/jekyll-theme-chirpy)
+ * © 2019 Cotes Chung
+ * MIT Licensed
+ */
+
+@import 'colors/light-typography';
+@import 'colors/dark-typography';
+@import 'addon/variables';
+@import 'variables-hook';
+@import 'addon/module';
+@import 'addon/syntax';
+@import 'addon/commons';
+@import 'layout/home';
+@import 'layout/post';
+@import 'layout/tags';
+@import 'layout/archives';
+@import 'layout/categories';
+@import 'layout/category-tag';
+
+#profile-card {
+  text-align: center;
+  #author-img{
+    text-align: center;
+  }
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    border-radius: 50%;
+  }
+  .profile-name {
+    margin-top: 20px;
+  }
+  .profile-bio,
+  .profile-links {
+    margin-top: 5px;
+  }
+  .social-link {
+    color: var(--social-link-color) !important;
+    font-size: 15px;
+    padding: 5px;
+    margin: 2px;
+    text-decoration: none !important;
+  }
+  #header-nav{
+    float: right;
+    margin-inline-start: 45px;
+  }
+  #navigation{
+    margin-top:50px;
+  }
+  .nav-link {
+    font-size: 15px !important;
+    color: var(--main-text-color);
+    font-weight: 600;
+  }
+
+}
