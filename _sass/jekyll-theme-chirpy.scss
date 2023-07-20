@@ -17,12 +17,14 @@
 @import 'layout/archives';
 @import 'layout/categories';
 @import 'layout/category-tag';
+@import 'layout/about';
 
 #profile-card {
   text-align: center;
   #author-img{
     text-align: center;
   }
+
   .profile-img {
     width: 150px;
     height: 150px;
@@ -30,7 +32,7 @@
     border-radius: 50%;
   }
   .profile-name {
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .profile-bio,
   .profile-links {
@@ -57,3 +59,5 @@
   }
 
 }
+
+
