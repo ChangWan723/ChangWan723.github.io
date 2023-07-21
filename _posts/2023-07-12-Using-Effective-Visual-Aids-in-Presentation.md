@@ -10,8 +10,6 @@ permalink: /blog/Using Effective Visual Aids in Presentations/
 usemathjax: true
 ---
 
-# Using Effective Visual Aids in Presentations
-
 ## Visual Aids
 
 Visual Aids can include the text on your slide, and visuals such as images, Charts, Tables, Artworks, Photographs, Graphs, Diagrams...
