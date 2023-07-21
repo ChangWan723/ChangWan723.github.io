@@ -6,7 +6,7 @@ layout: page
 
 {% include lang.html %}
 
-<div class="aboutCard" id="profile-card">
+<div class="specialCard" id="profile-card">
   <a href="/">
     <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ site.author_logo }}" class="profile-img" />
   </a>
@@ -26,8 +26,8 @@ layout: page
   {% endif %}
 </div>
 
-<div class="aboutCard">
-  <h1 class="aboutCard-title">About Site</h1>
+<div class="specialCard">
+  <h1 class="specialCard-title">About Site</h1>
   <p>This site is a non-profit personal site, the main function is to record and share content related to
     me.</p>
   <p>Through the <a href="{{site.url}}{{site.baseurl}}/archives">blog</a> module, I record and share my study notes,
@@ -43,8 +43,8 @@ layout: page
 </div>
 
 {% if site.author_bio %}
-<div class="aboutCard">
-  <h1 class="aboutCard-title">About Me</h1>
+<div class="specialCard">
+  <h1 class="specialCard-title">About Me</h1>
   <p>I am a Software engineer from China and now I live in the UK. My Chinese name is Wan Chang. I was
     born and raised in Yuncheng and lived there for eighteen years. Apart from my professional life, I
     am also interested in playing the piano. Nice to meet you. Welcome to talk to me!</p>
@@ -53,8 +53,8 @@ layout: page
 
 
 {% if site.show_author_work_experiences == true %}
-<div class="aboutCard">
-  <h1 class="aboutCard-title">Work Experience</h1>
+<div class="specialCard">
+  <h1 class="specialCard-title">Work Experience</h1>
   <br />
   {% for exp in site.author_work_experiences %} {% if exp.visibility == true
   %}
@@ -74,8 +74,8 @@ layout: page
 </div>
 
 {% endif %} {% if site.show_author_education_details == true %}
-<div class="aboutCard">
-  <h1 class="aboutCard-title">Education</h1>
+<div class="specialCard">
+  <h1 class="specialCard-title">Education</h1>
   <br />
   {% for detail in site.author_education_details %} {% if detail.visibility
   == true %}
@@ -95,8 +95,8 @@ layout: page
 </div>
 {% endif %}
 
-<div class="aboutCard">
-  <h1 class="aboutCard-title">Disclaimer</h1>
+<div class="specialCard">
+  <h1 class="specialCard-title">Disclaimer</h1>
   <p>1. This blog is a personal blog and a non-profit site. All materials are provided for self-learning
     and entertainment purposes. The content uploaded on this site does not guarantee originality. All
     content may be derived from my study notes, original content, a summary of the content of others,
