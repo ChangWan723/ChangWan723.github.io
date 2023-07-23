@@ -1,15 +1,29 @@
 ---
-layout: post
-title:  "Using Effective Visual Aids in Presentations"
-summary: "How to use effective visual aids in presentations"
-author: Note
-date: '2023-07-12 18:30:23 +0000'
-category: Presentation
-thumbnail: /assets/img/posts/note.jpg
-permalink: /blog/Using Effective Visual Aids in Presentations/
-usemathjax: true
+title: How to Using Effective Visual Aids in Presentations
+date: 2023-07-12 18:30:23 +0000
+categories: [Study Note, academic]
+tags: [academic, presentation]
+pin: false
 ---
 
+---
+<center><font size='5'> Contents </font></center>
+
+---
+
+<!-- TOC -->
+  * [Visual Aids](#visual-aids)
+  * [Importance of Visual Aids](#importance-of-visual-aids)
+    * [Message retention in presentations](#message-retention-in-presentations)
+    * [Visuals help achieve goals](#visuals-help-achieve-goals)
+  * [Effective Visual Aids](#effective-visual-aids-)
+    * [Visuals is as part of the assemblage](#visuals-is-as-part-of-the-assemblage-)
+    * [Be selective, attentive and creative](#be-selective-attentive-and-creative-)
+  * [Online presentations](#online-presentations)
+  * [References](#references)
+<!-- TOC -->
+
+---
 ## Visual Aids
 
 Visual Aids can include the text on your slide, and visuals such as images, Charts, Tables, Artworks, Photographs, Graphs, Diagrams...

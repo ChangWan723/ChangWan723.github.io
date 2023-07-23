@@ -1,35 +1,34 @@
 ---
-layout: post
-title:  "Refer to Visual Aids"
-summary: "How to refer to the material in academic presentations"
-author: Note
-date: '2023-07-12 14:35:23 +0530'
-category: ['Academic', 'Presentation']
-thumbnail: /assets/img/posts/note.jpg
-permalink: /blog/Refer to Visual Aids/
-usemathjax: true
+title: How to refer to the material in academic presentations
+date: 2023-07-12 14:35:23 +0530
+categories: [Study Note, academic]
+tags: [academic, presentation]
+pin: false
+---
+
+---
+<center><font size='5'> Contents </font></center>
+
 ---
 
 <!-- TOC -->
+  * [Referring to data in visual aids](#referring-to-data-in-visual-aids)
+    * [Referring to slide content](#referring-to-slide-content)
+    * [Describing results and trends](#describing-results-and-trends-)
+  * [Referencing visuals](#referencing-visuals)
+    * [Referencing in presentations vs. essays](#referencing-in-presentations-vs-essays)
+    * [Photos from internet](#photos-from-internet-)
+      * [author](#author-)
+      * [date](#date-)
+    * [Own images](#own-images-)
+    * [Example](#example)
+      * [Example of photographs](#example-of-photographs)
+      * [Example of Diagram reference](#example-of-diagram-reference)
+  * [References](#references)
+<!-- TOC -->
 
-- [How to refer to the material in academic presentations](#how-to-refer-to-the-material-in-academic-presentations)
-  - [Referring to data in visual aids](#referring-to-data-in-visual-aids)
-    - [Referring to slide content](#referring-to-slide-content)
-    - [Describing results and trends](#describing-results-and-trends)
-  - [Referencing visuals](#referencing-visuals)
-    - [Referencing in presentations vs. essays](#referencing-in-presentations-vs-essays)
-    - [Photos from internet](#photos-from-internet)
-      - [author](#author)
-      - [date](#date)
-    - [Own images](#own-images)
-    - [Example](#example)
-      - [Example of photographs](#example-of-photographs)
-      - [Example of Diagram reference](#example-of-diagram-reference)
-  - [References](#references)
+---
 
-<!-- /TOC -->
-
-# How to refer to the material in academic presentations
 
 Ensure your audience knows what visuals you are talking about.
 

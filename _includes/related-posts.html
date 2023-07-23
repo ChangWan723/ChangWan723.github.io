@@ -75,9 +75,9 @@
 
 {% if index_list.size > 0 %}
   <div id="related-posts" class="mb-2 mb-sm-4">
-    <h3 class="pt-2 mb-4 ms-1" data-toc-skip>
+    <font size="5">
       {{ site.data.locales[include.lang].post.relate_posts }}
-    </h3>
+    </font>
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       {% for entry in index_list %}
         {% assign index = entry | plus: 0 %}
@@ -86,7 +86,8 @@
           <a href="{{ post.url | relative_url }}" class="card post-preview h-100">
             <div class="card-body">
               {% include datetime.html date=post.date class="small" lang=include.lang %}
-              <h4 class="pt-0 my-2" data-toc-skip>{{ post.title }}</h4>
+              <br>
+              <font size="4">{{ post.title }}</font>
               <div class="text-muted small">
                 <p>
                   {% include no-linenos.html content=post.content %}
