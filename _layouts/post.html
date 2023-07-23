@@ -102,24 +102,13 @@ tail_includes:
   <div class="d-flex justify-content-between">
     <!-- author(s) -->
     <span>
-      {% if page.author %}
-        {% assign authors = page.author %}
-      {% elsif page.authors %}
-        {% assign authors = page.authors %}
+      {% if page.categories.size > 0 %}
+        {% assign sort = page.categories[0] %}
+        {{ site.data.locales[lang].post.written_by }}
+        <em>
+         <a href="/categories/{{ sort | slugify | url_encode }}">{{ sort }}</a>
+        </em>
       {% endif %}
-
-      {{ site.data.locales[lang].post.written_by }}
-
-      <em>
-      {% if authors %}
-        {% for author in authors %}
-          <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
-          {% unless forloop.last %}</em>, <em>{% endunless %}
-        {% endfor %}
-      {% else %}
-        <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
-      {% endif %}
-      </em>
     </span>
 
     <div>
