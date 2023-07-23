@@ -16,9 +16,9 @@ pin: false
   * [Importance of Visual Aids](#importance-of-visual-aids)
     * [Message retention in presentations](#message-retention-in-presentations)
     * [Visuals help achieve goals](#visuals-help-achieve-goals)
-  * [Effective Visual Aids](#effective-visual-aids-)
-    * [Visuals is as part of the assemblage](#visuals-is-as-part-of-the-assemblage-)
-    * [Be selective, attentive and creative](#be-selective-attentive-and-creative-)
+  * [Effective Visual Aids](#effective-visual-aids)
+    * [Visuals is as part of the assemblage](#visuals-is-as-part-of-the-assemblage)
+    * [Be selective, attentive and creative](#be-selective-attentive-and-creative)
   * [Online presentations](#online-presentations)
   * [References](#references)
 <!-- TOC -->
@@ -58,18 +58,18 @@ visuals greatly enhance your ability to achieve your goals (For example, communi
     <br>
 </center>
 
-## Effective Visual Aids 
+## Effective Visual Aids
 - Support the main points you are making
 - Be easy to read or understand at a glance
 - Our brains only pay attention to a few pieces of verbal information and visual information at a time	
 
-### Visuals is as part of the assemblage 
+### Visuals is as part of the assemblage
 Visuals is only one part of the assemblage, you should consider all parts
 
 - The audience has your speech, body movement and the visuals to process
 - Consider how you craft, construct and unite all parts 
 
-### Be selective, attentive and creative 
+### Be selective, attentive and creative
 
 There are many things to consider when looking at your visuals, Such as:
 

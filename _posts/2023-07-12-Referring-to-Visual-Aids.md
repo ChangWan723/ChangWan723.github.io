@@ -6,6 +6,14 @@ tags: [academic, presentation]
 pin: false
 ---
 
+
+Ensure your audience knows what visuals you are talking about.
+
+Ensure you leave a trail of where the information comes from for your audience.
+
+Provide references so you and your audience can track down the resources you use.
+
+
 ---
 <center><font size='5'> Contents </font></center>
 
@@ -14,13 +22,13 @@ pin: false
 <!-- TOC -->
   * [Referring to data in visual aids](#referring-to-data-in-visual-aids)
     * [Referring to slide content](#referring-to-slide-content)
-    * [Describing results and trends](#describing-results-and-trends-)
+    * [Describing results and trends](#describing-results-and-trends)
   * [Referencing visuals](#referencing-visuals)
     * [Referencing in presentations vs. essays](#referencing-in-presentations-vs-essays)
-    * [Photos from internet](#photos-from-internet-)
-      * [author](#author-)
-      * [date](#date-)
-    * [Own images](#own-images-)
+    * [Photos from internet](#photos-from-internet)
+      * [author](#author)
+      * [date](#date)
+    * [Own images](#own-images)
     * [Example](#example)
       * [Example of photographs](#example-of-photographs)
       * [Example of Diagram reference](#example-of-diagram-reference)
@@ -29,12 +37,6 @@ pin: false
 
 ---
 
-
-Ensure your audience knows what visuals you are talking about.
-
-Ensure you leave a trail of where the information comes from for your audience.
-
-Provide references so you and your audience can track down the resources you use.
 
 ## Referring to data in visual aids
 
@@ -49,7 +51,7 @@ The first important step when give a presentation and referring to visuals is to
 - At the top… At the bottom…
 - In the first row, you can see... 
 
-### Describing results and trends 
+### Describing results and trends
 
 It is important to locate and to describe effectively the key data. It is also crucial to reference where the information came from.
 
@@ -74,7 +76,7 @@ Here's an example of describing the data in the table:
 - More or fewer figures and tables 
 - It may contain images and photographs from websites
 
-### Photos from internet 
+### Photos from internet
 
 **Citation order:**
 - Photographer
@@ -82,7 +84,7 @@ Here's an example of describing the data in the table:
 - Title of photograph (in italics)
 - Available at: URL  Accessed: date              
 
-#### author 
+#### author
 
 Check for creator of image e.g. photographer or organisation
 
@@ -91,13 +93,13 @@ Check for creator of image e.g. photographer or organisation
 - Finding the creator takes extra research skills 
 - It may be a website has not credited an author/creator
 
-#### date 
+#### date
 
 - Look for a date for the image
 - If none, you may give the date the website was last updated/published (often at the bottom of the site) NB: Be careful here as they may not be original creator.
 - If no date can been seen, then write ‘no date’
 
-### Own images 
+### Own images
 
 **No references on your slides mean the image or photograph was created or taken by you.**
 
