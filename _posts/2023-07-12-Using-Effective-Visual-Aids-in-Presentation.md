@@ -1,5 +1,5 @@
 ---
-title: How to using effective visual aids in presentations
+title: How to using effective visual aids in presentations?
 date: 2023-07-12 18:30:23 +0000
 categories: [Study Note, academic]
 tags: [academic, presentation]
