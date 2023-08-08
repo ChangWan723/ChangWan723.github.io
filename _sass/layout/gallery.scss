@@ -1,9 +1,11 @@
 .byebye {
   opacity: 0;
 }
+
 .byebye:hover {
   transform: scale(0.2) !important;
 }
+
 .gallery {
   display: grid;
   grid-column-gap: 8px;
@@ -11,32 +13,39 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: 8px;
 }
+
 .gallery img {
   max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 0 16px #333;
   transition: all 1.5s ease;
 }
+
 .gallery img:hover {
   box-shadow: 0 0 32px #333;
 }
+
 .gallery .content {
   padding: 4px;
 }
+
 .gallery .gallery-item {
   transition: grid-row-start 300ms linear;
   transition: transform 300ms ease;
   transition: all 0.5s ease;
   cursor: pointer;
 }
+
 .gallery .gallery-item:hover {
   transform: scale(1.025);
 }
+
 @media (max-width: 600px) {
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
   }
 }
+
 @media (max-width: 400px) {
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
@@ -47,15 +56,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 .clearfix {
   *zoom: 1;
 }
+
 .clearfix:before,
 .clearfix:after {
   display: table;
   content: "";
   line-height: 0;
 }
+
 .clearfix:after {
   clear: both;
 }
@@ -63,29 +75,35 @@ table {
 .box .box_bot .box_bot_title {
   font-size: 24px;
 }
+
 .row_grl {
   margin-left: -30px;
   *zoom: 1;
 }
+
 .row_grl_grl:before,
 .row_grl:after {
   display: table;
   content: "";
   line-height: 0;
 }
+
 .row_grl:after {
   clear: both;
 }
+
 [class*="grid_"] {
   float: left;
   min-height: 1px;
   margin-left: 30px;
 }
+
 .box {
   position: relative;
   margin-top: 2px;
   overflow: hidden;
 }
+
 .box .gall_item {
   position: relative;
   display: block;
@@ -95,7 +113,7 @@ table {
   width: 100%;
   height: auto;
   border-radius: 0.3125em;
-  box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);
+  box-shadow: 0 2px 4px 0 rgba(34, 36, 38, .12), 0 2px 10px 0 rgba(34, 36, 38, .08);
 }
 
 .grid_glr {
@@ -104,8 +122,9 @@ table {
   margin-top: 20px;
   background-color: var(--card-background-color) !important;
   border-radius: 0.3125em;
-  box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);
+  box-shadow: 0 2px 4px 0 rgba(34, 36, 38, .12), 0 2px 10px 0 rgba(34, 36, 38, .08);
 }
+
 @media (min-width: 980px) and (max-width: 1500px) {
   .row_grl {
     margin-left: -20px;
@@ -129,6 +148,7 @@ table {
     width: 300px;
   }
 }
+
 @media (min-width: 768px) and (max-width: 979px) {
   .row_grl {
     margin-left: -20px;
@@ -152,9 +172,11 @@ table {
     width: 236px;
   }
 }
+
 .select-menu {
   display: none !important;
 }
+
 @media (max-width: 767px) {
   .row_grl {
     margin-left: 0;
@@ -170,6 +192,7 @@ table {
     display: block !important;
   }
 }
+
 @media (max-width: 479px) {
   body {
     padding: 0;
