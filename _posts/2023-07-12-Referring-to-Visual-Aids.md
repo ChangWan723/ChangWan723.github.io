@@ -2,7 +2,7 @@
 title: How to refer to the material in academic presentations?
 date: 2023-07-12 14:35:23 +0530
 categories: [Study Note, academic]
-tags: [academic, presentation]
+tags: [academic presentation]
 pin: false
 ---
 

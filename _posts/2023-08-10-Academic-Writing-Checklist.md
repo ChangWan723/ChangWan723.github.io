@@ -2,12 +2,12 @@
 title: Academic Writing Checklist
 date: 2023-08-10 15:40:00 +0530
 categories: [Study Note, academic]
-tags: [academic, writing]
+tags: [academic writing]
 pin: false
 ---
 
 
-In the blog, some of the rules that need to be followed in academic writing are summarised using easy-to-understand language. Excellent academic writing needs to meet the following checklist.
+In the blog, some of the rules that need to be followed in academic writing are summarised using easy-to-understand language. A good academic writing needs to meet the following checklist.
 
 
 ---
