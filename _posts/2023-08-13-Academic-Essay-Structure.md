@@ -29,8 +29,8 @@ An academic essay usually contains:
   * [Body](#body)
   * [Conclusion](#conclusion)
   * [Clear Thesis (Purpose)](#clear-thesis-purpose)
-  * [Thesis statement](#thesis-statement)
-  * [reference list](#reference-list)
+  * [Thesis Statement](#thesis-statement)
+  * [Reference List](#reference-list)
 <!-- TOC -->
 
 ---
@@ -69,7 +69,7 @@ An academic essay usually contains:
 * All paragraphs (topics/points) should be linked clearly to the thesis (purpose) of the essay
    * This is normally done in the first and/or last sentence of the paragraph
 
-## Thesis statement
+## Thesis Statement
 
 * Is **written in the introduction**, usually as the last sentence(s)
 * Shows very clearly what the focus of the essay is and what it is doing
@@ -78,10 +78,10 @@ An academic essay usually contains:
    * Unlike many novels or stories, surprises or twists should not appear in essays
    * The opinion and ideas of the author must be clear in the thesis statement and in the essay as a whole
 
-## reference list
+## Reference List
 
 * Shows what the author has read
 * Allows the reader to check information and find further reading
 * Makes it clear that ideas and evidence can be located in publications/sources
    * This **shows** that **it is not false information or opinions**
-* Complies to laws of copyright and academic integrity, which are **important parts of academic practice**
+* Complies to **laws of copyright and academic integrity**, which are important parts of academic practice
