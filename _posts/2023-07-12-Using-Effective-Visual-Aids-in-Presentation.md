@@ -20,7 +20,6 @@ pin: false
     * [Visuals is as part of the assemblage](#visuals-is-as-part-of-the-assemblage)
     * [Be selective, attentive and creative](#be-selective-attentive-and-creative)
   * [Online presentations](#online-presentations)
-  * [References](#references)
 <!-- TOC -->
 
 ---
@@ -133,19 +132,4 @@ There are many things to consider when looking at your visuals, Such as:
 - Less content on slides 
 - Leave space for your face on the recording - leave bottom right corner blank 
 - Hide the sharing screen icon 
-- Mouse pointer off slides 
-
-
-## References
-
-- Burton, G. (2013) Presenting: Delivering presentations with confidence. London: Harper Collins.
-
-- Charmaz, K. (2014) Constructing grounded theory. 2nd edn. Thousand Oaks, CA: Sage publications.
-
-- Icons8 (no date) Untitled. Available at: https://icons8.com/articles/6-tools-increasing-client-leads-graphic-designer/ (Accessed 13/07/2020).
-
-- Morris, W. (1875) Acanthus Wallpaper [Wallpaper design] Available at: https://www.vam.ac.uk/articles/william-morris-and-wallpaper-design (Accessed 13/07/2020).
-
-- Presentation Magazine (2009) Presentation Skills 1. Use Visual Aids. Available at: https://www.presentationmagazine.com/presentation-skills-1-use-visual-aids-7320.htm (Accessed: 10 June 2016).
-
-   
+- Mouse pointer off slides

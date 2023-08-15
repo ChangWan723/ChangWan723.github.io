@@ -32,7 +32,6 @@ Provide references so you and your audience can track down the resources you use
     * [Example](#example)
       * [Example of photographs](#example-of-photographs)
       * [Example of Diagram reference](#example-of-diagram-reference)
-  * [References](#references)
 <!-- TOC -->
 
 ---
@@ -43,12 +42,12 @@ Provide references so you and your audience can track down the resources you use
 ### Referring to slide content
 
 The first important step when give a presentation and referring to visuals is to clearly locate what you're talking about for your audience. So you may say some phrases like:
-- You can see in the image …​
-- If you look at this slide…​
-- Here are the data from our questionnaire.​
-- Locating a point on a slide:​
-- On the left side… On the right here…​
-- At the top… At the bottom…
+- You can see in the image...
+- If you look at this slide...
+- Here are the data from our questionnaire.
+- Locating a point on a slide:
+- On the left side… On the right her...
+- At the top… At the bottom...
 - In the first row, you can see... 
 
 ### Describing results and trends
@@ -135,11 +134,3 @@ But, you also need:
     color: #999;
     padding: 2px;">You can use ‘Figure’ captions or use the titles on the slides, but it is not necessary.</div>
 </center>
-
-## References
-
-- Bell, D. (2015) Passport to Academic Presentations. Reading: Garnet Education.
-
-- Charmaz, K. (2014) Constructing grounded theory. 2nd edn. Thousand Oaks, CA: Sage publications.
-
-- Shaer, J. China Institute  (2015-6) Guo Pei. Available at: https://fashionista.com/2016/09/guo-pei-china-paris-couture-rose-studio (Accessed: 13/07/2020).

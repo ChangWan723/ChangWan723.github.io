@@ -1,9 +1,9 @@
 ---
-title: An Overview of Academic Essay Structure
+title: Overview of Academic Essay Structure
 date: 2023-08-13 19:49:00 +0530
 categories: [Study Note, academic]
 tags: [academic writing]
-pin: false
+pin: true
 ---
 
 
@@ -31,6 +31,7 @@ An academic essay usually contains:
   * [Clear Thesis (Purpose)](#clear-thesis-purpose)
   * [Thesis Statement](#thesis-statement)
   * [Reference List](#reference-list)
+  * [Overview of the Structure](#overview-of-the-structure)
 <!-- TOC -->
 
 ---
@@ -45,6 +46,10 @@ An academic essay usually contains:
 *  Offers a thesis statement
    * State the purpose of the essay and the point(s) it is making
 
+---
+For more details refer to:
+* [Academic Essay Introductions](/posts/Academic-Essay-Introductions/)
+
 ## Body
 
 * Divides part of the discussion into topics
@@ -52,6 +57,10 @@ An academic essay usually contains:
 * Offers evidence, details and deep discussion that are not in the introduction and conclusion
 * Maintains focus on answering the essay question throughout
 * Divides purposes of topics – e.g. cause & effect, problem & solution, analysis & interpretation
+
+---
+For more details refer to:
+* [Academic Essay Paragraph](/posts/Academic-Essay-Paragraph/)
 
 ## Conclusion
 
@@ -85,3 +94,14 @@ An academic essay usually contains:
 * Makes it clear that ideas and evidence can be located in publications/sources
    * This **shows** that **it is not false information or opinions**
 * Complies to **laws of copyright and academic integrity**, which are important parts of academic practice
+
+---
+For more details refer to:
+* [How to find reliable sources for academic essay?](/posts/Find-Reliable-Sources-for-Academic-Essay/)
+
+## Overview of the Structure
+
+<center>
+    <img class="image-style" 
+    src="https://i.postimg.cc/sgBvZypx/ca820b1f09942969717846f15e3f686.png">
+</center>
