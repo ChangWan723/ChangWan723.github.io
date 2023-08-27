@@ -1,5 +1,5 @@
 ---
-title: Overview of Academic Essay Structure
+title: Overview of Academic Essay
 date: 2023-08-13 19:49:00 +0530
 categories: [Study Note, academic]
 tags: [academic writing]
@@ -11,11 +11,11 @@ This blog shows an overview of the basic structure of an academic essay.
 
 An academic essay usually contains:
 
+* A clear thesis (purpose)
 * An introduction
+* A thesis statement
 * A body
 * A conclusion
-* A clear thesis (purpose)
-* A thesis statement
 * A reference list
 
 
@@ -25,16 +25,25 @@ An academic essay usually contains:
 ---
 
 <!-- TOC -->
+  * [Clear Thesis (Purpose)](#clear-thesis-purpose)
   * [Introduction](#introduction)
+  * [Thesis Statement](#thesis-statement)
   * [Body](#body)
   * [Conclusion](#conclusion)
-  * [Clear Thesis (Purpose)](#clear-thesis-purpose)
-  * [Thesis Statement](#thesis-statement)
   * [Reference List](#reference-list)
-  * [Overview of the Structure](#overview-of-the-structure)
+  * [Essay Structure Diagram](#essay-structure-diagram)
 <!-- TOC -->
 
 ---
+
+## Clear Thesis (Purpose)
+
+* A thesis is a line of argument and identified purpose
+* It can be an argument that needs support and discussion, an enquiry that requires exploration, a suggestion that requires evaluation, etc.
+* A thesis should be clearly stated in the introduction.
+* All paragraphs (topics/points) should be linked clearly to the thesis (purpose) of the essay
+  * This is normally done in the first and/or last sentence of the paragraph
+
 
 ## Introduction
 
@@ -49,6 +58,15 @@ An academic essay usually contains:
 ---
 For more details refer to:
 * [Academic Essay Introductions](/posts/Academic-Essay-Introductions/)
+
+## Thesis Statement
+
+* Is **written in the introduction**, usually as the last sentence(s)
+* Shows very clearly what the focus of the essay is and what it is doing
+* States the nature and purpose of the essay (e.g. to argue, analyse, suggest, identify, evaluate, etc.)
+* Communicates the position of the author to the subject.
+  * Unlike many novels or stories, surprises or twists should not appear in essays
+  * The opinion and ideas of the author must be clear in the thesis statement and in the essay as a whole
 
 ## Body
 
@@ -70,22 +88,9 @@ For more details refer to:
 * Offers a conclusion based on the discussion so far
    * This can include implications, future possibilities, suggestions or recommendations, or a concluding point
 
-## Clear Thesis (Purpose)
-
-* A thesis is a line of argument and identified purpose
-* It can be an argument that needs support and discussion, an enquiry that requires exploration, a suggestion that requires evaluation, etc.
-* A thesis should be clearly stated in the introduction.
-* All paragraphs (topics/points) should be linked clearly to the thesis (purpose) of the essay
-   * This is normally done in the first and/or last sentence of the paragraph
-
-## Thesis Statement
-
-* Is **written in the introduction**, usually as the last sentence(s)
-* Shows very clearly what the focus of the essay is and what it is doing
-* States the nature and purpose of the essay (e.g. to argue, analyse, suggest, identify, evaluate, etc.)
-* Communicates the position of the author to the subject.
-   * Unlike many novels or stories, surprises or twists should not appear in essays
-   * The opinion and ideas of the author must be clear in the thesis statement and in the essay as a whole
+---
+For more details refer to:
+* [Academic Essay Conclusions](/posts/Academic-Essay-Conclusions)
 
 ## Reference List
 
@@ -97,9 +102,11 @@ For more details refer to:
 
 ---
 For more details refer to:
+* [Academic Integrity](/posts/Academic-Integrity)
 * [How to find reliable sources for academic essay?](/posts/Find-Reliable-Sources-for-Academic-Essay/)
+* [How to cite sources in academic essay?](/posts/How-To-Cite-Sources)
 
-## Overview of the Structure
+## Essay Structure Diagram
 
 <center>
     <img class="image-style" 

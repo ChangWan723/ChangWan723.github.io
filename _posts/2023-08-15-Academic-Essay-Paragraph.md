@@ -1,5 +1,5 @@
 ---
-title: Academic Essay Paragraph
+title: Academic Essay Paragraphs
 date: 2023-08-15 15:29:00 +0530
 categories: [Study Note, academic]
 tags: [academic writing]
