@@ -65,7 +65,7 @@ author_work_experiences:
 author_education_details:
   - college_logo: xidian.jpg
     college_name: Xidian University
-    college_url: http://xidian.ciss.org.cn/
+    college_url: https://en.xidian.edu.cn/
     college_degree: Software Engineering (BEng)
     description: "Study period: 2015 - 2019"
     visibility: true

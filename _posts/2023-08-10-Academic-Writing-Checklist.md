@@ -1,7 +1,7 @@
 ---
 title: Academic Writing Checklist
 date: 2023-08-10 15:40:00 +0530
-categories: [Study Note, academic]
+categories: [Study Note, academic writing]
 tags: [academic writing]
 pin: false
 ---

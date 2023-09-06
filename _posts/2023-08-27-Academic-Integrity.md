@@ -1,7 +1,7 @@
 ---
 title: Academic Integrity
 date: 2023-08-27 00:32:00 +0530
-categories: [Study Note, academic]
+categories: [Study Note, academic writing]
 tags: [academic writing]
 pin: false
 ---
