@@ -78,7 +78,7 @@ For more details refer to:
 
 ---
 For more details refer to:
-* [Academic Essay Paragraph](/posts/Academic-Essay-Paragraph/)
+* [Academic Essay Paragraphs](/posts/Academic-Essay-Paragraphs/)
 
 ## Conclusion
 
