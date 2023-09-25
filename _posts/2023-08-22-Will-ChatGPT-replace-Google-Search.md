@@ -25,24 +25,24 @@ In conclusion, ChatGPT has quite a few advantages in its ability in information 
 
 ## Reference List
 
-Abou Nabout, N. and Skiera, B. (2012) “Return on Quality Improvements in Search Engine Marketing,” _Journal of Interactive Marketing,_ 26(3), pp. 141–154. doi: 10.1016/j.intmar.2011.11.001.
+- Abou Nabout, N. and Skiera, B. (2012) “Return on Quality Improvements in Search Engine Marketing,” _Journal of Interactive Marketing,_ 26(3), pp. 141–154. doi: 10.1016/j.intmar.2011.11.001.
 
-Bianchi, T. (2023) _Alphabet R&D costs 2022, Statista._ Available at: https://www.statista.com/statistics/507858/alphabet-google-rd-costs/ (Accessed: 20 August 2023).
+- Bianchi, T. (2023) _Alphabet R&D costs 2022, Statista._ Available at: https://www.statista.com/statistics/507858/alphabet-google-rd-costs/ (Accessed: 20 August 2023).
 
-Bianchi, T. (2023) _Google revenue 2002-2022, Statista._ Available at: https://www.statista.com/statistics/266206/googles-annual-global-revenue/ (Accessed: 23 July 2023).
+- Bianchi, T. (2023) _Google revenue 2002-2022, Statista._ Available at: https://www.statista.com/statistics/266206/googles-annual-global-revenue/ (Accessed: 23 July 2023).
 
-Chatterjee, J. and Dethlefs, N. (2023) “This New Conversational Ai Model Can Be Your Friend, Philosopher, and Guide ... and Even Your Worst Enemy,” _Patterns,_ 4(1). doi: 10.1016/j.patter.2022.100676.
+- Chatterjee, J. and Dethlefs, N. (2023) “This New Conversational Ai Model Can Be Your Friend, Philosopher, and Guide ... and Even Your Worst Enemy,” _Patterns,_ 4(1). doi: 10.1016/j.patter.2022.100676.
 
-Cutler, K. (2023) “Chatgpt and Search Engine Optimisation: The Future Is Here,” _Applied Marketing Analytics,_ 9(1), pp. 8–22.
+- Cutler, K. (2023) “Chatgpt and Search Engine Optimisation: The Future Is Here,” _Applied Marketing Analytics,_ 9(1), pp. 8–22.
 
-Kumar, V. (2014) “Making ‘freemium’ Work: Many Start-Ups Fail to Recognize the Challenges of This Popular Business Model.(idea Watch),” _Harvard Business Review,_ 92(5), p. 27.
+- Kumar, V. (2014) “Making ‘freemium’ Work: Many Start-Ups Fail to Recognize the Challenges of This Popular Business Model.(idea Watch),” _Harvard Business Review,_ 92(5), p. 27.
 
-Landeweerd, M., Spil, T. and Klein, R. (2013) “The success of Google Search, the failure of Google Health and the future of google plus”, _Grand Successes and Failures in IT. Public and Private Sectors,_ pp. 221–239. doi:10.1007/978-3-642-38862-0_14.
+- Landeweerd, M., Spil, T. and Klein, R. (2013) “The success of Google Search, the failure of Google Health and the future of google plus”, _Grand Successes and Failures in IT. Public and Private Sectors,_ pp. 221–239. doi:10.1007/978-3-642-38862-0_14.
 
-OpenAI (2022) _Introducing ChatGPT._ Available at: https://openai.com/blog/chatgpt (Accessed: 23 July 2023).
+- OpenAI (2022) _Introducing ChatGPT._ Available at: https://openai.com/blog/chatgpt (Accessed: 23 July 2023).
 
-OpenAI (2023) _Introducing ChatGPT Plus._ Available at: https://openai.com/blog/chatgpt-plus (Accessed: 24 July 2023).
+- OpenAI (2023) _Introducing ChatGPT Plus._ Available at: https://openai.com/blog/chatgpt-plus (Accessed: 24 July 2023).
 
-van Dis, E. A. M. et al. (2023) “Chatgpt: Five Priorities for Research,” _Nature : International weekly journal of science,_ 614(7947), pp. 224–226. doi: 10.1038/d41586-023-00288-7.
+- van Dis, E. A. M. et al. (2023) “Chatgpt: Five Priorities for Research,” _Nature : International weekly journal of science,_ 614(7947), pp. 224–226. doi: 10.1038/d41586-023-00288-7.
 
-Wu, T. et al. (2023) “A Brief Overview of Chatgpt: The History, Status Quo and Potential Future Development,” _IEEE/CAA Journal of Automatica Sinica,_ 10(5). doi: 10.1109/JAS.2023.123618.
+- Wu, T. et al. (2023) “A Brief Overview of Chatgpt: The History, Status Quo and Potential Future Development,” _IEEE/CAA Journal of Automatica Sinica,_ 10(5). doi: 10.1109/JAS.2023.123618.
