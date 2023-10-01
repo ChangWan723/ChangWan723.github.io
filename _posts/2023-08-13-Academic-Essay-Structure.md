@@ -1,7 +1,7 @@
 ---
 title: Overview of Academic Essay
 date: 2023-08-13 19:49:00 +0530
-categories: [Study Note, academic writing]
+categories: [Learning Note, academic writing]
 tags: [academic writing]
 pin: true
 ---
