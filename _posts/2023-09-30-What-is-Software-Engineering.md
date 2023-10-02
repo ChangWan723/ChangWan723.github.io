@@ -15,7 +15,9 @@ pin: false
   * [Some definitions of Software Engineering](#some-definitions-of-software-engineering)
   * [What is Software Engineering?](#what-is-software-engineering)
   * [What is it different from other forms of engineering?](#what-is-it-different-from-other-forms-of-engineering)
-  * [What is it about?](#what-is-it-about)
+  * [Importance of software engineering](#importance-of-software-engineering)
+  * [Essential attributes of good software](#essential-attributes-of-good-software)
+  * [Some Questions](#some-questions)
 <!-- TOC -->
 
 ---
@@ -65,13 +67,42 @@ Many of the techniques of **general product management** are applicable to the s
 - **Flexibility**: A major advantage of software is the ease with which it can be changed. Therefore, the general perception is that it is easier to accommodate changes in software than to change the physical or organisational systems in which the software interfaces with.
   - Hence, software systems are likely to be subject to a high degree of change.
 
-## What is it about?
+## Importance of software engineering
 
-- **Group development**
-  - formalise overall project to all team members.
-- **Measure progress**
-  - progress can be monitored and re-scheduled.
-- **Identify subtasks**
-  - easier to complete, test and integrate several small tasks rather than a single large one.
-- **Cost-effective software development**
-  - identify cost, time vs features, reliability, ease of use trade-offs.
+- More and more, individuals and society rely on advanced software systems. We need to be able to produce reliable and  trustworthy systems economically and quickly.
+- The economies of ALL developed nations are dependent on software.
+- More and more systems are software controlled
+- Software engineering is concerned with theories, methods and tools for professional software development.
+- Expenditure on software represents a significant fraction of GNP in all developed countries.
+
+## Essential attributes of good software
+
+| Product characteristic     | Description                                                                                                                                                                                                                                                                  |
+|:---------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Maintainability            | Software should be written in such a way so that it can evolve to meet the changing needs of customers. This is a critical attribute because software change is an inevitable requirement of a changing business environment.                                                |
+| Dependability and security | Software dependability includes a range of characteristics including reliability, security and safety. Dependable software should not cause physical or economic damage in the event of system failure. Malicious users should not be able to access or damage the system.   |
+| Efficiency                 | Software should not make wasteful use of system resources such as memory and processor cycles. Efficiency therefore includes responsiveness, processing time, memory utilisation, etc.                                                                                       |
+| Acceptability              | Software must be acceptable to the type of users for which it is designed. This means that it must be understandable, usable and compatible with other systems that they use.                                                                                                |
+
+## Some Questions
+
+- What is software?
+  - **Computer programs** and **associated documentation**. Software products may be developed for a **particular customer** or may be developed for a **general market**.
+- What are the attributes of good software? 
+  - Good software should deliver the required functionality and performance to the user and should be **maintainable**, **dependable** and **usable**.
+- What is software engineering?
+  - Software engineering is an engineering discipline that is **concerned with all aspects** of software production.
+- What are the fundamental software engineering activities?
+  - Software specification, software development, software validation and software evolution.
+- What is the difference between software engineering and computer science?
+  - Computer science focuses on theory and fundamentals; software engineering is concerned with the **practicalities of developing and delivering** useful software. In addition, software engineering is generally considered to be **a subset of computer science**.
+- What is the difference between software engineering and system engineering?
+  - System engineering is concerned with all aspects of computer-based systems development including hardware, software and process engineering. Software engineering is part of this more general process.
+- What are the key challenges facing software engineering?
+  - Coping with increasing **Complexity**, demands for reduced **delivery times** and developing **trustworthy** software.
+- What are the costs of software engineering?
+  - Roughly 60% of software costs are development costs, 40% are testing costs. For custom software, evolution costs often exceed development costs.
+- What are the best software engineering techniques and methods?
+  - While all software projects have to be **professionally managed** and developed, different techniques are appropriate for different types of system. For example, games should always be developed using a series of prototypes whereas safety critical control systems require a complete and analyzable specification to be developed.
+- What differences has the web made to software engineering?
+  - The web has led to the availability of software services and the possibility of developing highly distributed service-based systems. Web-based systems development has led to important advances in programming languages and software reuse.
