@@ -15,7 +15,7 @@ pin: false
   * [What is Agile?](#what-is-agile)
   * [When to use Agile?](#when-to-use-agile)
   * [Traditional approaches](#traditional-approaches)
-    * [Characteristics of traditional approaches](#characteristics-of-traditional-approaches-)
+    * [Characteristics of traditional approaches](#characteristics-of-traditional-approaches)
     * [Issues with the Traditional Approaches](#issues-with-the-traditional-approaches)
   * [Agile Characteristics](#agile-characteristics)
     * [Incremental](#incremental)
@@ -55,7 +55,7 @@ pin: false
 
 ## Traditional approaches
 
-### Characteristics of traditional approaches 
+### Characteristics of traditional approaches
 
 - The traditional approach to perform work was to gather and document all the requirements in the beginning, plan all of them at once, and then begin execution.
 - Customer gets to see the final deliverables only when almost all the stages are complected.
