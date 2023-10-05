@@ -23,6 +23,7 @@ This module also introduces secure engineering of software systems.
   * [Why Secure software development?](#why-secure-software-development)
     * [Examples of Software Flaws](#examples-of-software-flaws)
     * [Examples of Software Bugs](#examples-of-software-bugs)
+  * [Related Blogs](#related-blogs)
 <!-- TOC -->
 
 ---
@@ -98,3 +99,7 @@ This module also introduces secure engineering of software systems.
 - SQL injection
 - Cross-site scripting
 - Cross-Site Request Forgery (CSRF)
+
+## Related Blogs
+
+- [Introduction To Agile Project Management](/posts/Introduction-To-Agile-Project-Management/)
