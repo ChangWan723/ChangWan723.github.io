@@ -1,5 +1,5 @@
 ---
-title:  Automated Software Verification
+title: Automated Software Verification
 date: 2023-10-01 19:39:00 +0530
 categories: [(CS) Learning Note, Automated Software Verification]
 tags: [computer science, software engineering, software verification]
@@ -23,6 +23,7 @@ This module aims is to give an understanding of Automated Software Verification:
     * [Testing](#testing)
   * [Validation versus Verification](#validation-versus-verification)
   * [Software Verification Approaches](#software-verification-approaches)
+  * [Related Blogs](#related-blogs)
 <!-- TOC -->
 
 ---
@@ -107,3 +108,7 @@ This module aims is to give an understanding of Automated Software Verification:
     - performs exhaustive exploration of all possible behaviours
     - works only on systems with finite state spaces
     - fully automatic
+
+## Related Blogs
+
+- [Modelling Programs with Transition Systems](/posts/Transition-Systems/)
