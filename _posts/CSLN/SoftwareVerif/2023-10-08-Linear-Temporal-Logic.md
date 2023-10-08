@@ -36,18 +36,13 @@ When it comes to reasoning about the behavior of systems over time, especially i
 
 ### What is Linear Temporal Logic?
 
-Linear Temporal Logic (LTL) is a type of modal logic that allows for reasoning about propositions that may be true or
-false over time. Unlike classical logic, which focuses on the truth values of propositions at a single point in time, *
-*LTL considers the entire timeline of a system's execution**.
+Linear Temporal Logic (LTL) is a type of modal logic that allows for reasoning about propositions that may be true or false over time. Unlike classical logic, which focuses on the truth values of propositions at a single point in time, **LTL considers the entire timeline of a system's execution**.
 
-Linear Temporal Logic offers a robust framework for reasoning about system behaviors over time. Its ability to express
-intricate temporal properties makes it indispensable in the realm of formal verification, ensuring that systems operate
-reliably and as intended.
+Linear Temporal Logic offers a robust framework for reasoning about system behaviors over time. Its ability to express intricate temporal properties makes it indispensable in the realm of formal verification, ensuring that systems operate reliably and as intended.
 
 ### Syntax of LTL
 
-LTL formulas are built from atomic propositions, Boolean operators, and temporal operators. Here are the primary
-components:
+LTL formulas are built from atomic propositions, Boolean operators, and temporal operators. Here are the primary components:
 
 - **Atomic Propositions**: These are basic propositions that can be either true or false.
 
@@ -63,8 +58,7 @@ components:
 
 ### Semantics of LTL
 
-The semantics of LTL are defined over infinite sequences of states, called traces. Each LTL formula is evaluated over
-such traces:
+The semantics of LTL are defined over infinite sequences of states, called traces. Each LTL formula is evaluated over such traces:
 
 - **Globally (`G`)**: If `G p` is true, then the proposition `p` holds at **every point** in the trace.
 
@@ -97,14 +91,11 @@ LTL formulas are of two kinds:
 
 LTL is widely used in the field of formal verification, especially in:
 
-- **Model Checking**: LTL formulas can specify properties that a system should satisfy. Model checkers then verify if a
-  given system model adheres to these properties.
+- **Model Checking**: LTL formulas can specify properties that a system should satisfy. Model checkers then verify if a given system model adheres to these properties.
 
-- **Runtime Verification**: LTL can be used to monitor running systems and check if they adhere to specified properties
-  in real-time.
+- **Runtime Verification**: LTL can be used to monitor running systems and check if they adhere to specified properties in real-time.
 
-- **Specification Writing**: LTL provides a formal language to write precise requirements for systems, ensuring clarity
-  and rigor.
+- **Specification Writing**: LTL provides a formal language to write precise requirements for systems, ensuring clarity and rigor.
 
 ## Some Examples about Semantics of LTL
 
