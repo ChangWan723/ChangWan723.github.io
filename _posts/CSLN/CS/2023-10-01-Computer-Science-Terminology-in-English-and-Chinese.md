@@ -21,6 +21,8 @@ This blog shows some common computer terminology in English and Chinese. To faci
     * [design principle, 设计原则](#design-principle-设计原则)
   * [code quality, 代码质量](#code-quality-代码质量)
     * [code analysis, 代码分析](#code-analysis-代码分析)
+  * [Software](#software)
+  * [Software Modelling](#software-modelling)
   * [algorithm, 算法](#algorithm-算法)
     * [matching, 匹配](#matching-匹配)
     * [searching, 查找](#searching-查找)
@@ -140,6 +142,18 @@ Testability，可测试性
 Analysability，可分析性
 
 Readability, 可读性
+
+Flexibility, 灵活性
+
+## Software
+
+## Software Modelling
+
+Linear Temporal Logic (LTL), 线性时序逻辑
+
+Transition Systems, 转换系统(变迁系统)
+
+
 
 ## algorithm, 算法
 

@@ -6,6 +6,9 @@ tags: [computer science, software engineering, software verification, Transition
 pin: false
 ---
 
+In the realm of theoretical computer science and formal methods, understanding system behavior is crucial. One of the foundational models used for this purpose is the **Transition System**.
+
+
 ---
 <center><font size='5'> Contents </font></center>
 
