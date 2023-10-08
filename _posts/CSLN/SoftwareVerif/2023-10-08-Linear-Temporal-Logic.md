@@ -23,7 +23,7 @@ When it comes to reasoning about the behavior of systems over time, especially i
   * [Some Examples about Semantics of LTL](#some-examples-about-semantics-of-ltl)
     * [Example 1](#example-1)
     * [Example 2](#example-2)
-    * [Example 3 With Annotation:](#example-3-with-annotation)
+    * [Example 3 With Annotation](#example-3-with-annotation)
   * [Some LTL Patterns](#some-ltl-patterns)
   * [Some Interesting Equivalences](#some-interesting-equivalences)
   * [Application Example of Checking Mutual Exclusion](#application-example-of-checking-mutual-exclusion)
@@ -125,7 +125,7 @@ LTL is widely used in the field of formal verification, especially in:
 
 ---
 
-### Example 3 With Annotation:
+### Example 3 With Annotation
 
 ---
 

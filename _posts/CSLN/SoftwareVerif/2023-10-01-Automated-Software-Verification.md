@@ -112,3 +112,4 @@ This module aims is to give an understanding of Automated Software Verification:
 ## Related Blogs
 
 - [Modelling Programs with Transition Systems](/posts/Transition-Systems/)
+- [Linear Temporal Logic (LTL)](/posts/Linear-Temporal-Logic/)
