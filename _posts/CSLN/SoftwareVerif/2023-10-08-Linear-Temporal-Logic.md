@@ -6,8 +6,7 @@ tags: [ computer science, software engineering, software verification, LTL ]
 pin: false
 ---
 
-When it comes to reasoning about the behavior of systems over time, especially in the domain of formal verification, *
-*Linear Temporal Logic (LTL)** stands out as a powerful tool.
+When it comes to reasoning about the behavior of systems over time, especially in the domain of formal verification, **Linear Temporal Logic (LTL)** stands out as a powerful tool.
 
 ---
 <center><font size='5'> Contents </font></center>
