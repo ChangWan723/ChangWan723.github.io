@@ -56,6 +56,9 @@ LTL formulas are built from atomic propositions, Boolean operators, and temporal
   - **All (`A`)**: A operator in LTL stands for "For All **Paths**". When we use this operator, we are making a
     statement about all possible future paths that the system can take from a given state.
 
+>path: a path in a transition system is a finite or infinite sequence of states
+{: .prompt-tip }
+
 ### Semantics of LTL
 
 The semantics of LTL are defined over infinite sequences of states, called traces. Each LTL formula is evaluated over such traces:
@@ -86,6 +89,8 @@ LTL formulas are of two kinds:
     - `f U g` : f **U**ntil g
 - **state formulas:**
   - `A f` : along **A**ll computation paths, f holds
+
+![](https://i.postimg.cc/cHKJsSqL/ltl4.png){: .w-55 .shadow .rounded-10 }
 
 ### Applications of LTL
 
@@ -156,21 +161,21 @@ LTL is widely used in the field of formal verification, especially in:
 
 ## Some Interesting Equivalences
 
-`¬ G p` = `F ¬p`
+`¬ G p` ≡ `F ¬p`
 
-`G p` = `G G p`
+`G p` ≡ `G G p`
 
-`F p` = `F F p`
+`F p` ≡ `F F p`
 
-`G (p ∧ q)` = `G p ∧ G q`
+`G (p ∧ q)` ≡ `G p ∧ G q`
 
-`F (p ∨ q)` = `F p ∨ F q`
+`F (p ∨ q)` ≡ `F p ∨ F q`
 
-`G F (p ∨ q)` = `G F p ∨ G F q`
+`G F (p ∨ q)` ≡ `G F p ∨ G F q`
 
-`p U q` = `p U (p U q)`
+`p U q` ≡ `p U (p U q)`
 
-`p U q` = `(p U q) U q`
+`p U q` ≡ `(p U q) U q`
 
 ## Application Example of Checking Mutual Exclusion
 
