@@ -49,8 +49,8 @@ LTL formulas are built from atomic propositions, Boolean operators, and temporal
 - **Boolean Operators**: Standard operators like AND (`∧`), OR (`∨`), NOT (`¬`).
 
 - **Temporal Operators**:
-  - **Globally (`G`)**: A property **holds for all points** in the future.
-  - **Finally (`F`)**: A property will **eventually** be true in the future.
+  - **Globally (`G`)**: A property **holds for all points** in the future (It should contain the current point).
+  - **Finally (`F`)**: A property will **eventually** be true in the future (It can contain the current point).
   - **Next (`X`)**: A property will be true **at the next time step**.
   - **Until (`U`)**: A property holds **until another becomes true**.
   - **All (`A`)**: A operator in LTL stands for "For All **Paths**". When we use this operator, we are making a
@@ -70,6 +70,12 @@ The semantics of LTL are defined over infinite sequences of states, called trace
 - **Next (`X`)**: If `X p` is true, then `p` will be true at the **very next point** in the trace.
 
 - **Until (`U`)**: `p U q` means `p` holds **continuously until** `q` becomes true.
+
+>There is a special case for `p U q`: 
+>
+> If the first point is `q`, it is always holds even if `p U q` does not appear again in following paths (Because `q` is first one, so, it doesn't break "`p` holds **continuously until** `q` becomes true"). For example: S0(`p`)→S1(`q`), path`S0→S1` and path`S1` all hold for `p U q`. 
+{: .prompt-warning }
+
 
 - **All (`A`)**: `A φ`means that "for all **paths**, φ holds". In other words, no matter which path the system takes
   from the current state, the property φ will always be true.
@@ -126,16 +132,16 @@ LTL is widely used in the field of formal verification, especially in:
 
 ![](https://i.postimg.cc/zX2qchFD/ltl3.png){: .w-55 .shadow .rounded-10 }
 
-| Semantics of LTL  | Matching Node             | Annotation                                                                                                                                                                         |
-|:------------------|:--------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `A F a`           | holds in all states       | For **all** paths form all states, pass through S2(`a`) **finally**.                                                                                                               |
-| `A F r`           | holds in state S1 only    | Only **all** paths from state S1, pass through S1(`r`) **finally**. e.g. S3→S2→S4→S2→S4→..., doesn't pass through S1(`r`)                                                          |
-| `A F g`           | holds in states S1 and S3 | Only **all** paths from states S1 and S3, pass through S3(`g`) **finally**. e.g. S2→S4→S2→S4→..., doesn't pass through S3(`g`)                                                     |
-| `A G a`           | holds in no state         | No path always stops at S2(`a`). So, it is clear that no state holds, because `a` is only in S2.                                                                                   |
-| `A G F a`         | holds in all states       | For **all** paths, and for **every point**, pass through S2(`a`) **finally**.                                                                                                      |
-| `A G F r`         | holds in no state         | For **all** paths, there are **some points**, from them doesn't pass through S1(`r`) **finally**. e.g. For path S1→S2. Then from S2, S2→S4→S2→S4→..., doesn't pass through S1(`r`) |
-| `A (b U ¬b)`      | holds in all states       | `b U ¬b` equivalent to: `b` to `¬b`, is obviously S4→S2 (S2, `a` is `¬b`). **All states** can to S4→S2, and after S4(`b`) always is S2(`¬b`).                                      |
-| `A (g U (a U r))` | holds in no state ?       |                                                                                                                                                                                    |
+| Semantics of LTL  | Matching Node             | Annotation                                                                                                                                                                                                                                                             |
+|:------------------|:--------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `A F a`           | holds in all states       | For **all** paths form all states, pass through S2(`a`) **finally**.                                                                                                                                                                                                   |
+| `A F r`           | holds in state S1 only    | Only **all** paths from state S1, pass through S1(`r`) **finally**. e.g. S3→S2→S4→S2→S4→..., doesn't pass through S1(`r`)                                                                                                                                              |
+| `A F g`           | holds in states S1 and S3 | Only **all** paths from states S1 and S3, pass through S3(`g`) **finally**. e.g. S2→S4→S2→S4→..., doesn't pass through S3(`g`)                                                                                                                                         |
+| `A G a`           | holds in no state         | No path always stops at S2(`a`). So, it is clear that no state holds, because `a` is only in S2.                                                                                                                                                                       |
+| `A G F a`         | holds in all states       | For **all** paths, and for **every point**, pass through S2(`a`) **finally**.                                                                                                                                                                                          |
+| `A G F r`         | holds in no state         | For **all** paths, there are **some points**, from them doesn't pass through S1(`r`) **finally**. e.g. For path S1→S2. Then from S2, S2→S4→S2→S4→..., doesn't pass through S1(`r`)                                                                                     |
+| `A (b U ¬b)`      | holds in all states       | `r`,`a`,`g` all are `¬b`, and after S4(`b`) always is S2(`¬b`). So, holds in all states                                                                                                                                                                                |
+| `A (g U (a U r))` | holds in state S1 only    | `g U (a U r)` equivalent to: `g` to `a` to `r`(ease of understanding, NOT rigorous). It seems like that there is no state holds because S2(`a`) can to S4(`b`), but S1 is `r`,  so **all paths from S1** hold for `g U (a U r)`. Therefore, S1 holds `A (g U (a U r))` |
 
 ---
 
