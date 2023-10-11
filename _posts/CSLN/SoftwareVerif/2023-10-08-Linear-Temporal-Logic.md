@@ -73,7 +73,7 @@ The semantics of LTL are defined over infinite sequences of states, called trace
 
 >There is a special case for `p U q`: 
 >
-> If the first point is `q`, it is always holds even if `p U q` does not appear again in following paths (Because `q` is first one, so, it doesn't break "`p` holds **continuously until** `q` becomes true"). For example: S0(`p`)→S1(`q`), path`S0→S1` and path`S1` all hold for `p U q`. 
+> If the first point is `q`, it always holds no matter what the following points are (Because `q` is first one, so, it doesn't break "`p` holds continuously until `q` becomes true"). For example: S0(`p`)→S1(`q`), path`S0→S1` and path`S1` all hold for `p U q`. 
 {: .prompt-warning }
 
 

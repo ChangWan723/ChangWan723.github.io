@@ -19,6 +19,7 @@ This blog shows some common computer terminology in English and Chinese. To faci
   * [design, 设计](#design-设计)
     * [design pattern, 设计模式](#design-pattern-设计模式)
     * [design principle, 设计原则](#design-principle-设计原则)
+    * [Object-oriented programming (OOP), 面向对象编程](#object-oriented-programming-oop-面向对象编程)
   * [code quality, 代码质量](#code-quality-代码质量)
     * [code analysis, 代码分析](#code-analysis-代码分析)
   * [Software](#software)
@@ -114,6 +115,22 @@ DRY Principle，不自我重复原则（Don't Repeat Yourself）
 Acyclic Dependencies Principle，非循环依赖原则（ADP）
 
 YAGNI Principle，不需要原则（You Aren't Gonna Need It）
+
+### Object-oriented programming (OOP), 面向对象编程
+
+Encapsulation, 封装
+
+Inheritance, 继承
+
+Polymorphism, 多态
+
+Abstraction, 抽象
+
+Override, 重写: 在子类中定义某方法与其父类有相同的名称和参数
+
+Overload, 重载: 一个类中定义了多个同名的方法，它们或有不同的参数个数或有不同的参数类型
+
+High cohesion and low coupling, 高内聚、低耦合
 
 ## code quality, 代码质量
 
