@@ -3,7 +3,7 @@ title: Software Project Management and Secure Development
 date: 2023-10-01 17:55:00 +0530
 categories: [(CS) Learning Note, Software Project Management and Secure Development]
 tags: [computer science, software engineering, project management]
-pin: true
+pin: false
 ---
 
 This module is for undertaking large software projects. It introduces the high-level strategies required for managing projects from their genesis to completion.
