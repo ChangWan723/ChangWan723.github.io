@@ -54,7 +54,7 @@ image:
 
 >In short, a programmer who writes clean code is an artist who can take a blank screen through a series of transformations until it is an elegantly coded system.
 
->Reading clean code will never be quite like reading Lord of the Rings. Still, the literary metaphor is not a bad one. Like a good novel, clean code should clearly expose the tensions in the problem to be solved. It should build those tensions to a climax and then give the reader that “Aha! Of course!” as the issues and tensions are resolved in the revelation of an obvious solution. 
+>Reading clean code will never be quite like reading _Lord of the Rings_. Still, the literary metaphor is not a bad one. Like a good novel, clean code should clearly expose the tensions in the problem to be solved. It should build those tensions to a climax and then give the reader that “Aha! Of course!” as the issues and tensions are resolved in the revelation of an obvious solution. 
 
 >The Boy Scouts of America have a simple rule that we can apply to our profession.
 >

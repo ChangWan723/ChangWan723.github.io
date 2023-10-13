@@ -23,6 +23,7 @@ In the vast world of software development, where technologies evolve rapidly and
   * [What is Clean Code?](#what-is-clean-code)
   * [Why is Clean Code Important?](#why-is-clean-code-important)
   * [Some Characteristics of Clean Code](#some-characteristics-of-clean-code)
+  * [Related Blogs](#related-blogs)
 <!-- TOC -->
 
 ---
@@ -70,3 +71,17 @@ Clean Code is more than just a set of guidelines; **it's a mindset**. It's about
 - **No Redundancies**: Clean Code avoids duplicate code and unnecessary elements. Every piece of code has a clear purpose.
 
 - **Error Handling**: Errors are handled gracefully, with clear messages and without cluttering the main logic.
+
+
+## Related Blogs
+
+- [Clean Code: Meaningful Names](/posts/Clean-Code-Meaningful-Names/)
+
+
+<br>
+
+---
+
+**Reference:**
+
+- Martin, R. C. (2009) _Clean code : a handbook of agile software craftsmanship._ Upper Saddle River, NJ: Prentice Hall (Robert C. Martin series).
