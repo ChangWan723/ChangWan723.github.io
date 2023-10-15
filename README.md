@@ -1,4 +1,4 @@
-[MySite](https://wanchang.netlify.app/)
+[MySite](https://www.cwblogs.com)
 
 This site is a non-profit personal site, the main function is to record and share content related to me.
 

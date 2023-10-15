@@ -18,13 +18,13 @@ timezone: Europe/London
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Wan Chang # the main title
+title: Chang Wan # the main title
 subtitle: 行到水穷处，坐看云起时
 
 tagline: Welcome to My Personal Website! # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  The Personal Website of Wan Chang.
+  The Personal Website of Chang Wan.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: ""
@@ -38,18 +38,18 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Wan Chang
+  name: Chang Wan
   email: wan723@outlook.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/ChangWan723 # change to your github homepage
 
 author_logo: myCat.jpg
-author: Wan Chang
-author_bio: My Chinese name is Wan Chang, and you can call me Chang.
+author: Chang Wan
+author_bio: My Chinese name is Chang.
 author_email: "wan723@outlook.com"
 author_location: U.K.
-author_website_url: "https://wanchang.netlify.app"
+author_website_url: "https://www.cwblogs.com"
 typewrite-text: Welcome to my personal website.
 
 # Experiences

@@ -129,8 +129,6 @@ public List<DailyWeather> getRainyDays() {
 
 It's the same function, look at how much difference there is between [version 1](#code-example-version-1) and [version 4](#code-example-version-4). **This is the beauty and art of Clean Code!** When you read good Clean Code, you will heartily exclaim, "**Yes, that's what good code looks like!**"
 
->Reading clean code will never be quite like reading _Lord of the Rings_. Still, the literary metaphor is not a bad one. Like a good novel, clean code should clearly expose the tensions in the problem to be solved. It should build those tensions to a climax and then give the reader that “Aha! Of course!” as the issues and tensions are resolved in the revelation of an obvious solution.
-
 The code in [version 4](#code-example-version-4) is already quite clean and efficient. However, the definition of "better" may vary depending on our goals (e.g., performance, readability, extensibility, etc.). This code may also need to be optimised for specific projects. **Remember: code is never perfect!**
 
 ---
@@ -235,6 +233,8 @@ Methods perform actions, so names like `save`, `delete`, or `calculateTotal` are
 ### Opt for Simplicity over Cleverness
 
 It's better to be straightforward than to be witty. Remember, your code is for humans first.
+
+>Will they know what the function named `HolyHandGrenade` is supposed to do? Sure, it’s cute, but maybe in this case `DeleteItems` might be a better name. Choose clarity over entertainment value.
 
 >Say what you mean. Mean what you say.
 
