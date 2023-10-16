@@ -63,17 +63,17 @@ author_work_experiences:
 
 # Education
 author_education_details:
-  - college_logo: xidian.jpg
-    college_name: Xidian University
-    college_url: https://en.xidian.edu.cn/
-    college_degree: Software Engineering (BEng)
-    description: "Study period: 2015 - 2019"
-    visibility: true
   - college_logo: soton.jpg
     college_name: University of Southampton
     college_url: https://www.southampton.ac.uk/
     college_degree: Software Engineering (MSc)
     description: "Study period: 2023 - 2024 (expected)"
+    visibility: true
+  - college_logo: xidian.jpg
+    college_name: Xidian University
+    college_url: https://en.xidian.edu.cn/
+    college_degree: Software Engineering (BEng)
+    description: "Study period: 2015 - 2019"
     visibility: true
 
 show_author_work_experiences: true
