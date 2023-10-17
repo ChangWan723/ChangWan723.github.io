@@ -1,8 +1,8 @@
 ---
 title: Use Case Diagrams in UML
-date: 2023-10-05 20:31:00 +0530
+date: 2023-10-17 18:53:00 +0530
 categories: [(CS) Learning Note, Software Project Management and Secure Development]
-tags: [computer science, software engineering, UML, Use Case Diagrams]
+tags: [computer science, software engineering, UML, Use Case Diagram]
 pin: false
 ---
 
@@ -16,11 +16,18 @@ pin: false
   * [Key Concepts in Use Case Diagrams](#key-concepts-in-use-case-diagrams)
   * [How to Draw a Use Case Diagram](#how-to-draw-a-use-case-diagram)
   * [Example](#example)
+  * [Possible Mistakes with Use Case Diagrams](#possible-mistakes-with-use-case-diagrams)
 <!-- TOC -->
 
 ---
 
 ## What is a Use Case Diagram?
+
+**Use Case Diagram**:
+- A **generalised** description of how a system will be used.
+- Provides an **overview** of the **intended functionality** of the system
+
+---
 
 A Use Case Diagram is a visual representation that shows the interactions between external actors and the system to achieve a particular goal. It helps in understanding the external functionalities and requirements of a system.
 
@@ -34,6 +41,9 @@ A Use Case Diagram is a visual representation that shows the interactions betwee
 - **Actors**: These are entities that interact with the system. They can be users, other systems, or external processes. They are typically represented by stick figures.
 
 - **Use Cases**: These are specific actions or functions the system performs in response to an actor. They are represented by ovals.
+  - A use case is a **single unit** of **meaningful** work. (e.g. login, register, place an order, etc.)
+
+- **System boundary**: A rectangle diagram representing the boundary between the actors and the system.
 
 - **Relationships**: Lines or arrows depict the interactions between actors and use cases. There are several types of relationships in use case diagrams:
 
@@ -45,9 +55,7 @@ A Use Case Diagram is a visual representation that shows the interactions betwee
 
   - **Generalization**: A solid line with a hollow triangle arrowhead. It indicates that one actor or use case inherits the properties and behaviors of another.
 
-![](https://i.postimg.cc/JnLM7Tbs/1696536299188.png){: .w-75 .shadow .rounded-10 }
-_Example: Some relationships in Use Case Diagrams_
-
+  - others: Used when **exceptional circumstances** are encountered.
 
 ## How to Draw a Use Case Diagram
 
@@ -67,5 +75,11 @@ Let's consider a library management system:
 - **Actors**: borrower, librarian, and self-service machine. In this case library is not an actor or can be replaced by librarian
 - Note since the library can have multiple copies of the same book we need to differentiate between an item (copy) and a title
 
-![](https://i.postimg.cc/y6TfJJyW/1696535555182.png){: .w-75 .shadow .rounded-10 }
+![](https://i.postimg.cc/y6TfJJyW/1696535555182.png){: .w-100 .shadow .rounded-10 }
 _One possible use case diagram_
+
+## Possible Mistakes with Use Case Diagrams
+
+![](https://i.postimg.cc/FKnh9Nhp/ucu1.png){: .w-100 .shadow .rounded-10 }
+
+![](https://i.postimg.cc/9QfqQXGw/ucu2.png){: .w-60 .shadow .rounded-10 }
