@@ -5,7 +5,7 @@ categories: [(CS) Learning Note, Clean Code]
 tags: [computer science, software engineering, Clean Code, code]
 pin: true
 image:
-  path: https://i.postimg.cc/cJNC49P9/1697215373767.png
+  path: /assets/img/posts/name.png
 ---
 
 >Names are everywhere in software. We name our variables, our functions, our arguments, classes, and packages. We name our source files and the directories that contain them. We name our jar files and war files and ear files. We name and name and name. Because we do so much of it, we’d better do it well.
