@@ -26,6 +26,7 @@ pin: false
     * [Design Principle 7: Sufficiency](#design-principle-7-sufficiency)
     * [Design Principle 8: Completeness](#design-principle-8-completeness)
   * [Levels of design](#levels-of-design)
+  * [Related Blogs](#related-blogs)
 <!-- TOC -->
 
 ---
@@ -234,3 +235,7 @@ unwanted results.
   - what are the **responsibilities** of each component/class ?
   - what are the **interfaces**?
   - what **messages** are exchanged, in what **order**?
+
+## Related Blogs
+
+- [Unified Modelling Language (UML)](/posts/Unified-Modelling-Language-(UML)/)
