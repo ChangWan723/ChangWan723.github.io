@@ -6,7 +6,7 @@ tags: [computer science, software engineering, project management]
 pin: false
 published: false
 ---
-
+secure
 This module is for undertaking large software projects. It introduces the high-level strategies required for managing projects from their genesis to completion.
 
 This module also introduces secure engineering of software systems. 

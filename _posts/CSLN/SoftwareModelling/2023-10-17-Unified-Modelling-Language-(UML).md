@@ -122,3 +122,4 @@ We need UML to:
 
 - [Use Case Diagrams in UML](/posts/Use-Case-Diagrams-in-UML/)
 - [Class Diagrams in UML](/posts/Class-Diagrams-in-UML/)
+- [State Machine Diagrams in UML](/posts/State-Machine-Diagrams-in-UML/)
