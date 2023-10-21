@@ -252,3 +252,4 @@ A Sample Project Charter:
 ## Related Blogs
 
 - [Introduction To Agile Project Management](/posts/Introduction-To-Agile-Project-Management/)
+- [Project Management Process Groups](/posts/The-Project-Management-Process-Groups/)

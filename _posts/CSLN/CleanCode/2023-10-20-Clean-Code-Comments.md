@@ -288,3 +288,12 @@ Apart from the good comments mentioned above, the rest of the comments are almos
 9. **In-obvious Connection**: Avoid comments that are not clearly connected to the code they are referencing.
 
 10. **Position Markers**: Avoid using comments as position markers. Use other tools.
+
+
+<br>
+
+---
+
+**Reference:**
+
+- Martin, R. C. (2009) _Clean code : a handbook of agile software craftsmanship._ Upper Saddle River, NJ: Prentice Hall (Robert C. Martin series).

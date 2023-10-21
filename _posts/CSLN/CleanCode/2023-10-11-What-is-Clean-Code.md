@@ -41,8 +41,6 @@ These words simple yet profound statement encapsulates the essence of Clean Code
 The only valid measurement of code quality: **WTFs/minute**
 ![](/assets/img/posts/cd1.png){: .w-75 .shadow .rounded-10 }
 
-When you're reading bad code, you may say: "WTF; WTF is this shit; WTF; dude, WTF; WTF." (Funny, and sad.)
-
 ---
 
 Clean Code is more than just a set of guidelines; **it's a mindset**. It's about recognizing that code is written for humans first and machines second. By embracing Clean Code, developers **not only improve the quality of their software but also foster a culture of excellence, collaboration, and continuous learning.**
@@ -63,6 +61,7 @@ Clean Code is more than just a set of guidelines; **it's a mindset**. It's about
 
 - [Clean Code: Meaningful Names](/posts/Clean-Code-Meaningful-Names/)
 - [Clean Code: Functions](/posts/Clean-Code-Functions/)
+- [Clean Code: Comments](/posts/Clean-Code-Comments/)
 
 <br>
 
