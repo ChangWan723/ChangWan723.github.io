@@ -36,7 +36,7 @@ pin: false
   - **Determine** the **scope**, **time**, and **cost** constraints for the project
   - **Identify** the project **sponsor**
   - **Select** the project **manager**
-  - **Develop** a [business case](#Business-Case-for-a-Project) for a project
+  - **Develop** a _business case_ for a project
   - **Meet** with the project manager to **review** the **process** and **expectations** for managing the project
   - **Determine** if the project should be **divided** into two or more **smaller projects**
 

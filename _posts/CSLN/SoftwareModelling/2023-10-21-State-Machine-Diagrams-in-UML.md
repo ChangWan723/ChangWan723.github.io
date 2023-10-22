@@ -128,3 +128,7 @@ _State Machine Diagram of Back ATM_
 
 4. **Facilitates Testing**: They clearly outline the different states and transitions, making it easier to test the system.
 
+- State diagrams are mostly used in reactive/event driven systems/components
+- State diagrams are also useful in modeling concurrent or parallel behavior by allowing multiple states to exist simultaneously.
+- This is helpful in modeling systems with multiple threads or concurrent processes.
+
