@@ -2,7 +2,7 @@
 title: Project Management Process Groups
 date: 2023-10-20 17:09:00 +0530
 categories: [(CS) Learning Note, Software Project Management]
-tags: [computer science, software engineering, project management]
+tags: [computer science, software engineering, project management, process groups]
 pin: false
 ---
 
@@ -105,3 +105,4 @@ Alpha (Excellent) PM **spends more time on planning** and pay off in execution:
 ## Related Blogs
 
 - [Initiating Projects (Process Groups)](/posts/Initiating-Projects/)
+- [Planning Projects - Scope (Process Groups)](/posts/Planning-Projects-Scope/)

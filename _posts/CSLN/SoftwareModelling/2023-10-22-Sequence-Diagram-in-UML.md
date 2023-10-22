@@ -1,6 +1,6 @@
 ---
 title: Sequence Diagrams in UML
-date: 2023-10-21 19:44:00 +0530
+date: 2023-10-22 18:00:00 +0530
 categories: [(CS) Learning Note, Software Modelling]
 tags: [computer science, software engineering, UML, Sequence Diagrams]
 pin: false
