@@ -39,8 +39,7 @@ pin: false
 
 ## What is Project planning?
 
-- **Project plannin**g is a discipline addressing **how to complete** a project in a **certain timeframe**, usually with
-  **defined stages** and **designated resources**.
+- **Project planning** is a discipline addressing **how to complete** a project in a **certain timeframe**, usually with **defined stages** and **designated resources**.
 - After a project is initiated, it goes into the Planning stage.
 - One view of project planning divides the activity into these steps:
   - setting measurable objectives
@@ -70,7 +69,7 @@ Project Planning Should Guide Project Execution:
 
 ## Planning Processes and Outputs for Project Integration and Scope Management
 
-| Knowledge area                 | Initiating process                                                                | Outputs                                                                                                                                                                                                                                      |
+| Knowledge area                 | Planning process                                                                  | Outputs                                                                                                                                                                                                                                      |
 |:-------------------------------|:----------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Project integration management | Develop project management plan                                                   | Project management plan                                                                                                                                                                                                                      |
 | Project scope management       | Plan scope management <br> Collect requirements <br> Define scope <br> Create WBS | Scope management plan <br> Requirements management plan <br> Requirements documentation <br> Requirements traceability matrix <br> Project scope statement <br> Project documents updates <br> Scope baseline <br> Project documents updates |
