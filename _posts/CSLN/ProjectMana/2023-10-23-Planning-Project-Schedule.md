@@ -21,7 +21,7 @@ pin: false
     * [Activity Attributes](#activity-attributes)
       * [Creating the Activity List and Attributes](#creating-the-activity-list-and-attributes)
     * [Milestone List](#milestone-list)
-      * [Best Practice of Milestones List](#best-practice-of-milestones-list-)
+      * [Best Practice of Milestones List](#best-practice-of-milestones-list)
   * [Sequencing using Network Diagram: Activity on node (AON)](#sequencing-using-network-diagram-activity-on-node-aon)
     * [AON Rules](#aon-rules)
     * [Terminology of AON](#terminology-of-aon)
@@ -147,7 +147,7 @@ _Network Diagram_
 ![](https://i.postimg.cc/Wzfg8b01/sspc3.png){: .w-100 .shadow .rounded-10 }
 _Example of Milestone List_
 
-#### Best Practice of Milestones List  
+#### Best Practice of Milestones List
 
 The **SMART** criteria suggest that **milestones** should be:
 - **S**pecific
