@@ -1,7 +1,7 @@
 ---
 title: Activity Diagrams in UML
 date: 2023-10-22 18:30:00 +0530
-categories: [(CS) Learning Note, Software Modelling]
+categories: [(CS) Learning Note, Software Modelling and Design]
 tags: [computer science, software engineering, UML, Activity Diagrams]
 pin: false
 ---
