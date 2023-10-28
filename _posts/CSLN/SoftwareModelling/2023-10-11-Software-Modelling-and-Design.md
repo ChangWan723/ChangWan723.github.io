@@ -239,3 +239,4 @@ unwanted results.
 ## Related Blogs
 
 - [Unified Modelling Language (UML)](/posts/Unified-Modelling-Language-(UML)/)
+- [Architectural Design](/posts/Architectural-Design/)
