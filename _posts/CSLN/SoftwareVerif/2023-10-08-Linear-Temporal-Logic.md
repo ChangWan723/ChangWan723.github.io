@@ -209,5 +209,8 @@ LTL is widely used in the field of formal verification, especially in:
   - Need fairness assumptions for the property to hold. (**False or True**)
 - **no strict sequencing**: processes need not enter their critical section in strict sequence
   - can only express the negation of this property, but this is sufficient, since a counter-example to strict sequencing is proof for non-strict sequencing !
-  - define Weak Until operator: `f W g = G f ∨ f U g`
-  - `A ( G (c0 → c0 W (¬c0 ∧ ¬c0 W c1)) ∧ G (. . .) )`  (False, So, no strict sequencing is **True**)
+  - define Weak Until `W` operator: f `W` g = `G` f ∨ f `U` g
+  - `A` ( `G` (c0 → c0 `W` (¬c0 ∧ ¬c0 `W` c1)) ∧ `G` (. . .) )  (False, So, no strict sequencing is **True**)
+
+>In the context of mutual exclusion, "**no strict sequencing**" refers to the principle that there is no predetermined or fixed order in which processes must be granted access to the critical section. In other words, a mutual exclusion solution should not enforce a strict order or sequence in which processes enter their critical sections.
+{: .prompt-tip }

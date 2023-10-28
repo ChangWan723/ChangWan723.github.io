@@ -18,7 +18,7 @@ Büchi automaton is a type of ω-automaton (omega automaton) that accepts infini
     * [What is Büchi Automaton?](#what-is-büchi-automaton)
     * [Formal Definition](#formal-definition)
     * [Applications](#applications)
-  * [Recap on Finite Automaton](#recap-on-finite-automaton)
+  * [Finite Automaton](#finite-automaton)
     * [Example of Finite Automaton](#example-of-finite-automaton)
     * [Consists of Finite Automaton](#consists-of-finite-automaton)
   * [Büchi Automaton](#büchi-automaton)
@@ -37,11 +37,11 @@ A Büchi automaton is essentially a nondeterministic finite automaton (NFA) exte
 
 ### Formal Definition
 
-A Büchi automaton is defined as a tuple \( A = (Q, Σ, Δ, q0, F) \), where:
+A Büchi automaton is defined as a tuple \( A = (Q, Σ, δ, q0, F) \), where:
 
 - `Q` is a finite set of states.
 - `Σ` is a finite input alphabet.
-- `Δ` is a transition relation.
+- `δ` is a transition relation.
 - `q0` is the initial state.
 - `F` is a set of accepting states.
 
@@ -52,7 +52,7 @@ The acceptance condition for a Büchi automaton is slightly different from the u
 Büchi automata are widely used in the formal verification of systems, especially in model checking of linear temporal logic (LTL) properties. LTL is a type of temporal logic that allows statements about sequences of states that a system can take. By converting LTL formulas to Büchi automata, verification tools can then check if a given system (modeled as another type of automaton) satisfies the desired properties.
 
 
-## Recap on Finite Automaton
+## Finite Automaton
 
 - finite automata accept/reject strings over a given alphabet
 - equivalent to regular expressions
