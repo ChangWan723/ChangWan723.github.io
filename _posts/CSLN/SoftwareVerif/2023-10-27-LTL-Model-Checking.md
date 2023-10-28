@@ -146,7 +146,7 @@ _From LTL(`A G ¬c2`) to Automata `B`_
 
 ---
 
-The above automaton means that only `¬c2` can reach to **accepting states(final states)**. So, product automaton of `A ∩ B` will be:
+The above automaton means that `¬c2` is **global**, or `c2` can't exist. So, product automaton of `A ∩ B` will be:
 
 ![](https://i.postimg.cc/9FSsSNm4/lmc10.png){: .w-55 .shadow .rounded-10 }
 _Product automaton of `A ∩ B`, has accepting states(final states)_
