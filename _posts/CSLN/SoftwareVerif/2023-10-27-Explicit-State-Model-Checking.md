@@ -1,5 +1,5 @@
 ---
-title: LTL Model Checking
+title: Explicit State Model Checking
 date: 2023-10-27 19:02:00 +0530
 categories: [ (CS) Learning Note, Automated Software Verification ]
 tags: [ computer science, software engineering, software verification, Büchi Automaton, LTL, Transition Systems]
@@ -18,7 +18,7 @@ pin: false
     * [Use the Properties of Automata to Do Model Checking](#use-the-properties-of-automata-to-do-model-checking)
       * [Example 1](#example-1)
       * [Example 2](#example-2)
-    * [Benefits and Limitations of Explicit State Model Checking](#benefits-and-limitations-of-explicit-state-model-checking)
+  * [Benefits and Limitations of Explicit State Model Checking](#benefits-and-limitations-of-explicit-state-model-checking)
 <!-- TOC -->
 
 ---
@@ -161,7 +161,7 @@ Since the language accepted by the product automaton (`A ∩ B`) is **not empty*
 
 So, automata `A` do **not satisfy liveness property** `A F c2`.
 
-### Benefits and Limitations of Explicit State Model Checking
+## Benefits and Limitations of Explicit State Model Checking
 
 The above examples are **Explicit State Model Checking**.
 
