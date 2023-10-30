@@ -79,7 +79,7 @@ pin: false
 - Projects involve five project management **process groups**:
   - Initiating, planning, executing, monitoring & controlling, and closing
 
-![](https://i.postimg.cc/PxKJnMNj/pg5.png){: .w-100 .shadow .rounded-10 }
+![](https://i.postimg.cc/PxKJnMNj/pg5.png){: .w-70 .shadow .rounded-10 }
 
 
 Alpha (Excellent) PM **spends more time on planning** and pay off in execution:
@@ -106,3 +106,5 @@ Alpha (Excellent) PM **spends more time on planning** and pay off in execution:
 
 - [Initiating Projects (Process Groups)](/posts/Initiating-Projects/)
 - [Planning Projects - Scope (Process Groups)](/posts/Planning-Projects-Scope/)
+- [Planning Projects - Schedule (Process Groups)](/posts/Planning-Projects-Schedule/)
+- [Planning Projects - Cost (Process Groups)](/posts/Planning-Projects-Cost/)
