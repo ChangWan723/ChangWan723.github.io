@@ -68,3 +68,11 @@ Consistency is key to good formatting. It's essential to establish and follow te
 
 - **Code Formatting Tools**: Utilize tools and linters to enforce consistent formatting automatically.
 - **Code Reviews**: Use code reviews as an opportunity to reinforce formatting standards.
+
+<br>
+
+---
+
+**Reference:**
+
+- Martin, R. C. (2009) _Clean code : a handbook of agile software craftsmanship._ Upper Saddle River, NJ: Prentice Hall (Robert C. Martin series).

@@ -62,6 +62,8 @@ Clean Code is more than just a set of guidelines; **it's a mindset**. It's about
 - [Clean Code: Meaningful Names](/posts/Clean-Code-Meaningful-Names/)
 - [Clean Code: Functions](/posts/Clean-Code-Functions/)
 - [Clean Code: Comments](/posts/Clean-Code-Comments/)
+- [Clean Code: Formatting](/posts/Clean-Code-Formatting/)
+- [Clean Code: Objects and Data Structure](/posts/Clean-Code-Structure/)
 
 <br>
 
