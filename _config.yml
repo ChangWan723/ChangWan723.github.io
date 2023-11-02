@@ -21,7 +21,7 @@ timezone: Europe/London
 title: Chang Wan # the main title
 subtitle: 行到水穷处，坐看云起时
 
-tagline: Welcome to My Personal Website! # it will display as the sub-title
+tagline: Welcome to My Website! # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   The Personal Website of Chang Wan.
@@ -50,7 +50,7 @@ author_bio: My Chinese name is Chang.
 author_email: "wan723@outlook.com"
 author_location: U.K.
 author_website_url: "https://www.cwblogs.com"
-typewrite-text: Welcome to my personal website.
+typewrite-text: Welcome to my website.
 
 # Experiences
 author_work_experiences:
