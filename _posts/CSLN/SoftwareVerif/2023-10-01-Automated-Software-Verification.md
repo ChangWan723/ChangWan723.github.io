@@ -115,3 +115,4 @@ This module aims is to give an understanding of Automated Software Verification:
 - [Linear Temporal Logic (LTL)](/posts/Linear-Temporal-Logic/)
 - [Büchi Automaton](/posts/Büchi-Automaton/)
 - [Explicit State Model Checking](/posts/Explicit-State-Model-Checking/)
+- [Symbolic Model Checking](/posts/Symbolic-Model-Checking/)

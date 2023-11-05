@@ -2,7 +2,7 @@
 title: Explicit State Model Checking
 date: 2023-10-27 19:02:00 +0530
 categories: [ (CS) Learning Note, Automated Software Verification ]
-tags: [ computer science, software engineering, software verification, Büchi Automaton, LTL, Transition Systems]
+tags: [ computer science, software engineering, software verification, Büchi Automaton, Model Checking, LTL, Transition Systems]
 pin: false
 ---
 
@@ -12,9 +12,14 @@ pin: false
 ---
 
 <!-- TOC -->
-  * [Model Checking using Automata](#model-checking-using-automata)
+  * [What is Explicit State Model Checking](#what-is-explicit-state-model-checking)
+  * [Key Components of Explicit State Model Checking](#key-components-of-explicit-state-model-checking)
+    * [State Space Generation](#state-space-generation)
+    * [Property Specification](#property-specification)
+    * [Systematic Exploration](#systematic-exploration)
+  * [Explicit State Model Checking using Automata](#explicit-state-model-checking-using-automata)
     * [From LTL to Automata](#from-ltl-to-automata)
-    * [One of the Properties of Automata](#one-of-the-properties-of-automata)
+    * [Properties of Automata](#properties-of-automata)
     * [Use the Properties of Automata to Do Model Checking](#use-the-properties-of-automata-to-do-model-checking)
       * [Example 1](#example-1)
       * [Example 2](#example-2)
@@ -23,7 +28,28 @@ pin: false
 
 ---
 
-## Model Checking using Automata
+## What is Explicit State Model Checking
+
+Explicit State Model Checking is a method used in formal verification where the state space of a system is explicitly enumerated to verify its properties. It involves exploring all possible states and transitions of a system to check for properties like safety, liveness, and deadlock freedom.
+
+## Key Components of Explicit State Model Checking
+
+###  State Space Generation
+
+- The model checker generates the state space of the system by simulating all possible actions from each state.
+- This results in a graph where nodes represent states, and edges represent transitions between states.
+
+### Property Specification
+
+- Properties to be verified are specified using temporal logics, such as Linear Temporal Logic (LTL) or Computational Tree Logic (CTL).
+- These properties define the correct behavior of the system in terms of its states and transitions.
+
+### Systematic Exploration
+
+- The model checker systematically explores the state space, checking whether the specified properties hold in each state.
+- It uses algorithms to traverse the graph, inspecting each node (state) and its outgoing edges (transitions).
+
+## Explicit State Model Checking using Automata
 
 Transition systems can be transformed into Büchi automata (Place `Prop` in the middle of the line in the opposite direction of the arrow):
 
@@ -80,7 +106,7 @@ _From LTL(`A F c1`) to Automata_
 
 The above automaton accepts all infinite words eventually containing c1 as part of a "symbol".
 
-### One of the Properties of Automata
+### Properties of Automata
 
 Assuming the existence of automaton `A` and automaton `S`, and model satisfies the specification `L(A) ⊆ L(S)`, thus:
 
@@ -176,5 +202,5 @@ The above examples are **Explicit State Model Checking**.
 - produces counter-examples
 
 **Limitations:**
-- state explosion problem (partially addressed by **symbolic model checking**)
+- state explosion problem (partially addressed by [Symbolic Model Checking](/posts/Symbolic-Model-Checking/))
 - only works for finite-state systems
