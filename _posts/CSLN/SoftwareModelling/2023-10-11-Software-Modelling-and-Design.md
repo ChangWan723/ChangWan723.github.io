@@ -240,3 +240,5 @@ unwanted results.
 
 - [Unified Modelling Language (UML)](/posts/Unified-Modelling-Language-(UML)/)
 - [Architectural Design](/posts/Architectural-Design/)
+- [Design Patterns](/posts/Design-Patterns/)
+- [Data Modelling](/posts/Data-Modelling/)

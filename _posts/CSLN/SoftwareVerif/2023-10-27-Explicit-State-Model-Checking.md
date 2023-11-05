@@ -176,5 +176,5 @@ The above examples are **Explicit State Model Checking**.
 - produces counter-examples
 
 **Limitations:**
-- state explosion problem – partially addressed by **symbolic model checking**
+- state explosion problem (partially addressed by **symbolic model checking**)
 - only works for finite-state systems
