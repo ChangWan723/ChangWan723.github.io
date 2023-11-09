@@ -225,7 +225,7 @@ Representation on the previous slide is **still not a Boolean formula**! We need
 
 ## BDDs and Symbolic Model Checking
 
-- **binary decision diagrams** (BDDs) are a canonical form to represent **Boolean functions**
+- [binary decision diagrams](/posts/Binary-Decision-Diagrams/) (BDDs) are a canonical form to represent **Boolean functions**
   - often more compact than traditional normal forms
   - can be manipulated efficiently
 - reachable state space can be represented as a BDD

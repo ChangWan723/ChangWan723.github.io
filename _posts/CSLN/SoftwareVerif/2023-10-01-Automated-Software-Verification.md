@@ -116,3 +116,4 @@ This module aims is to give an understanding of Automated Software Verification:
 - [Büchi Automaton](/posts/Büchi-Automaton/)
 - [Explicit State Model Checking](/posts/Explicit-State-Model-Checking/)
 - [Symbolic Model Checking](/posts/Symbolic-Model-Checking/)
+- [Binary Decision Diagrams](/posts/Binary-Decision-Diagrams/)

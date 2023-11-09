@@ -31,6 +31,7 @@ UML, or Unified Modeling Language, is a standardized visual language designed to
     * [Timing Diagram](#timing-diagram)
     * [Composite Structure Diagram](#composite-structure-diagram)
     * [Profile Diagram](#profile-diagram)
+  * [UML in Common Use](#uml-in-common-use)
   * [Related Blogs](#related-blogs)
 <!-- TOC -->
 
@@ -117,6 +118,21 @@ We need UML to:
 - **Purpose**: Provides a mechanism to customize UML models for particular domains and platforms.
 - **Components**: Stereotypes, tagged values, and constraints.
 
+## UML in Common Use
+
+Models used mainly for **requirements**:
+- **Use case diagram** shows a set of use cases and actors and their relationships.
+- **Activity diagram** (flowchart) shows the flow from one activity to another activity within a system.
+
+Models used mainly for systems **architecture**:
+• **Component diagram** shows the organisation and dependencies among a set of components.
+• **Deployment diagram** shows the configuration of processing nodes and the components that live on them.
+
+Models used mainly for **detailed design**:
+
+- **Class diagram**: shows a set of classes, interfaces, and collaborations with their relationships.
+- **Sequence diagrams**: time ordering of messages
+- **State diagrams** and **activity diagrams** also are widely used.
 
 ## Related Blogs
 
