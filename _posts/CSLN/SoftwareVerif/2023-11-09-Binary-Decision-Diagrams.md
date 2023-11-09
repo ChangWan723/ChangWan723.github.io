@@ -26,7 +26,7 @@ Binary Decision Diagrams (BDDs) are a data structure that is pivotal in the real
     * [Facilitating Operations](#facilitating-operations)
     * [Canonical Form](#canonical-form)
   * [Applications of BDDs](#applications-of-bdds)
-  * [How to get a ROBDD of Comparator?](#how-to-get-a-robdd-of-comparator-)
+  * [How to get a ROBDD of Comparator?](#how-to-get-a-robdd-of-comparator)
     * [OBDT Example of Comparator](#obdt-example-of-comparator)
     * [OBDT to ROBDD](#obdt-to-robdd)
   * [Variable Ordering of ROBDDs](#variable-ordering-of-robdds)
@@ -71,7 +71,7 @@ In the case of OBDDs, the canonical form ensures uniqueness, making them ideal f
 3. **Boolean Function Manipulation**
   - BDDs are ideal for applications involving complex Boolean function manipulations, such as those found in artificial intelligence and computational logic.
 
-## How to get a ROBDD of Comparator? 
+## How to get a ROBDD of Comparator?
 
 ### OBDT Example of Comparator
 
