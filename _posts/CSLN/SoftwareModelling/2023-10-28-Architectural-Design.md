@@ -245,7 +245,9 @@ _Web Application Architecture Using the MVC Pattern_
 ### Layered Architecture
 
 **Problem**: distinct, hierarchical classes of services. “Concentric circles” of functionality
+
 **Context**: a large system that requires decomposition (e.g., virtual machines, OSI model)
+
 **Solution**:
 - system model: hierarchy of layers, often limited visibility
 - components: collections of procedures (module)

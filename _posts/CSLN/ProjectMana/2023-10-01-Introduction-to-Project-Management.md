@@ -65,6 +65,9 @@ project to **define**, **communicate**, and meet **project goals**.
     needed?
 - Other constraints include **quality**, **risk**, and **resources**
 
+![](https://i.postimg.cc/QMvF4W8B/pm1.png){: .w-65 .shadow .rounded-10 }
+_Typical Project Constraints_
+
 ### Project Vs. Operation
 
 | Project                              | Operation (Business as Usual)                                         |
