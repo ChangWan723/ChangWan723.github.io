@@ -12,7 +12,7 @@ pin: false
 ---
 
 <!-- TOC -->
-  * [Communications Planning](#communications-planning-)
+  * [Communications Planning](#communications-planning)
     * [What Will Be Communicated?](#what-will-be-communicated)
     * [When Will the Communication Happen?](#when-will-the-communication-happen)
     * [How will it be communicated](#how-will-it-be-communicated)
@@ -21,7 +21,7 @@ pin: false
 
 ---
 
-## Communications Planning 
+## Communications Planning
 
 ###  What Will Be Communicated?
 - It is important that the performance report formats and frequencies are agreed upon with the stakeholders.

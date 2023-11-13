@@ -108,3 +108,7 @@ Alpha (Excellent) PM **spends more time on planning** and pay off in execution:
 - [Planning Projects - Scope (Process Groups)](/posts/Planning-Projects-Scope/)
 - [Planning Projects - Schedule (Process Groups)](/posts/Planning-Projects-Schedule/)
 - [Planning Projects - Cost (Process Groups)](/posts/Planning-Projects-Cost/)
+- [Planning Projects - Quality (Process Groups)](/posts/Planning-Projects-Quality/)
+- [Planning Projects - Resource (Process Groups)](/posts/Planning-Projects-Resource/)
+- [Planning Projects - Communication (Process Groups)](/posts/Planning-Projects-Communication/)
+- [Planning Projects - Risk (Process Groups)](/posts/Planning-Projects-Risk/)
