@@ -173,9 +173,10 @@ _V(s) = (turn, PC0, PC1)_
 1. Can the program reach a state where both P0 and P1 are using the shared resource? (**This would violate mutual exclusion.**)
   - sufficient to check for a state **s** with (PC0 = c0, PC1 = c1) ∈V(s).
   - We can see by looking at the diagram that (PC0 = c0, PC1 = c1) ∈V(s) does not exist. So, **it doesn't violate mutual exclusion.**
-2. Does there exist an execution of the program where **P1 never accesses the shared resource**?
+2. Does there exist an execution of the program where **P1 never accesses the shared resource**? (**This would violate fairness.**)
   - sufficient to check if a path through the graph exists which starts in an initial state and never reaches states **s** with (PC1 = c1) ∈V(s).
-  - We can see by looking at the diagram that (PC1 = c1) ∈V(s) exist. So, **P1 can access the shared resource**.
+  - We can see by looking at the diagram that the path exists. So, **P1 may never access the shared resource**.
+  - **Fairness is conditionally satisfied**: it works under the assumption that both processes are functioning correctly and have roughly equal opportunities to run. If one process fails or is much slower, the other process can monopolize the critical section, leading to unfairness or even starvation.
 
 > You might say, "I can get the answer straight away by looking at the code. And I don't need Transition Systems". This is because this mutual exclusion program is very simple. **Transition Systems are vital when it comes to more complex programs.**
 {: .prompt-tip }

@@ -6,6 +6,41 @@ tags: [computer science, software engineering, software verification, Model Chec
 pin: false
 ---
 
+---
+<center><font size='5'> Contents </font></center>
+
+---
+
+<!-- TOC -->
+  * [What is NuSMV?](#what-is-nusmv)
+    * [Key Features of NuSMV](#key-features-of-nusmv)
+    * [Applications of NuSMV](#applications-of-nusmv)
+      * [Hardware Verification](#hardware-verification)
+      * [Software Verification](#software-verification)
+      * [Protocol Verification](#protocol-verification)
+  * [Getting Started with NuSMV](#getting-started-with-nusmv)
+  * [NuSMV's modeling language](#nusmvs-modeling-language)
+    * [Declaring State Variables](#declaring-state-variables)
+    * [Assignments](#assignments)
+    * [Expressions](#expressions)
+    * [LTL specifications](#ltl-specifications)
+  * [Examples of NuSMV Model Checker](#examples-of-nusmv-model-checker)
+    * [Example 1](#example-1)
+    * [Example 2](#example-2)
+    * [Example 3](#example-3)
+    * [Example 4](#example-4)
+  * [Module Composition](#module-composition)
+    * [Synchronous Composition](#synchronous-composition)
+    * [Asynchronous Composition](#asynchronous-composition)
+  * [Modelling Programs in NuSMV](#modelling-programs-in-nusmv)
+    * [Example: Mutual Exclusion Protocol](#example-mutual-exclusion-protocol)
+      * [Mutual Exclusion Protocol in NuSMV](#mutual-exclusion-protocol-in-nusmv)
+      * [Running NUSMV (interactive mode)](#running-nusmv-interactive-mode)
+      * [NuSMV output](#nusmv-output)
+      * [Fairness Constraints](#fairness-constraints)
+<!-- TOC -->
+
+---
 
 ## What is NuSMV?
 
@@ -105,14 +140,14 @@ ASSIGN
 
 ```
 ASSIGN
-y := expression ;
+  y := expression ;
 ```
 
 or
 
 ```
 DEFINE
-y := expression ;
+  y := expression ;
 ```
 - Immediate assignments constrain the current value of a variable in terms of the current values of other variables.
 - Immediate assignments can be used to model outputs of the system.
@@ -151,8 +186,8 @@ esac
 > 
 > In general, they can represent a set of possible values.
 > - `init(var) := {a,b,c} union {x,y,z};`
->   - destination (lhs) can take any value in the set represented by the set expression (rhs)
->   - constant c is a syntactic abbreviation for singleton {c}
+>   - destination (`init(var)`) can take any value in the set represented by the set expression (`{a,b,c} union {x,y,z}`)
+>   - constant `c` is a syntactic abbreviation for singleton `{c}`
 {: .prompt-tip }
 
 
@@ -207,3 +242,219 @@ In the above picture, **the NuSMV code** and **the diagram** are meant to **repr
 
 - If the `request` is `true` (req), the diagram shows that the system must go to the `busy` state, which corresponds to the NuSMV `case` code `request : busy;`.
 - If the `request` is `false` (¬req), the system can stay in the `ready` state or transition to the `busy` state. This is the default, which corresponds to the NuSMV `case` code `TRUE : {ready, busy}`.
+
+### Example 3
+
+An SMV program can consist of one or more module declarations.
+
+![](https://i.postimg.cc/bwD81mYp/nus3.png){: .w-55 .shadow .rounded-10 }
+
+- Modules are instantiated in other modules. The instantiation is performed inside the VAR declaration of the parent module.
+- In each SMV program, there must be a module `main` (top-most one).
+- All variables declared in a module instance are visible in the module in which it has been instantiated via the dot notation (e.g. `m1.out`).
+
+### Example 4
+Module declarations may be parametric.
+
+![](https://i.postimg.cc/YqfkRvYy/nus4.png){: .w-55 .shadow .rounded-10 }
+
+- Formal parameters (`in`) are substituted with the actual parameters(`m2.out`, `m1.out`) when the module is instantiated.
+- Actual parameters can be any legal expression.
+- Actual parameters are passed by reference.
+
+## Module Composition
+
+- **synchronous composition**
+  - all assignments are executed in parallel and synchronously
+  - a single step of the resulting model corresponds to a step in each of the components
+
+- **asynchronous composition**
+  - a step of the composition is a step by exactly one process
+  - variables not assigned in that process are left unchanged
+
+### Synchronous Composition
+
+By default, the composition of modules is synchronous:
+- all modules move at each step
+
+![](https://i.postimg.cc/76yHNdmS/nus5.png){: .w-55 .shadow .rounded-10 }
+
+![](https://i.postimg.cc/Xq16tzcH/nus6.png){: .w-55 .shadow .rounded-10 }
+_a possible execution (Bolded text indicates a change)_
+
+### Asynchronous Composition
+
+- Asynchronous composition can be specified using the keyword `process`
+- In asynchronous composition, one process moves at each step.
+
+``` 
+MODULE cell(input) VAR
+  val : {red, green, blue};
+  ASSIGN
+    next(val) := {val, input};
+MODULE main
+  VAR
+    c1 : process cell(c3.val);
+    c2 : process cell(c1.val);
+    c3 : process cell(c2.val);
+```
+
+![](https://i.postimg.cc/zvcFsCLS/nus7.png){: .w-55 .shadow .rounded-10 }
+_a possible execution_
+
+The execution of Asynchronous Composition is more unstable.
+
+## Modelling Programs in NuSMV
+
+Given the following piece of code, computing the GCD of a and b, how do we model and verify it with NuSMV?
+
+```c++
+void main() {
+// initialization of a and b
+  while (a!=b) {
+    if (a>b)
+      a=a-b;
+    else
+      b=b-a;
+  }
+// GCD=a=b
+}
+```
+
+---
+
+**Step 1:**
+
+label pc (program counter)
+
+![](https://i.postimg.cc/G2LyQXLg/nus8.png){: .w-55 .shadow .rounded-10 }
+
+---
+
+**Step 2:**
+
+encode the transition system using `ASSIGN`
+
+![](https://i.postimg.cc/G2xZ0m1h/nus9.png){: .w-55 .shadow .rounded-10 }
+
+---
+
+### Example: Mutual Exclusion Protocol
+
+![](https://i.postimg.cc/6pGWknbW/nus10.png){: .w-55 .shadow .rounded-10 }
+
+####  Mutual Exclusion Protocol in NuSMV
+
+```
+MODULE process1(a,b,turn)
+VAR
+  pc: {out, wait, cs};
+ASSIGN
+  init(pc) := out;
+  next(pc) := case
+    pc=out : wait;
+    pc=wait & (!b | !turn) : cs;
+    pc=cs : out;
+    TRUE : pc;
+  esac;
+  
+  next(turn) := case
+    pc=out : TRUE;
+    TRUE : turn;
+  esac;
+  
+  next(a) := case
+    pc=out : TRUE;
+    pc=cs : FALSE;
+    TRUE : a;
+  esac;
+  
+  next(b) := b;
+  
+MODULE process2(a,b,turn)
+VAR
+  pc: {out, wait, cs};
+ASSIGN
+  init(pc) := out;
+  next(pc) := case
+    pc=out : wait;
+    pc=wait & (!a | turn) : cs;
+    pc=cs : out;
+    TRUE : pc;
+  esac;
+  
+  next(turn) := case
+    pc=out : FALSE;
+    TRUE : turn;
+  esac;
+  
+  next(b) := case
+    pc=out : TRUE;
+    pc=cs : FALSE;
+    TRUE : b;
+  esac;
+  
+  next(a) := a;
+
+MODULE main
+VAR
+  a : boolean;
+  b : boolean;
+  turn : boolean;
+  p1 : process process1(a,b,turn);
+  p2 : process process2(a,b,turn);
+ASSIGN
+  init(a) := FALSE;
+  init(b) := FALSE;
+LTLSPEC
+  G(!(p1.pc=cs & p2.pc=cs))
+LTLSPEC
+  G(a -> F(p1.pc=cs)) & G(b -> F(p2.pc=cs))
+```
+
+> The `LTLSPEC` is used to verify:
+> 1. **Mutual Exclusion**: The critical section(cs) is not entered by more than one process at the same time.
+> 2. **Fairness**: If a process is waiting to enter the critical section(cs), it will eventually be allowed to enter.
+{: .prompt-tip }
+
+#### Running NUSMV (interactive mode)
+
+``` 
+% NuSMV -int add.smv
+NuSMV > go
+NuSMV > check_ltlspec
+NuSMV > quit
+```
+
+- `go` abbreviates the sequence of commands `read_model`, `flatten_hierarchy`, `encode_variables`, `build_model`
+- for command options, use -h or look in the NuSMV User Manual
+
+
+#### NuSMV output
+
+![](https://i.postimg.cc/0NW5GdVP/nus11.png){: .w-55 .shadow .rounded-10 }
+
+#### Fairness Constraints
+
+If we add the following declaration to `process1`:
+
+``` 
+COMPASSION
+  (pc=wait & (!b | !turn), pc=cs);
+```
+
+And we also add the following declaration to `process2`:
+
+``` 
+COMPASSION
+  (pc=wait & (!a | turn), pc=cs);
+```
+
+then: `( G (a -> F p1.pc = cs) & G (b -> F p2.pc = cs))` is true!
+
+---
+
+> `COMPASSION (expr1, expr2)`: restricts attention to executions where if `expr1` is true infinitely often, then `expr2` is true infinitely often.
+> 
+> In essence, the `COMPASSION` is to **ensure that a process is not infinitely prevented** from entering the critical section **due to the system's unfairness**. However, access to the critical region still requires that **the process must satisfy the conditions for entry**.
+{: .prompt-tip }
