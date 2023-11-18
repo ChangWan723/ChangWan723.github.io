@@ -37,30 +37,42 @@ The JVM divides memory into several areas, each serving a specific purpose:
 
 ### Heap Memory
 
-This is where the JVM stores objects and JRE classes.
-- **Garbage Collection**: It is the main area for garbage collection, where objects no longer in use are identified and removed.
-- **Size Management**: The size of the heap memory can be adjusted with `-Xms` (initial size) and `-Xmx` (maximum size) JVM arguments.
+- **Purpose**: This is the runtime data area from which memory for **all class instances** and **arrays** is allocated. The heap is created when the JVM starts up.
+- **Stored Data**: Objects and their instance variables, as well as array elements, are stored here. The heap is shared among all Java Virtual Machine (JVM) threads.
+- **Lifetime**: The memory for objects is reclaimed by an automatic memory management system known as a garbage collector.
 
 ### Stack Memory
 
-Each thread in a Java application has its own stack, used for storing local variables and method call details.
-- **Lifespan**: The stack memory lives only as long as the corresponding thread runs.
-- **Overflow Risk**: Excessive memory usage in this area can lead to a `StackOverflowError`.
+- **Purpose**: This memory is used for execution of threads. It contains method-specific **values that are short-lived** and **references to other objects in the heap** that are getting referred from the method.
+- **Stored Data**: Local variables, partial results, and method invocation details (like return address, method arguments) are stored in stack memory. Each thread has:
+  - **LVA**: Local Variable Array
+    - This is the part of the stack frame that contains all the local variables used by the method being executed. In Java, local variables are scoped to the method in which they are defined and are not accessible outside it.
+  - **OS**: Operand Stack
+    - This is a working area of the stack frame where intermediate results of expressions are stored during method execution. The JVM is a stack-based machine, and the operand stack is used as a runtime workspace to perform operations like addition, multiplication, and method invocation.
+  - **FD**: Frame Data
+    - This includes the method's return address and other information used to manage and restore the state of the method invocation. The frame data helps in restoring the state when a method call returns. It ensures that after a method call is completed, the execution environment is correctly restored to the state it was in before the method was called.
+
+- **Lifetime**: Each thread has its own stack that is created when the thread is created. The stack is LIFO (Last In First Out) structure and is swift.
 
 ### Method Area
 
-This area stores class-level information such as class names, method data, and static variables.
-- **Shared Resource**: It's shared among all threads.
+- **Purpose**: It stores **per-class structures** such as the runtime constant pool, field, and method data, and the code for methods and constructors.
+- **Stored Data**: Class structure (like OOP concepts, constructor and method code, static variables), constant pool (constant values referenced within the class), and static variables.
+- **Lifetime**: It's initialized on virtual machine startup, and all threads share this area.
 
 ### Program Counter (PC) Registers
 
-These registers hold the address of the JVM instruction currently being executed.
-- **Thread-Specific**: Each thread has its own PC register.
-
+- **Purpose**: Each JVM thread has its own PC (program counter) register. It holds the address of the JVM instruction currently being executed.
+- **Stored Data**: The address of the currently executing JVM instruction. If the method being invoked is native, the PC register is undefined.
+- **Lifetime**: It's an essential part of thread life cycle and exists as long as the thread is alive.
 ### Native Method Stacks
 
-These stacks are used for native methods written in languages other than Java.
-- **Usage**: They are less commonly used but crucial for applications that rely on native code.
+- **Purpose**: This is not a Java stack. It's used for native methods when they are called (methods written in a language other than Java, like C or C++, and are accessed using Java Native Interface).
+- **Stored Data**: Instruction set for executing native code.
+- **Lifetime**: As with the Java stack, each thread has its own native stack, created when the thread is created.
+
+![](https://i.postimg.cc/52Y2S5S5/mmj1.png){: .w-100 .shadow .rounded-10 }
+_JVM Memory Structure_
 
 ## Optimizing JVM Memory Usage
 
@@ -78,3 +90,4 @@ These stacks are used for native methods written in languages other than Java.
 
 - **Analysis**: Analyze memory dumps to understand what led to `OutOfMemoryError`.
 - **Heap Size Adjustment**: Increase the heap size if necessary, but also consider the impact on garbage collection times.
+

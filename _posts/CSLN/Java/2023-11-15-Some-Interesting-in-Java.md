@@ -6,7 +6,7 @@ tags: [computer science, software engineering, Java]
 pin: false
 ---
 
-Java has some interesting counter-intuitive code. If you run this code, it is possible that something unexpected will happen. By understanding them, we can avoid some bugs and get a better understanding of Java.
+Java has some interesting and counter-intuitive code. If you run this code, it is possible that something unexpected will happen. By understanding them, we can avoid some bugs and get a better understanding of Java.
 
 ---
 <center><font size='5'> Contents </font></center>
@@ -24,6 +24,8 @@ Java has some interesting counter-intuitive code. If you run this code, it is po
     * [Example 2 (Double)](#example-2-double)
     * [Example 4 (`equals()`)](#example-4-equals)
     * [Example 3 (Integer and Long)](#example-3-integer-and-long)
+  * [Addition of different types](#addition-of-different-types)
+  * [Reference Copy and Shallow Copy](#reference-copy-and-shallow-copy)
 <!-- TOC -->
 
 ---
@@ -300,13 +302,106 @@ public static void main(String[] args) {
   - This checks if `c` (an `Integer` with value 3) is equal to the result of `a+b` (which also results in 3). In Java, the `+` operation between two `Integer` objects results in an `int` primitive. Since `c` is auto-unboxed to an `int`, the comparison is between two `int` values. The result is `true`.
 
 - `System.out.println(c.equals(a+b));`
-  - This checks if the `Integer` object `c` is equal to the `Integer` object resulting from `a+b`. Here, `a+b` is auto-boxed back to an `Integer` object. The `equals()` method in the `Integer` class checks for value equality, and since both values are 3, the result is `true`.
+  - This checks if the `Integer` object `c` is equal to the `Integer` object resulting from `a+b`. Here, `a+b` is auto-boxed back to an `Integer` object. (Auto-boxed is triggered by `equals()`) The `equals()` method in the `Integer` class checks for value equality, and since both values are 3, the result is `true`.
 
 - `System.out.println(g==(a+b));`
-  - This checks if `g` (a `Long` with value 3) is equal to `a+b` (resulting in 3). Here, `a+b` is promoted to a `long` for the comparison, and since their values are the same, the result is `true`. (Automatic unboxing is triggered)
+  - This checks if `g` (a `Long` with value 3) is equal to `a+b` (resulting in 3). Here, `a+b` is promoted to a `long` for the comparison, and since their values are the same, the result is `true`. (Automatic unboxing is triggered by `+` and `==`)
 
 - `System.out.println(g.equals(a+b));`
   - This is a bit tricky. `g.equals(a+b)` checks if the `Long` object `g` is equal to the `Integer` object resulting from `a+b`. In Java, **`equals()` checks for both value and type equality**. Since the types are different (`Long` vs `Integer`), the result is `false`.
 
 - `System.out.println(g.equals(a+h));`
   - This checks if the `Long` object `g` is equal to the result of `a+h`. Here, `a+h` results in a `Long` object. Since both are `Long` objects with the same value (3), the result is `true`.
+
+## Addition of different types
+
+```java 
+public static void main(String[] args) {
+    Object object1 = 1 + 1 + "1";
+    Object object2 = "1" + 1 + 1;
+
+    System.out.println(object1);
+    System.out.println(object2);
+}
+```
+
+result:
+
+``` 
+21
+111
+
+```
+
+- `1 + 1 + "1"`:
+  - **The addition operations are evaluated from left to right.**
+  - First, `1 + 1` is evaluated (because they are two integer literals), resulting in `2`.
+  - Then `2` (which is now an integer) is added to `"1"` (a string literal). In Java, **when you add an integer to a string, the integer is converted to a string** and the two strings are concatenated.
+  - So, the result is the string `"21"`.
+
+- `"1" + 1 + 1`:
+  - Again, evaluation is from left to right.
+  - First, `"1"` (a string literal) is concatenated with `1` (an integer), which results in the string `"11"` because the integer is converted to a string.
+  - Then, the string `"11"` is concatenated with the next `1` (an integer), resulting in the string `"111"`.
+
+
+## Reference Copy and Shallow Copy
+
+```java 
+class ExampleObject implements Cloneable{
+    public int primitiveValue = 1;
+
+    public int[] arrValue = {1};
+
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+```
+
+``` 
+public static void main(String[] args) {
+    ExampleObject original = new ExampleObject(); // primitiveValue = 1, and arrValue[0] = 1
+    
+    ExampleObject copied = original; // Reference Copy
+    copied.primitiveValue = 2;
+    copied.arrValue[0] = 2;
+    
+    System.out.println(original.primitiveValue);
+    System.out.println(original.arrValue[0]);
+}
+```
+
+result:
+``` 
+2
+2
+
+```
+
+> After reference copy, both reference variables **point to the same object in memory**, meaning **any changes done through one reference are reflected in the other**.
+{: .prompt-tip }
+
+
+``` 
+public static void main(String[] args) throws CloneNotSupportedException {
+    ExampleObject original = new ExampleObject(); // primitiveValue = 1, and arrValue[0] = 1
+
+    ExampleObject copied = (ExampleObject) original.clone(); // Shallow Copy
+    copied.primitiveValue = 2;
+    copied.arrValue[0] = 2;
+
+    System.out.println(original.primitiveValue);
+    System.out.println(original.arrValue[0]);
+}
+```
+
+result:
+``` 
+1
+2
+
+```
+
+> A shallow copy of an object is **a new object** with copies of the values of the original object's fields. If the field value is a **primitive type**, a **direct copy of the value is made**. If the field is a reference to an **object**(arrays are objects in Java), it only **copies the reference**.
+{: .prompt-tip }

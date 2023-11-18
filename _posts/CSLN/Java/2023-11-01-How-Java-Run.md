@@ -92,7 +92,7 @@ During runtime, whenever a Java method is called, the JVM generates a stack fram
 
 When exiting the currently executing method, no matter if it returns normally or abnormally, the JVM pops the current stack frame of the current thread and discards it.
 
-![](https://i.postimg.cc/pLRPNgkV/jvm2.png){: .w-100 .shadow .rounded-10 }
+![](https://i.postimg.cc/wB6QsPgb/jvm3.png){: .w-100 .shadow .rounded-10 }
 
 
 
