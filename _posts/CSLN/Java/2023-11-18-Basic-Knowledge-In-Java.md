@@ -1,5 +1,5 @@
 ---
-title: Basic Knowledge in Java
+title: Some Java basics
 date: 2023-11-18 10:00:00 +0530
 categories: [(CS) Learning Note, Java]
 tags: [computer science, software engineering, Java]
@@ -12,7 +12,7 @@ pin: false
 ---
 
 <!-- TOC -->
-  * [What are the characteristics of Java?](#what-are-the-characteristics-of-java-)
+  * [What are the characteristics of Java?](#what-are-the-characteristics-of-java)
     * [Advantage](#advantage)
     * [Limitation](#limitation)
   * [What are reference copy, shallow copy and deep copy?](#what-are-reference-copy-shallow-copy-and-deep-copy)
@@ -20,7 +20,7 @@ pin: false
 
 ---
 
-## What are the characteristics of Java? 
+## What are the characteristics of Java?
 
 ### Advantage
 
