@@ -31,6 +31,7 @@ Binary Decision Diagrams (BDDs) are a data structure that is pivotal in the real
     * [OBDT to ROBDD](#obdt-to-robdd)
   * [Variable Ordering of ROBDDs](#variable-ordering-of-robdds)
   * [Logical Operations on ROBDDs](#logical-operations-on-robdds)
+  * [Some Limitations in Working with ROBDDs](#some-limitations-in-working-with-robdds)
 <!-- TOC -->
 
 ---
@@ -144,3 +145,9 @@ There are Boolean functions that have **exponential size** OBDDs for any variabl
 ![](https://i.postimg.cc/bwwgtbs5/bdd10.png){: .w-55 .shadow .rounded-10 }
 _ROBDD Operations_
 
+## Some Limitations in Working with ROBDDs
+
+- they can often become large
+- variable ordering must be uniform along paths
+- selecting the “right” variable ordering is crucial
+- in some cases, no space-efficient variable ordering exists

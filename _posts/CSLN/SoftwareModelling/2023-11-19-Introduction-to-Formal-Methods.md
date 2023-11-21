@@ -41,7 +41,7 @@ pin: false
 
 In V model, many specification errors are detected only after a lot of development has been undertaken:
 
-![](https://i.postimg.cc/GtSWrhYT/fm1.png){: .w-50 .shadow .rounded-10 }
+![](https://i.postimg.cc/GtSWrhYT/fm1.png){: .w-80 .shadow .rounded-10 }
 
 So, defects discovered too late:
 
@@ -79,7 +79,7 @@ So, defects discovered too late:
   - Focus on what a system does (its purpose) at early stages of modelling
   - Incremental analysis and design: answering the question of how later on
 
-![](https://i.postimg.cc/wvdycLWF/fm2.png){: .w-50 .shadow .rounded-10 }
+![](https://i.postimg.cc/wvdycLWF/fm2.png){: .w-80 .shadow .rounded-10 }
 
 
 ### Testing vs Proving
@@ -137,7 +137,7 @@ So, defects discovered too late:
 ### Modelling REQ1
 
 REQ1: We need a money bank for storing and reclaiming finite, non-negative funds for a coffee club.
-![](https://i.postimg.cc/Jhv2bG74/fm3.png){: .w-50 .shadow .rounded-10 }
+![](https://i.postimg.cc/Jhv2bG74/fm3.png){: .w-80 .shadow .rounded-10 }
 
 - The invariants specify the properties that the variables (the state) must satisfy before and after every event. 
 
@@ -157,20 +157,20 @@ REQ1: We need a money bank for storing and reclaiming finite, non-negative funds
 
 - Variables do not have any known value before initialisation.
 
-![](https://i.postimg.cc/nLdtNvKF/fm4.png){: .w-50 .shadow .rounded-10 }
+![](https://i.postimg.cc/nLdtNvKF/fm4.png){: .w-80 .shadow .rounded-10 }
 
 ### Modelling REQ2
 
 REQ2: We need an operation for adding money to the money bank. 
 
-![](https://i.postimg.cc/yxK4ZvsT/fm5.png){: .w-50 .shadow .rounded-10 }
+![](https://i.postimg.cc/yxK4ZvsT/fm5.png){: .w-80 .shadow .rounded-10 }
 
 ### Modelling REQ3
 
 REQ3: We need an operation for removing money from the money bank; 
 - but it cannot remove more money than the money bank contains.
 
-![](https://i.postimg.cc/xds3HCQp/fm6.png){: .w-50 .shadow .rounded-10 }
+![](https://i.postimg.cc/xds3HCQp/fm6.png){: .w-80 .shadow .rounded-10 }
 
 ## Operational Interpretation of Event-B
 

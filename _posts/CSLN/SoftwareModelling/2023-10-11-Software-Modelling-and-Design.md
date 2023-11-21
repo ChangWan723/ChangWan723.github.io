@@ -242,3 +242,4 @@ unwanted results.
 - [Architectural Design](/posts/Architectural-Design/)
 - [Design Patterns](/posts/Design-Patterns/)
 - [Data Modelling](/posts/Data-Modelling/)
+- [Introduction to Formal Methods & Event-B](/posts/Automated-Software-Verification/)
