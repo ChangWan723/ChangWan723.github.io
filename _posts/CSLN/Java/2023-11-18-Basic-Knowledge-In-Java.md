@@ -16,6 +16,7 @@ pin: false
     * [Advantage](#advantage)
     * [Limitation](#limitation)
   * [What are reference copy, shallow copy and deep copy?](#what-are-reference-copy-shallow-copy-and-deep-copy)
+  * [What is the Garbage Collector and how does it work?](#what-is-the-garbage-collector-and-how-does-it-work)
 <!-- TOC -->
 
 ---
@@ -39,7 +40,6 @@ pin: false
 1. **Performance Overhead**: Java can be slower than native languages such as C or C++ because Java code runs on a JVM. The level of abstraction provided by the JVM can result in additional overhead during execution, although just-in-time (JIT) compilers and advanced garbage collection techniques have significantly narrowed this gap.
 2. **Memory Consumption**: Java's garbage collection and object-oriented overhead can lead to greater memory consumption compared to languages where the developer has direct control over memory allocation and cleanup.
 3. **Lesser Control Over Lower Level Features**: Java does not provide direct access to low-level system details that are available in languages like C++. This lack of control can be a hindrance when developing applications that require high performance and system-level control.
-
 
 ## What are reference copy, shallow copy and deep copy?
 
@@ -97,4 +97,25 @@ DeepCopyExample copied = (DeepCopyExample) original.clone();
 
 ![](https://i.postimg.cc/2SPpn7mJ/bkj1.png){: .w-100 .shadow .rounded-10 }
 
+## What is the Garbage Collector and how does it work?
 
+The Garbage Collector (GC) in Java is a form of automatic memory management that aims to reclaim memory occupied by objects that are no longer in use by the program. This is crucial in Java because it prevents memory leaks and manages heap memory, where Java objects are stored.
+
+Here's an overview of how it works:
+
+- **Object Creation and Heap Allocation**
+  - In Java, when you create an object using the new keyword, it's allocated memory in the heap. This is the area of memory used for dynamic memory allocation.
+- **Reachability Analysis**
+  - The garbage collector periodically checks for objects that are no longer reachable from any references in the executing code. An object is considered "live" or "reachable" if it's accessible through at least one chain of references from any active part of the program, like stack variables (local variables, parameters), static variables, or active Java threads.
+- **Mark and Sweep**
+  - **Mark**: The GC traverses from the root nodes (like static variables, thread stacks) and marks all reachable objects.
+  - **Sweep**: After marking, the GC sweeps through the heap and removes objects that were not marked, thus reclaiming their memory.
+- **Generational Collection**: Java GC often uses a generational memory model, where the heap is divided into:
+  - **Young Generation**: Where new objects are created. It's further divided into one Eden space and two Survivor spaces.
+  - **Old Generation**: For objects that have survived multiple GC cycles in the Young Generation.
+  - **Permanent Generation (or Metaspace in newer versions)**: Holds metadata like class definitions.
+- **Garbage Collection Phases**
+  - **Minor GC**: Cleans the Young Generation when it’s full. It's relatively fast but frequent.
+  - **Major (or Full) GC**: Cleans the Old Generation. It's usually slower and can cause noticeable pauses in the application.
+
+By managing memory automatically, Java's Garbage Collector helps avoid common problems like memory leaks and dangling pointers, which are common in languages with manual memory management. However, it's also important for developers to understand GC behavior to write efficient and performance-optimized Java applications.

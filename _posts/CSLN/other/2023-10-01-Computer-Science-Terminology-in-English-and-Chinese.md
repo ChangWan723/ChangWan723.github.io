@@ -16,6 +16,7 @@ This blog shows some common computer terminology in English and Chinese. To faci
 ---
 
 <!-- TOC -->
+  * [Commonly Used](#commonly-used)
   * [design, 设计](#design-设计)
     * [design pattern, 设计模式](#design-pattern-设计模式)
     * [design principle, 设计原则](#design-principle-设计原则)
@@ -45,6 +46,17 @@ This blog shows some common computer terminology in English and Chinese. To faci
 
 ---
 
+## Commonly Used
+
+invocate 调用
+
+instance 实例
+parameter 参数
+variable 变量
+
+synchronous 同步
+asynchronous 异步
+primitive type 原始类型,基本类型
 
 
 ## design, 设计
