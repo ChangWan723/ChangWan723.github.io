@@ -23,6 +23,7 @@ pin: false
   * [Access Levels of Different Modifiers in Java](#access-levels-of-different-modifiers-in-java)
   * [What is static block in Java?](#what-is-static-block-in-java)
   * [What is a Comparator and Comparable in Java?](#what-is-a-comparator-and-comparable-in-java)
+  * [What are the Strong Reference，Soft Reference，Weak Reference and Phantom Reference in Java?](#what-are-the-strong-referencesoft-referenceweak-reference-and-phantom-reference-in-java)
 <!-- TOC -->
 
 ---
@@ -116,6 +117,11 @@ Here's an overview of how it works:
 - **Mark and Sweep**
   - **Mark**: The GC traverses from the root nodes (like static variables, thread stacks) and marks all reachable objects.
   - **Sweep**: After marking, the GC sweeps through the heap and removes objects that were not marked, thus reclaiming their memory.
+- **Types of Collectors**:
+  - **Serial Garbage Collector**: Simple, for single-threaded environments.
+  - **Parallel Garbage Collector**: Also known as Throughput Collector, it uses multiple threads for the GC process and is suitable for multi-threaded applications.
+  - **Concurrent Mark Sweep (CMS) Collector**: Minimizes application pause times by doing most of the garbage collection work concurrently with the application threads.
+  - **G1 Garbage Collector**: Designed for large heap sizes, it divides the heap into regions and prioritizes collecting regions with the most garbage first.
 - **Generational Collection**: Java GC often uses a generational memory model, where the heap is divided into:
   - **Young Generation**: Where new objects are created. It's further divided into one Eden space and two Survivor spaces.
   - **Old Generation**: For objects that have survived multiple GC cycles in the Young Generation.
@@ -239,3 +245,40 @@ Collections.sort(people, new NameComparator()); // Sorts by name
 ```
 
 In summary, `Comparable` is for defining a natural, usually single, ordering for objects of a class, **intrinsic to the class itself**. `Comparator`, on the other hand, is **for externalized orderings** that can be different from.
+
+## What are the Strong Reference，Soft Reference，Weak Reference and Phantom Reference in Java?
+
+
+- **Strong Reference** 
+  - Strong references are the most common type of references in Java. Any object actively referenced in the application is considered strongly referenced.
+  - Strong references are straightforward and natural in programming. They ensure that objects remain in memory as long as needed by the application.
+
+```java
+Object strongObject = new Object();
+```
+
+- **Soft Reference**
+  - Soft references are used for memory-sensitive caching. Objects with only soft references are cleared by the garbage collector in response to memory demand.
+  - Soft references are ideal for caches that should be cleared when memory is needed. They help in avoiding `OutOfMemoryError` by allowing the garbage collector to reclaim space if necessary.
+
+```java
+SoftReference<Object> softReference = new SoftReference<>(new Object());
+```
+
+- **Weak Reference** 
+  - Weak references are weaker than soft references. The garbage collector can reclaim an object with only weak references at any time.
+  - Weak references are useful for metadata, mappings, or listeners that should not prevent their referents from being garbage collected. They are often used in scenarios like caching, tracking, and managing resources that can be recreated.
+
+```java
+WeakReference<Object> weakReference = new WeakReference<>(new Object());
+```
+
+- **Phantom Reference**
+  - Phantom references are the weakest type of references. An object with a phantom reference is considered to be already finalized but not reclaimed.
+  - Phantom references are used for post-mortem clean-up actions or pre-recycling actions. They allow for safe cleanup operations without the risk of `OutOfMemoryError`.
+
+
+```java
+PhantomReference<Object> phantomReference = new PhantomReference<>(new Object(), referenceQueue);
+```
+

@@ -51,13 +51,20 @@ This blog shows some common computer terminology in English and Chinese. To faci
 invocate 调用
 
 instance 实例
+
 parameter 参数
+
 variable 变量
 
 synchronous 同步
+
 asynchronous 异步
+
 primitive type 原始类型,基本类型
 
+explicit 显式
+
+implicit 隐式
 
 ## design, 设计
 
