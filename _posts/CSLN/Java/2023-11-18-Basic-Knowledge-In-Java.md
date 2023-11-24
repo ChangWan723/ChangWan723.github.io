@@ -17,6 +17,12 @@ pin: false
     * [Limitation](#limitation)
   * [What are reference copy, shallow copy and deep copy?](#what-are-reference-copy-shallow-copy-and-deep-copy)
   * [What is the Garbage Collector and how does it work?](#what-is-the-garbage-collector-and-how-does-it-work)
+  * [What is the difference between abstract class and interface in Java?](#what-is-the-difference-between-abstract-class-and-interface-in-java)
+  * [What is generic in Java? Why do we need to use it?](#what-is-generic-in-java-why-do-we-need-to-use-it)
+  * [How is the `final` applied differently between variables, methods, and classes in Java?](#how-is-the-final-applied-differently-between-variables-methods-and-classes-in-java)
+  * [Access Levels of Different Modifiers in Java](#access-levels-of-different-modifiers-in-java)
+  * [What is static block in Java?](#what-is-static-block-in-java)
+  * [What is a Comparator and Comparable in Java?](#what-is-a-comparator-and-comparable-in-java)
 <!-- TOC -->
 
 ---
@@ -119,3 +125,117 @@ Here's an overview of how it works:
   - **Major (or Full) GC**: Cleans the Old Generation. It's usually slower and can cause noticeable pauses in the application.
 
 By managing memory automatically, Java's Garbage Collector helps avoid common problems like memory leaks and dangling pointers, which are common in languages with manual memory management. However, it's also important for developers to understand GC behavior to write efficient and performance-optimized Java applications.
+
+## What is the difference between abstract class and interface in Java?
+
+In Java, abstract classes and interfaces are used for different purposes and have key differences:
+
+- **Usage Intent**
+  - Abstract Class: Sharing code (combining common features of subclasses). 
+  - Interface: Defining a contract (what you can see from outside the class).
+- **Method Implementation**:
+  - Abstract Class: Can have both abstract (no implementation) and concrete (with implementation) methods.
+  - Interface: Originally only allowed abstract methods, but since Java 8, they can also include default and static methods with implementations.
+- **Fields**:
+  - Abstract Class: Can have instance variables and can be non-static and non-final.
+  - Interface: All fields are implicitly public, static, and final.
+- **Inheritance**:
+  - Abstract Class: A class can extend only one abstract class, supporting single inheritance.
+  - Interface: A class can implement multiple interfaces, allowing for multiple inheritance of type.
+- **Constructors**:
+  - Abstract Class: Can have constructors.
+  - Interface: Cannot have constructors.
+- **Access Modifiers**:
+  - Abstract Class: Members can have any access modifier (private, protected, public).
+  - Interface: Before Java 9, all methods were implicitly public; Java 9 introduced private methods in interfaces.
+
+## What is generic in Java? Why do we need to use it?
+
+Generics in Java are a feature that allows you to write classes, interfaces, and methods where the **type of data is specified as a parameter**. 
+
+Using generics, you can create code that is more flexible and safer, reducing runtime errors and the need for casts. 
+
+Here's why generics are important:
+1. **Type Safety**: Generics enforce type safety by allowing you to specify the exact data types to be used. This reduces errors at runtime because any attempt to use the wrong type can be caught at compile time.
+2. **Elimination of Casts**: Without generics, you had to cast objects retrieved from a collection. With generics, you specify the type of objects stored in a collection, eliminating the need for casting and reducing the chance of runtime errors.
+3. **Code Reuse**: Generics enable you to write code that is independent of data types. For example, a single generic class like ArrayList<T> can be used with any object type, promoting code reuse.
+
+## How is the `final` applied differently between variables, methods, and classes in Java?
+
+- **Final Variables**: 
+  - When applied to a variable, `final` indicates that the variable's value cannot be changed once it is initialized.
+  - Final variables can be initialised either at the time of declaration or in the constructor for instance variables.
+  - It can be used to primitive types and object references:
+    - For primitive types, this means the value itself cannot change.
+    - For object references, it means the reference cannot change to point to a different object, although the object's state (its fields) can still be modified unless those fields are also `final`.
+- Final Methods:
+  - A `final` method cannot be overridden by subclasses.
+  - This is used to prevent a change in the behaviour of the method, ensuring consistency across different subclasses.
+  - Final methods can be inherited but maintain their finality.
+- Final Classes:
+  - A `final` class cannot be subclassed.
+  - This is often done to maintain the integrity of the class and ensure that its implementation is not altered through inheritance.
+  - All methods in a final class can implicitly be considered as final, but fields need to be explicitly marked as final to have the constant behaviour.
+
+## Access Levels of Different Modifiers in Java
+
+| Modifier    | 	Class | 	Package | 	Subclass | 	World |
+|-------------|--------|----------|-----------|--------|
+| public      | 	Y	    | Y	       | Y         | 	Y     |
+| protected   | 	Y	    | Y        | 	Y	       | N      |
+| no modifier | 	Y	    | Y        | 	N        | 	N     |
+| private     | 	Y     | 	N       | 	N        | 	N     |
+
+
+## What is static block in Java?
+
+In Java, a static block, also known as a static initialisation block, is a block of code that **is executed when the class is first loaded into the JVM** (Java Virtual Machine). Static blocks are used to initialise static variables or to perform static initializations that require more than a single line of code. 
+
+## What is a Comparator and Comparable in Java?
+
+In Java, Comparator and Comparable are two interfaces used for defining custom orderings of objects, but they are used in different contexts:
+
+- Comparable Interface:
+  - **Purpose**: The Comparable interface is used to define the natural ordering of objects of a class. It must be implemented by the class whose objects you want to sort.
+  - **Method**: This interface contains a single method, `compareTo(T o)`, that compares this object with the specified object for order.
+  - **Usage**: When a class implements `Comparable`, it gives a way to compare its instances. For example, if you have a `Person` class, implementing Comparable could allow you to define a natural order (e.g., by age or name).
+  - **Collections Sorting**: Classes that implement `Comparable` can be easily sorted using utility methods like `Collections.sort()` or `Arrays.sort()` without specifying any additional comparator.
+
+```java 
+public class Person implements Comparable<Person> {
+    private String name;
+    private int age;
+
+    // Constructor, getters, and setters
+
+    @Override
+    public int compareTo(Person other) {
+        return this.age - other.age; // Ascending order of age
+    }
+}
+
+// Usage:
+List<Person> people = Arrays.asList(new Person("Alice", 30), new Person("Bob", 25));
+Collections.sort(people); // Sorts by natural ordering (age)
+```
+
+- Comparator Interface:
+  - **Purpose**: The `Comparator` interface is used to define an ordering, but it's separate from the objects to be ordered. It allows defining multiple different orderings for a class.
+  - **Method**: The interface defines the `compare(T o1, T o2)` method used to compare two objects of the same type.
+  - **Usage**: It’s useful when you need to sort instances of a class that did not implement `Comparable`, or you need a different sorting order than the one provided by `Comparable`.
+  - **Collections Sorting**: You can pass a `Comparator` instance to utility methods like `Collections.sort()` or `Arrays.sort()` to sort based on the order defined by the Comparator.
+
+```java 
+public class NameComparator implements Comparator<Person> {
+    @Override
+    public int compare(Person p1, Person p2) {
+        return p1.getName().compareTo(p2.getName()); // Ascending order of names
+    }
+}
+
+// Usage:
+List<Person> people = Arrays.asList(new Person("Alice", 30), new Person("Bob", 25));
+Collections.sort(people, new NameComparator()); // Sorts by name
+```
+
+In summary, `Comparable` is for defining a natural, usually single, ordering for objects of a class, **intrinsic to the class itself**. `Comparator`, on the other hand, is **for externalized orderings** that can be different from.

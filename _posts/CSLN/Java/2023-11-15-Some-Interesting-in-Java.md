@@ -308,10 +308,19 @@ public static void main(String[] args) {
   - This checks if `g` (a `Long` with value 3) is equal to `a+b` (resulting in 3). Here, `a+b` is promoted to a `long` for the comparison, and since their values are the same, the result is `true`. (Automatic unboxing is triggered by `+` and `==`)
 
 - `System.out.println(g.equals(a+b));`
-  - This is a bit tricky. `g.equals(a+b)` checks if the `Long` object `g` is equal to the `Integer` object resulting from `a+b`. In Java, **`equals()` checks for both value and type equality**. Since the types are different (`Long` vs `Integer`), the result is `false`.
+  - This is a bit tricky. `g.equals(a+b)` checks if the `Long` object `g` is equal to the `Integer` object resulting from `a+b`. In Java, **`Long.equals()` checks for both value and type equality**. Since the types are different (`Long` vs `Integer`), the result is `false`.
 
 - `System.out.println(g.equals(a+h));`
   - This checks if the `Long` object `g` is equal to the result of `a+h`. Here, `a+h` results in a `Long` object. Since both are `Long` objects with the same value (3), the result is `true`.
+
+> - `==`: 
+>   - **Usage with Primitive Types**: When used with primitive types (like int, char, double), it compares their values.
+>   - **Usage with Objects**: When used with objects, it checks if both references are pointing to the same object, not comparing the actual content of the objects.
+>
+> - `.equals()`:
+>   - **Usage**: This method must be used for comparing the content of objects. The behavior of `.equals()` is class-specific (it depends on how the `.equals()` method is overridden in the class).
+{: .prompt-tip }
+
 
 ## Addition of different types
 
