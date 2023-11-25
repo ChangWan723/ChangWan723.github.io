@@ -14,6 +14,7 @@ Java has some interesting and counter-intuitive code. If you run this code, it i
 ---
 
 <!-- TOC -->
+  * [Precision Problems with Floating Point Numbers](#precision-problems-with-floating-point-numbers)
   * [switch](#switch)
     * [Example 1 (Without `break`)](#example-1-without-break)
     * [Example 2 (With `break` in the next one)](#example-2-with-break-in-the-next-one)
@@ -22,13 +23,79 @@ Java has some interesting and counter-intuitive code. If you run this code, it i
   * [Autoboxing and Unboxing](#autoboxing-and-unboxing)
     * [Example 1 (Integer)](#example-1-integer)
     * [Example 2 (Double)](#example-2-double)
-    * [Example 4 (`equals()`)](#example-4-equals)
-    * [Example 3 (Integer and Long)](#example-3-integer-and-long)
+    * [Example 3 (`equals()`)](#example-3-equals)
+    * [Example 4 (Integer and Long)](#example-4-integer-and-long)
   * [Addition of different types](#addition-of-different-types)
   * [Reference Copy and Shallow Copy](#reference-copy-and-shallow-copy)
 <!-- TOC -->
 
 ---
+
+## Precision Problems with Floating Point Numbers
+
+``` 
+public static void main(String[] args) {
+    System.out.println(0.1 * 3 == 0.3); // false
+    System.out.println(0.1 + 0.2 == 0.3); // false
+    System.out.println(0.1 + 0.4 == 0.5); // true
+    System.out.println(0.5 + 0.5 == 1); // true
+    System.out.println(0.125 * 2 == 0.25); // true
+    System.out.println(4.35 * 100 == 435); // false
+}
+```
+
+Novices are often confused when using floating point numbers in java. This is because floating-point numbers (i.e., `float` and `double`) always involve a degree of uncertainty in Java, as these values are approximated to **represent real numbers using a finite number of bits (binary system)**.
+
+- Java follows the IEEE 754 standard for floating-point arithmetic, which is used by most modern computers. The two primary types for floating-point numbers in Java are `float` and `double`.
+  - **float**: This is a single-precision 32-bit IEEE 754 floating-point.
+  - **double**: This is a double-precision 64-bit IEEE 754 floating-point.
+
+We can see how this can happen by printing out the result using `println()`:
+
+```java 
+public static void main(String[] args) {
+    System.out.println(0.3); // 0.3
+    System.out.println(0.1 + 0.2); // 0.30000000000000004
+    System.out.println(0.1 * 3); // 0.30000000000000004
+    System.out.println(0.1 + 0.4); // 0.5
+    System.out.println(0.5 + 0.5); //1.0
+    System.out.println(0.125 * 2); // 0.25
+    System.out.println(4.35 * 100); // 434.99999999999994
+}
+```
+
+- `0.3` prints as expected because it's directly being printed **without any arithmetic operation** that introduces additional error.
+- `0.1 + 0.2` results in a long decimal due to floating-point arithmetic. (The binary representation of `0.3` is `0.0100110011......`, which is infinite)
+- `0.1 * 3` is similar to the addition, and the result has a floating-point representation error.
+- `0.1 + 0.4` results in 0.5, which is exact. This calculation does not show a precision issue because `0.5` can be precisely represented in binary **as it is a power of the form `1/2`**, so it **can be accurately expressed in binary form**. (The binary representation of `0.5` is `0.1`)
+- `0.5 + 0.5` results in 1.0, which is exact. Same as above.
+- `0.125 * 2` results in 0.25, which is exact. Same as above. (The binary representation of `0.125` is `0.001`)
+- `4.35 * 100` results in a value close to 435 but not exactly 435 due to the result has a floating-point representation error.
+
+> These examples highlight the importance of using `BigDecimal` for precise monetary calculations in Java, where such a precision is critical.
+{: .prompt-tip }
+
+For example:
+
+```java 
+public static void main(String[] args) {
+    BigDecimal price = new BigDecimal("4.35");
+    BigDecimal quantity = new BigDecimal("100");
+    System.out.println(price.multiply(quantity)); // 435.00
+}
+```
+
+If we don't use `BigDecimal`, for equality checks, avoid direct comparison of floating-point numbers. Instead, **check if the absolute difference is within a small tolerance**:
+
+```java
+double result = 4.35 * 100;
+double expected = 435.00;
+
+final double EPSILON = 0.00001;
+if (Math.abs(result - expected) < EPSILON) {
+// Considered equal
+}
+```
 
 ## switch
 
@@ -171,7 +238,7 @@ public static void main(String[] args) {
 }
 ```
 
-What is the result? Obviously, both are "true". No problem.
+What is the result? Obviously, both are "true".
 
 result:
 
@@ -261,7 +328,7 @@ public static void main(String[] args) {
 >The `valueOf()` of the classes `Integer`, `Short`, `Byte`, `Character`, and `Long` have the cache. But the `valueOf()` of `Double` and `Float` do not.
 {: .prompt-warning }
 
-### Example 4 (`equals()`)
+### Example 3 (`equals()`)
 
 ```java 
 public static void main(String[] args) {
@@ -277,7 +344,7 @@ public static void main(String[] args) {
 
 `equals()` checks for **value** and **type** equality. If **value** and **type** both is same, the result is `true`.
 
-### Example 3 (Integer and Long)
+### Example 4 (Integer and Long)
 
 ```java 
 public static void main(String[] args) {
@@ -414,3 +481,6 @@ result:
 
 > A shallow copy of an object is **a new object** with copies of the values of the original object's fields. If the field value is a **primitive type**, a **direct copy of the value is made**. If the field is a reference to an **object**(arrays are objects in Java), it only **copies the reference**.
 {: .prompt-tip }
+
+More about Shallow Copy and Deep Copy: [What are reference copy, shallow copy and deep copy?](/posts/Basic-Knowledge-In-Java/#what-are-reference-copy-shallow-copy-and-deep-copy)
+
