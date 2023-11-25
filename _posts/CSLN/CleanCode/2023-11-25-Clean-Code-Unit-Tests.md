@@ -91,3 +91,9 @@ Adhering to the F.I.R.S.T principles helps in creating a robust and maintainable
 - **Self-Validating**: A test should have a boolean output: pass or fail. There should be no need for manual interpretation of log files or results to determine whether the test passed.
 
 - **Timely**: Tests should be written in a timely manner, typically before the production code is written (as in Test-Driven Development - TDD). Writing tests first helps ensure that the code is testable and meets the requirements, and it can lead to better designed, more maintainable code.
+
+---
+
+**Reference:**
+
+- Martin, R. C. (2009) _Clean code : a handbook of agile software craftsmanship._ Upper Saddle River, NJ: Prentice Hall (Robert C. Martin series).

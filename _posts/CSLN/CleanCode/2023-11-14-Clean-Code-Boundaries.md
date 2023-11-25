@@ -56,3 +56,9 @@ public void testThirdPartyFunction() {
    assertEquals(expectedResult, thirdPartyPackage.someFunction());
 }
 ```
+
+---
+
+**Reference:**
+
+- Martin, R. C. (2009) _Clean code : a handbook of agile software craftsmanship._ Upper Saddle River, NJ: Prentice Hall (Robert C. Martin series).

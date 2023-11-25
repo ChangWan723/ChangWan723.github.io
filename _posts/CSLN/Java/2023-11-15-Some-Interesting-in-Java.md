@@ -3,7 +3,7 @@ title: Some Interesting Codes in Java
 date: 2023-11-15 23:49:00 +0530
 categories: [(CS) Learning Note, Java]
 tags: [computer science, software engineering, Java]
-pin: false
+pin: true
 ---
 
 Java has some interesting and counter-intuitive code. If you run this code, it is possible that something unexpected will happen. By understanding them, we can avoid some bugs and get a better understanding of Java.
@@ -64,7 +64,7 @@ public static void main(String[] args) {
 }
 ```
 
-- `0.3` prints as expected because it's directly being printed **without any arithmetic operation** that introduces additional error.
+- `0.3` prints as expected **because it's directly being printed without any arithmetic operation** that introduces additional error.
 - `0.1 + 0.2` results in a long decimal due to floating-point arithmetic. (The binary representation of `0.3` is `0.0100110011......`, which is infinite)
 - `0.1 * 3` is similar to the addition, and the result has a floating-point representation error.
 - `0.1 + 0.4` results in 0.5, which is exact. This calculation does not show a precision issue because `0.5` can be precisely represented in binary **as it is a power of the form `1/2`**, so it **can be accurately expressed in binary form**. (The binary representation of `0.5` is `0.1`)
