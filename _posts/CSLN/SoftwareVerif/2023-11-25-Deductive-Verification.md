@@ -28,6 +28,9 @@ pin: false
       * [consequence](#consequence)
       * [composition](#composition)
       * [conditionals](#conditionals)
+      * [iteration](#iteration)
+  * [Examples](#examples)
+    * [Programs with Loops](#programs-with-loops)
 <!-- TOC -->
 
 ---
@@ -120,13 +123,13 @@ This is an example of a **logical fallacy** – an **incorrect form of argument*
 
 `{𝑥 > 2} x:=x+1 {𝑥 ≤ 3}`
 
+---
+
 `{true} x:=x+1 {???}`
 
-How can we express that the value of `𝑥` has increased by executing the program statement `x:=x+1`?
-
-`{true ∧ 𝑥 = 𝑣} x:=x+1 {𝑥 = 𝑣 + 1}`
-
-where 𝑣 is a fresh variable.
+- How can we express that the value of `𝑥` has increased by executing the program statement `x:=x+1`?
+  - `{true ∧ 𝑥 = 𝑣} x:=x+1 {𝑥 = 𝑣 + 1}`
+  - where `𝑣` is a fresh variable.
 
 ## Hoare Logic
 
@@ -140,7 +143,7 @@ where 𝑣 is a fresh variable.
 
 ### Hoare Logic: Assignment Examples
 
-In practice, to check a Hoare triple `{𝑃𝑅𝐸} x:=E {𝑃𝑂𝑆𝑇}` we check `𝑃𝑅𝐸 → 𝑃𝑂𝑆𝑇0`. Examples:
+In practice, to check a Hoare triple `{𝑃𝑅𝐸} x:=E {𝑃𝑂𝑆𝑇}` we check `𝑃𝑅𝐸 → 𝑃𝑂𝑆𝑇₀`. Examples:
 
 `{𝑥 + 1 = 3} x:=x+1 {𝑥 = 3}`
 
@@ -153,6 +156,9 @@ In practice, to check a Hoare triple `{𝑃𝑅𝐸} x:=E {𝑃𝑂𝑆𝑇}` we
 #### consequence
 
 ![](https://i.postimg.cc/MHGT71zG/hl3.png){: .w-55 .shadow .rounded-10 }
+
+> The line in the picture is the notation for a proof rule used in Hoare Logic, which stands for "deduce" or "derive" in logical deduction. In Hoare Logic, this symbol is usually used to indicate that if the above condition (premise) holds, then the following conclusion will also hold.
+{: .prompt-tip }
 
 #### composition
 
@@ -167,3 +173,59 @@ In practice, to check a Hoare triple `{𝑃𝑅𝐸} x:=E {𝑃𝑂𝑆𝑇}` we
 ![](https://i.postimg.cc/kX2TXZW2/hl5.png){: .w-55 .shadow .rounded-10 }
 
 
+#### iteration
+
+![](https://i.postimg.cc/CKp1CSRJ/hl7.png){: .w-55 .shadow .rounded-10 }
+
+The rules are in two parts:
+1. **Loop Invariant**: `P` is a loop invariant. `P` holds as the program enters the loop and is preserved after each iteration of the loop. The loop invariant is a key concept for verifying the correctness of loops.
+2. **Iteration Rule**: 
+  - `{P ∧ grd} PROG {P}`: This means that if the condition `P` (the loop invariant) and `grd` (the guard or condition of the loop) are both true before each iteration of the loop, then `P` will still be true after the execution of `PROG` (the body of the loop).
+  - `{P} while (grd) do PROG od {¬grd ∧ P}`: For the loop as a whole, if `P` is true at the start of the loop, then after executing `PROG` in each iteration of the loop until `grd` is no longer true (i.e., the loop ends), the final state will be `¬grd ∧ P`, meaning the loop invariant `P` is still maintained and the guard `grd` is false.
+
+## Examples
+
+### Programs with Loops
+
+Suppose we have the following looping program with integer program variables 𝑟, 𝑛 and 𝑁 (which is treated as input):
+
+`n:=N; r:=1; while(n>1) do r:=r*n; n:=n-1 od`
+
+- What does this program compute?
+  - `{𝑁 > 0} n:=N; r:=1; while(n>1) do r:=r*n; n:=n-1 od {𝑟 = 𝑁!}`
+
+---
+
+Apparently, this program implements the factorial function. How can we prove this?
+
+Let’s trace the execution:
+
+| Iteration   | r                          | n          |
+|-------------|----------------------------|------------|
+| Iteration 0 | 𝑟 = 1                     | 𝑛 = N     |
+| Iteration 1 | 𝑟 = N                     | 𝑛 = N - 1 |
+| Iteration 2 | 𝑟 = N * (N - 1)           | 𝑛 = N - 2 |
+| Iteration 3 | 𝑟 = N * (N - 1) * (N - 2) | 𝑛 = N - 3 |
+
+- According to the **definition** of factorial: `N! = N(N - 1)(N - 2)⋯1`
+- For every iteration of the loop: `N(N - 1)(N - 2)⋯1` = `r * (n!)`
+  - Iteration 0: `𝑟 = 1`, `𝑛 = N`, so `r * (n!)` = `N(N - 1)(N - 2)⋯1`
+  - Iteration 1: `𝑟 = N`, `𝑛 = N - 1`, so `r * (n!)` = `N(N - 1)(N - 2)⋯1`
+  - ...
+- So, `N! = r * (n!)` holds initially and after each loop iteration.
+- Finally, `N! = r * (n!) ∧ n > 0` remains true throughout the loop, even after the loop ends. This proves that the given program segment correctly calculates the factorial `N!`.
+- After the loop terminates:
+  1. The loop invariant will be true `N! = r * (n!) ∧ n > 0`.
+  2. The loop guard will be false, i.e. `¬(𝑛 > 1)` will hold.
+
+---
+
+![](https://i.postimg.cc/t44BFVKX/hl8.png){: .w-55 .shadow .rounded-10 }
+
+Proving correctness using loop invariants is similar to proofs by induction:
+1. **A base step**: the loop invariant is true initially,
+2. **Inductive step**: `𝑃𝑅𝑂𝐺` (i.e. loop body) preserves the invariant when the guard (`𝑔𝑟𝑑`) holds,
+3. **Sufficiency**: when the loop terminates, the invariant and `¬𝑔𝑟𝑑` together imply the post-condition.
+
+> Finding loop invariants can be rather difficult in practice.
+{: .prompt-warning }

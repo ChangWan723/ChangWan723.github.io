@@ -74,11 +74,13 @@ This module aims is to give an understanding of Automated Software Verification:
   - check that the program we are building fulfills its intended purpose (meets the user needs)
   - Ensure that the **specification** of the software system **satisfy the requirements** of the stakeholders (customers, users, administrators, ...)
   - _Are we building the right product?_
+  - the _specification_ is correct (**validation**)
 
 - verification: 
   - check that the program meets its requirements and design specifications
   - Ensure that the **finished** product **satisfies the specification**.
   - _Are we building the product right?_
+  - the program meets its _specification_ (**verification**)
 
 ## Software Verification Approaches
 
