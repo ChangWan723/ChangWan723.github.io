@@ -19,13 +19,19 @@ pin: false
   * [Relations](#relations)
     * [Domain and Range](#domain-and-range)
     * [Relational Image](#relational-image)
-  * [Functions](#functions)
+  * [Partial and Total Functions](#partial-and-total-functions)
     * [Partial Functions](#partial-functions)
       * [Function Application](#function-application)
       * [Well-definedness](#well-definedness)
       * [Example of Birthday Book](#example-of-birthday-book)
     * [Total Functions](#total-functions)
       * [Example of Modelling with Total functions](#example-of-modelling-with-total-functions)
+  * [Injective and Surjective Functions](#injective-and-surjective-functions)
+    * [Injective Functions](#injective-functions)
+      * [Total Injective Functions](#total-injective-functions)
+    * [Surjective Functions](#surjective-functions)
+      * [Total Surjective Functions](#total-surjective-functions)
+    * [Bijective Functions](#bijective-functions)
   * [Restriction and Substraction](#restriction-and-substraction)
     * [Domain Restriction](#domain-restriction)
     * [Domain Subtraction](#domain-subtraction)
@@ -103,7 +109,7 @@ Assume `R ∈ S ↔ T `and `A ⊆ S`, the **relational image** of set `A` under 
 |-----------|------------------------|
 | y ∈ R[A]  | ∃x · x ∈ A ∧ x ↦ y ∈ R |
 
-## Functions
+## Partial and Total Functions
 
 ### Partial Functions
 
@@ -140,6 +146,8 @@ The following definition of function application assumes that `f(x)` **is well-d
 |-----------|------------|
 | y = f(x)  | x ↦ y ∈ f  |
 
+> In mathematics, a **well-defined** expression or **unambiguous** expression is an expression whose definition assigns it a unique interpretation or value. Otherwise, the expression is said to be **not well defined, ill defined or ambiguous**. A function is well defined if it gives the **same result** when the representation of the input is changed **without changing the value** of the input.
+
 #### Example of Birthday Book
 
 - Birthday book relates people to their birthday.
@@ -152,10 +160,16 @@ The following definition of function application assumes that `f(x)` **is well-d
 
 ### Total Functions
 
-A total function **is a special kind of partial function**. To declare `f` as a total function: `f ∈ X → Y`
+A total function **is a special kind of partial function**. To declare `f` as a total function: `f ∈ X → Y`.
 
-This means that `f` **is well-defined for every element** in `X`, i.e., `f ∈ X → Y` is shorthand
+A total function means that `f` **is well-defined for every element** in `X`, i.e., `f ∈ X → Y` is shorthand
 for `f ∈ X⇸Y ∧ dom(f) = X`
+
+> Total Function: A total function is a function that is defined for every possible input in its domain. For Example: `f(x) = x + 2`, where the domain is all real numbers. For every real number you input into this function, you get a valid output (another real number).
+> 
+> Partial Function: A partial function, on the other hand, is only defined for some inputs in its domain. For Example: `f(x) = 1/x`, where the domain could be considered as all real numbers. However, this function is not defined for the input x = 0 (since division by zero is undefined).
+{: .prompt-tip }
+
 
 #### Example of Modelling with Total functions
 
@@ -165,11 +179,82 @@ We can re-write the invariant for the birthday book to use total functions:
 
 ![](https://i.postimg.cc/8kH9Yybz/rf13.png){: .w-10 .shadow .rounded-10 }
 
+## Injective and Surjective Functions
+
+### Injective Functions
+
+**One-to-one function**: different _domain_ elements are mapped to different range elements.
+In other words, in **inverse is also a function**.
+
+To declare `f` as an (partial) injective function: `f ∈ X ⤔ Y`
+
+This is defined in terms of the inverse of f as follows:
+
+| Predicate | Definition |
+|-----------|----------------------------|
+| f ∈ X ⤔ Y     | f ∈ X ⇸ Y ∧ f⁻¹ ∈ Y ⇸ X  |
+
+#### Total Injective Functions
+
+Just as for standard total functions, we can declare an injective funciton to be total on some set.
+
+To declare f as a total injective function: `f ∈ S ↣ Y`
+
+This is defined i as follows:
+
+| Predicate | Definition |
+|-----------|---------------------------|
+| f ∈ S ↣ Y     | f ∈ S ⤔ Y ∧ dom(f) = S  |
+
+### Surjective Functions
+
+Onto function: If every element of _range_ is reached from some element of domain.
+
+To declare `f` as a (partial) surjective function: `f ∈ X ⤀ Y`
+
+This is defined as follows:
+
+| Predicate | Definition |
+|-----------|---------------------------|
+| f ∈ X ⤀ Y     | f ∈ X ⇸ Y ∧ ran(f) = Y  |
+
+#### Total Surjective Functions
+
+Just as for standard total functions, we can declare a surjective funciton to be total on some set.
+
+To declare `f` as a (partial) surjective function: `f ∈ X ↠ Y`
+
+This is defined as follows:
+
+| Predicate | Definition |
+|-----------|---------------------------|
+| f ∈ X ↠ Y     | f ∈ X ⤀ Y ∧ f ∈ S → Y  |
+
+![](https://i.postimg.cc/cJHC7szz/rf19.png){: .w-10 .shadow .rounded-10 }
+_Graphical Representation of Injective and Surjective_
+
+### Bijective Functions
+
+A function which is **total**, **injective** and **surjective** is called a **bijective** function.
+
+In other words, every element in the domain of a bijective function is mapped to exactly one element of its range.
+
+To declare f as a bijective function: `f ∈ S ⤖ Y`
+
+This is defined as follows:
+
+| Predicate | Definition |
+|-----------|---------------------------|
+| f ∈ S ⤖ Y     | f ∈ X ↣ Y ∧ f ∈ S ↠ Y  |
+
+![](hhttps://i.postimg.cc/XqG4Xqpf/rf20.png){: .w-10 .shadow .rounded-10 }
+_Graphical Representation of Different Functions_
+
 ## Restriction and Substraction
 
 ### Domain Restriction
 
-Given `R ∈ S ↔ T` and `A ⊆ S`, the domain restriction of `R` by `A` is writen: `A ▷ R`
+Given `R ∈ S ↔ T` and `A ⊆ S`, the domain restriction of `R` by `A` is writen: `A ◁ R`
 
 Restrict relation `R` so that it only contains pairs whose first part is in the set `A`.
 
@@ -177,7 +262,7 @@ Restrict relation `R` so that it only contains pairs whose first part is in the 
 
 `directory = { mary ↦ 287573, mary ↦ 398620, john ↦ 829483, jim ↦ 398620 }`
 
-`{john, jim, jane} C directory = { john ↦ 829483, jim ↦ 398620 }`
+`{john, jim, jane} ◁ directory = { john ↦ 829483, jim ↦ 398620 }`
 
 ### Domain Subtraction
 
@@ -189,7 +274,7 @@ Remove those pairs from `R` whose first part is in `A`.
 
 `directory = { mary ↦ 287573, mary ↦ 398620, john ↦ 829483, jim ↦ 398620 }`
 
-`{john, jim, jane} C directory = { mary ↦ 287573, mary ↦ 398620 }`
+`{john, jim, jane} ⩤ directory = { mary ↦ 287573, mary ↦ 398620 }`
 
 ### Domain and Range
 
