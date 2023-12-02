@@ -2,7 +2,7 @@
 title: Büchi Automaton
 date: 2023-10-15 19:03:00 +0530
 categories: [ (CS) Learning Note, Automated Software Verification ]
-tags: [ computer science, software engineering, software verification, Büchi Automaton ]
+tags: [computer science, software verification, Büchi Automaton ]
 pin: false
 ---
 

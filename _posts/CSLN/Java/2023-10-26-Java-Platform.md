@@ -2,7 +2,7 @@
 title: "Three Java Platforms: SE, EE, and ME"
 date: 2023-10-26 18:40:00 +0530
 categories: [(CS) Learning Note, Java]
-tags: [computer science, software engineering, Java]
+tags: [software engineering, Java]
 pin: false
 ---
 

@@ -2,7 +2,7 @@
 title: Planning Projects - Scope (Process Groups)
 date: 2023-10-22 18:51:00 +0530
 categories: [ (CS) Learning Note, Software Project Management ]
-tags: [ computer science, software engineering, project management, process groups, WBS]
+tags: [software engineering, project management, process groups, WBS]
 pin: false
 ---
 

@@ -2,7 +2,7 @@
 title: "Clean Code: Formatting"
 date: 2023-10-25 23:27:00 +0530
 categories: [(CS) Learning Note, Clean Code]
-tags: [computer science, software engineering, Clean Code, code]
+tags: [software engineering, Clean Code, code]
 pin: false
 image:
   path: /assets/img/posts/formatting.jpg

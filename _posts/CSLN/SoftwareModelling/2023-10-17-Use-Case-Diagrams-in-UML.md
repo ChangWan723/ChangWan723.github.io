@@ -2,7 +2,7 @@
 title: Use Case Diagrams in UML
 date: 2023-10-17 18:53:00 +0530
 categories: [(CS) Learning Note, Software Modelling and Design]
-tags: [computer science, software engineering, UML, Use Case Diagram]
+tags: [software engineering, UML, OOP]
 pin: false
 ---
 

@@ -2,7 +2,7 @@
 title: Relations and Functions in Event-B
 date: 2023-11-19 20:20:00 +0530
 categories: [ (CS) Learning Note, Software Modelling and Design ]
-tags: [ computer science, software engineering, Event-B ]
+tags: [computer science, Event-B ]
 pin: false
 ---
 

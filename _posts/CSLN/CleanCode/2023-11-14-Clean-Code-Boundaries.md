@@ -2,7 +2,7 @@
 title: "Clean Code: Boundaries"
 date: 2023-11-14 12:12:00 +0530
 categories: [(CS) Learning Note, Clean Code]
-tags: [computer science, software engineering, Clean Code, code]
+tags: [software engineering, Clean Code, code]
 pin: false
 image:
   path: /assets/img/posts/boundaries.jpg

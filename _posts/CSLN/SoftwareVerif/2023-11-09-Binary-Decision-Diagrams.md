@@ -2,7 +2,7 @@
 title: Binary Decision Diagrams
 date: 2023-11-09 15:45:00 +0530
 categories: [ (CS) Learning Note, Automated Software Verification ]
-tags: [ computer science, software engineering, software verification, Model Checking, BDDs]
+tags: [computer science, software verification, Model Checking, BDDs]
 pin: false
 ---
 

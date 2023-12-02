@@ -2,7 +2,7 @@
 title: Symbolic Model Checking
 date: 2023-11-05 18:51:00 +0530
 categories: [ (CS) Learning Note, Automated Software Verification ]
-tags: [ computer science, software engineering, software verification, Model Checking, LTL]
+tags: [computer science, software verification, Model Checking, LTL]
 pin: false
 ---
 

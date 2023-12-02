@@ -2,7 +2,7 @@
 title: Bounded Model Checking
 date: 2023-11-25 17:28:00 +0530
 categories: [ (CS) Learning Note, Automated Software Verification ]
-tags: [computer science, software engineering, software verification, Model Checking]
+tags: [computer science, software verification, Model Checking]
 pin: false
 ---
 

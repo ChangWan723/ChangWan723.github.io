@@ -2,7 +2,7 @@
 title: How does Java code runs?
 date: 2023-11-01 23:04:00 +0530
 categories: [(CS) Learning Note, Java]
-tags: [computer science, software engineering, Java, JVM]
+tags: [software engineering, Java, JVM]
 pin: false
 ---
 

@@ -2,7 +2,7 @@
 title: Memory Management in JVM
 date: 2023-11-09 22:03:00 +0530
 categories: [(CS) Learning Note, Java]
-tags: [computer science, software engineering, Java, JVM]
+tags: [software engineering, Java, JVM]
 pin: false
 ---
 

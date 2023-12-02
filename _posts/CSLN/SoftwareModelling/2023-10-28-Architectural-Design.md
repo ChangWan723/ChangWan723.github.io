@@ -2,7 +2,7 @@
 title: Architectural Design
 date: 2023-10-28 16:44:00 +0530
 categories: [(CS) Learning Note, Software Modelling and Design]
-tags: [computer science, software engineering, architecture]
+tags: [software engineering, architecture]
 pin: false
 ---
 

@@ -2,7 +2,7 @@
 title: Planning Projects - Schedule (Process Groups)
 date: 2023-10-23 19:22:00 +0530
 categories: [ (CS) Learning Note, Software Project Management ]
-tags: [ computer science, software engineering, project management, process groups, AON]
+tags: [software engineering, project management, process groups, AON]
 pin: false
 ---
 

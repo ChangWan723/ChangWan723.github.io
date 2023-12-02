@@ -2,7 +2,7 @@
 title: Java Version History
 date: 2023-10-26 17:52:00 +0530
 categories: [(CS) Learning Note, Java]
-tags: [computer science, software engineering, Java]
+tags: [software engineering, Java]
 pin: false
 ---
 

@@ -2,7 +2,7 @@
 title: Planning Projects - Cost (Process Groups)
 date: 2023-10-30 14:01:00 +0530
 categories: [ (CS) Learning Note, Software Project Management ]
-tags: [ computer science, software engineering, project management, process groups]
+tags: [software engineering, project management, process groups]
 pin: false
 ---
 

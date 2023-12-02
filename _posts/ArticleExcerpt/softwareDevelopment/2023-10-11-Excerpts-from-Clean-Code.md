@@ -2,7 +2,7 @@
 title: Excerpts from "Clean Code"
 date: 2023-10-11 23:14:00 +0530
 categories: [Article Excerpt, Software]
-tags: [computer science, software engineering, Clean Code, code]
+tags: [software engineering, Clean Code, code]
 pin: false
 image:
   path: /assets/img/posts/cleancode.jpg

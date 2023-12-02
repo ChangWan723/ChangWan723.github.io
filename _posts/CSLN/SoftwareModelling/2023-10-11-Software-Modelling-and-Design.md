@@ -2,7 +2,7 @@
 title: Software Modelling and Design
 date: 2023-10-11 16:48:00 +0530
 categories: [(CS) Learning Note, Software Modelling and Design]
-tags: [computer science, software engineering, Software Modelling and Design]
+tags: [software engineering, Software Modelling and Design]
 pin: false
 ---
 

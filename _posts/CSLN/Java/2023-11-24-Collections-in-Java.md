@@ -2,7 +2,7 @@
 title: Some Java basics
 date: 2023-11-24 20:00:00 +0530
 categories: [(CS) Learning Note, Java]
-tags: [computer science, software engineering, Java]
+tags: [software engineering, Java]
 pin: false
 ---
 

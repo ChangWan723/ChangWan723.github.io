@@ -2,7 +2,7 @@
 title: Some Interesting Codes in Java
 date: 2023-11-15 23:49:00 +0530
 categories: [(CS) Learning Note, Java]
-tags: [computer science, software engineering, Java]
+tags: [software engineering, Java]
 pin: true
 ---
 

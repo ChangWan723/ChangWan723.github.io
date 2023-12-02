@@ -2,7 +2,7 @@
 title: Security By Design
 date: 2023-11-13 16:35:00 +0530
 categories: [ (CS) Learning Note, Software Security and Safety]
-tags: [computer science, software engineering, software security]
+tags: [software engineering, software security]
 pin: false
 ---
 

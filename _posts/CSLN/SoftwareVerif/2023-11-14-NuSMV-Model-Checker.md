@@ -2,7 +2,7 @@
 title: NuSMV Model Checker
 date: 2023-11-14 19:51:00 +0530
 categories: [ (CS) Learning Note, Automated Software Verification ]
-tags: [computer science, software engineering, software verification, Model Checking]
+tags: [computer science, software verification, Model Checking]
 pin: false
 ---
 

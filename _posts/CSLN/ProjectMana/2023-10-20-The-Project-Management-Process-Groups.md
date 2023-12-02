@@ -2,7 +2,7 @@
 title: Project Management Process Groups
 date: 2023-10-20 17:09:00 +0530
 categories: [(CS) Learning Note, Software Project Management]
-tags: [computer science, software engineering, project management, process groups]
+tags: [software engineering, project management, process groups]
 pin: false
 ---
 

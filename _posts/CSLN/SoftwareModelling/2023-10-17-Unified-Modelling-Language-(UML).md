@@ -2,7 +2,7 @@
 title: Unified Modelling Language (UML)
 date: 2023-10-17 16:07:00 +0530
 categories: [(CS) Learning Note, Software Modelling and Design]
-tags: [computer science, software engineering, Software Modelling and Design, UML]
+tags: [software engineering, Software Modelling and Design, UML, OOP]
 pin: false
 ---
 

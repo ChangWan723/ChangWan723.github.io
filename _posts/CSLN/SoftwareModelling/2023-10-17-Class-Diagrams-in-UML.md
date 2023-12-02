@@ -2,7 +2,7 @@
 title: Class Diagrams in UML
 date: 2023-10-17 19:30:00 +0530
 categories: [(CS) Learning Note, Software Modelling and Design]
-tags: [computer science, software engineering, UML, Class Diagram]
+tags: [software engineering, UML, OOP]
 pin: false
 ---
 

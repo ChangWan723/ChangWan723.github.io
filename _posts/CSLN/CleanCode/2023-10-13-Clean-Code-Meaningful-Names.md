@@ -2,7 +2,7 @@
 title: "Clean Code: Meaningful Names"
 date: 2023-10-13 17:26:00 +0530
 categories: [(CS) Learning Note, Clean Code]
-tags: [computer science, software engineering, Clean Code, code]
+tags: [software engineering, Clean Code, code]
 pin: true
 image:
   path: /assets/img/posts/name.png

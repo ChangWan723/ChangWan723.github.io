@@ -2,7 +2,7 @@
 title: Explicit State Model Checking
 date: 2023-10-27 19:02:00 +0530
 categories: [ (CS) Learning Note, Automated Software Verification ]
-tags: [ computer science, software engineering, software verification, Büchi Automaton, Model Checking, LTL, Transition Systems]
+tags: [computer science, software verification, Büchi Automaton, Model Checking, LTL, Transition Systems]
 pin: false
 ---
 

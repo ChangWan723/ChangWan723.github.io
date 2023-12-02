@@ -2,7 +2,7 @@
 title: Planning Projects - Resource (Process Groups)
 date: 2023-11-13 19:30:00 +0530
 categories: [ (CS) Learning Note, Software Project Management ]
-tags: [computer science, software engineering, project management, process groups]
+tags: [software engineering, project management, process groups]
 pin: false
 ---
 
