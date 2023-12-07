@@ -1,5 +1,5 @@
 ---
-title: Some Java basics
+title: Collections in Java
 date: 2023-11-24 20:00:00 +0530
 categories: [(CS) Learning Note, Java]
 tags: [software engineering, Java]
@@ -68,15 +68,21 @@ The Java Collections Framework provides a set of interfaces and classes for stor
   - Fast random access.
   - Good for storing and accessing data.
   - Not synchronized.
+  - `null` values are supported
+  - Maintains insertion order.
 - **LinkedList**:
   - Doubly-linked list implementation.
   - Better at add and remove operations.
   - Preferred for dynamic insertions and deletions.
   - Not synchronized.
+  - `null` values are supported
+  - Maintains insertion order.
 - **Vector**:
   - Similar to ArrayList, but synchronised.
   - Slower than ArrayList due to synchronisation.
   - Legacy class but useful in multithreaded environments.
+  - `null` values are supported
+  - Maintains insertion order.
 
 ### Sets: HashSet vs. TreeSet vs. LinkedHashSet vs. ConcurrentHashSet
 

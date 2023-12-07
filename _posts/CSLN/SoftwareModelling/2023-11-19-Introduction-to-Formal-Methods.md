@@ -179,3 +179,11 @@ REQ3: We need an operation for removing money from the money bank;
 - When all events have false guards, the discrete system stops
 - When more than one event have true guards, one of them is chosen nondeterministically and its action modifies the state
 - The previous phase is repeated (if possible)
+
+## Related Blogs
+
+- [Introduction to Event-B](/posts/Introduction-to-Event-B/)
+- [Relations and Functions in Event-B](/posts/Relations-and-Functions-in-Event-B/)
+- [Extension Refinement in Event-B](/posts/Extension-Refinement-in-Event-B/)
+- [Handling Proofs in Event-B](/posts/Handling-Proofs-in-Event-B/)
+- [Lists and Collections in Event-B](/posts/Lists-and-Collections-in-Event-B/)
