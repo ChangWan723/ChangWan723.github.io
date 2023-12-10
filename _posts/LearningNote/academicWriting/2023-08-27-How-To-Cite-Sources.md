@@ -1,6 +1,6 @@
 ---
 title: How to cite sources in academic essay?
-date: 2023-08-27 21:39:00 +0530
+date: 2023-08-27 21:39:00 UTC
 categories: [Learning Note, academic writing]
 tags: [academic writing]
 pin: false

@@ -1,6 +1,6 @@
 ---
 title: Planning Projects - Quality (Process Groups)
-date: 2023-11-13 18:42:00 +0530
+date: 2023-11-13 18:42:00 UTC
 categories: [ (CS) Learning Note, Software Project Management ]
 tags: [software engineering, project management, process groups]
 pin: false

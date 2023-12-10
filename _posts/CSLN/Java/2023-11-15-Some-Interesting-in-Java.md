@@ -1,6 +1,6 @@
 ---
 title: Some Interesting Codes in Java
-date: 2023-11-15 23:49:00 +0530
+date: 2023-11-15 23:49:00 UTC
 categories: [(CS) Learning Note, Java]
 tags: [software engineering, Java]
 pin: true

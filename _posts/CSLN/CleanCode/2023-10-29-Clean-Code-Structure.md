@@ -1,6 +1,6 @@
 ---
 title: "Clean Code: Objects and Data Structure"
-date: 2023-10-29 16:50:00 +0530
+date: 2023-10-29 16:50:00 UTC
 categories: [(CS) Learning Note, Clean Code]
 tags: [software engineering, Clean Code, code]
 pin: false

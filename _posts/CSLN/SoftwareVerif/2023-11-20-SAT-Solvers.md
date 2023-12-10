@@ -1,6 +1,6 @@
 ---
 title: SAT Problem and DPLL
-date: 2023-11-20 19:37:00 +0530
+date: 2023-11-20 19:37:00 UTC
 categories: [ (CS) Learning Note, Automated Software Verification ]
 tags: [computer science, software verification, Model Checking]
 pin: false

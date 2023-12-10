@@ -1,6 +1,6 @@
 ---
 title: "Clean Code: Error Handling"
-date: 2023-10-31 20:35:00 +0530
+date: 2023-10-31 20:35:00 UTC
 categories: [(CS) Learning Note, Clean Code]
 tags: [software engineering, Clean Code, code]
 pin: false

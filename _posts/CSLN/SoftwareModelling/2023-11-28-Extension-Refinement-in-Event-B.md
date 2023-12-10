@@ -1,6 +1,6 @@
 ---
 title: Extension Refinement in Event-B
-date: 2023-11-28 18:35:00 +0530
+date: 2023-11-28 18:35:00 UTC
 categories: [ (CS) Learning Note, Software Modelling and Design ]
 tags: [computer science, Event-B ]
 pin: false

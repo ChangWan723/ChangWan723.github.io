@@ -1,6 +1,6 @@
 ---
 title: Modelling Programs with Transition Systems
-date: 2023-10-06 22:42:00 +0530
+date: 2023-10-06 22:42:00 UTC
 categories: [(CS) Learning Note, Automated Software Verification]
 tags: [computer science, software verification, Transition Systems]
 pin: false

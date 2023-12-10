@@ -1,6 +1,6 @@
 ---
 title: Computer Science Terminology in English and Chinese
-date: 2023-10-01 15:46:00 +0530
+date: 2023-10-01 15:46:00 UTC
 categories: [(CS) Learning Note, other]
 tags: [computer science, terminology]
 pin: false

@@ -1,6 +1,6 @@
 ---
 title: What is Software Engineering?
-date: 2023-09-30 18:30:00 +0530
+date: 2023-09-30 18:30:00 UTC
 categories: [(CS) Learning Note, other]
 tags: [software engineering]
 pin: false

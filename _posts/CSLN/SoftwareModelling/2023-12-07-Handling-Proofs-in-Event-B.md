@@ -1,6 +1,6 @@
 ---
 title: Handling Proofs in Event-B
-date: 2023-12-07 16:16:00 +0530
+date: 2023-12-07 16:16:00 UTC
 categories: [ (CS) Learning Note, Software Modelling and Design ]
 tags: [computer science, Event-B ]
 pin: false

@@ -1,6 +1,6 @@
 ---
 title: "Clean Code: Meaningful Names"
-date: 2023-10-13 17:26:00 +0530
+date: 2023-10-13 17:26:00 UTC
 categories: [(CS) Learning Note, Clean Code]
 tags: [software engineering, Clean Code, code]
 pin: true

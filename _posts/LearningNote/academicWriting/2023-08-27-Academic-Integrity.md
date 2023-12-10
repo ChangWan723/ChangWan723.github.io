@@ -1,6 +1,6 @@
 ---
 title: Academic Integrity
-date: 2023-08-27 00:32:00 +0530
+date: 2023-08-27 00:32:00 UTC
 categories: [Learning Note, academic writing]
 tags: [academic writing]
 pin: false

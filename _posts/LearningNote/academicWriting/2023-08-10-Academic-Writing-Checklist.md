@@ -1,6 +1,6 @@
 ---
 title: Academic Writing Checklist
-date: 2023-08-10 15:40:00 +0530
+date: 2023-08-10 15:40:00 UTC
 categories: [Learning Note, academic writing]
 tags: [academic writing]
 pin: false

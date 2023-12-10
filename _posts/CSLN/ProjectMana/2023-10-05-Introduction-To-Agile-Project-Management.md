@@ -1,6 +1,6 @@
 ---
 title: Introduction To Agile Project Management
-date: 2023-10-05 10:19:00 +0530
+date: 2023-10-05 10:19:00 UTC
 categories: [(CS) Learning Note, Software Project Management]
 tags: [software engineering, project management, Agile]
 pin: false

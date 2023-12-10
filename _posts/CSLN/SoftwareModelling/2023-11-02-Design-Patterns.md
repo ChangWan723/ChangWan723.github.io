@@ -1,6 +1,6 @@
 ---
 title: Design Patterns
-date: 2023-11-02 16:14:00 +0530
+date: 2023-11-02 16:14:00 UTC
 categories: [(CS) Learning Note, Software Modelling and Design]
 tags: [software engineering, Design Patterns, OOP]
 pin: false

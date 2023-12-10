@@ -1,6 +1,6 @@
 ---
 title: Introduction to  Event-B
-date: 2023-11-19 18:45:00 +0530
+date: 2023-11-19 18:45:00 UTC
 categories: [(CS) Learning Note, Software Modelling and Design]
 tags: [computer science, Event-B, Set Theory]
 pin: false

@@ -1,6 +1,6 @@
 ---
 title: Academic Essay Paragraphs
-date: 2023-08-15 15:29:00 +0530
+date: 2023-08-15 15:29:00 UTC
 categories: [Learning Note, academic writing]
 tags: [academic writing]
 pin: false

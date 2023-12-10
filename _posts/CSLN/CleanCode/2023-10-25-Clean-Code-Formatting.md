@@ -1,6 +1,6 @@
 ---
 title: "Clean Code: Formatting"
-date: 2023-10-25 23:27:00 +0530
+date: 2023-10-25 23:27:00 UTC
 categories: [(CS) Learning Note, Clean Code]
 tags: [software engineering, Clean Code, code]
 pin: false

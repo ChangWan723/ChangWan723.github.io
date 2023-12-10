@@ -1,6 +1,6 @@
 ---
 title: How to find reliable sources for academic essay?
-date: 2023-08-15 15:46:00 +0530
+date: 2023-08-15 15:46:00 UTC
 categories: [Learning Note, academic writing]
 tags: [academic writing]
 pin: false

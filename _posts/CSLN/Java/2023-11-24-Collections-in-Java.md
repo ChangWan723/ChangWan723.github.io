@@ -1,6 +1,6 @@
 ---
 title: Collections in Java
-date: 2023-11-24 20:00:00 +0530
+date: 2023-11-24 20:00:00 UTC
 categories: [(CS) Learning Note, Java]
 tags: [software engineering, Java]
 pin: false

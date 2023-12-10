@@ -1,6 +1,6 @@
 ---
 title: Excerpts from "Clean Code"
-date: 2023-10-11 23:14:00 +0530
+date: 2023-10-11 23:14:00 UTC
 categories: [Article Excerpt, Software]
 tags: [software engineering, Clean Code, code]
 pin: false

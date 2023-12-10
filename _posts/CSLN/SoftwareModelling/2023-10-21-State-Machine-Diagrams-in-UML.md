@@ -1,6 +1,6 @@
 ---
 title: State Machine Diagrams in UML
-date: 2023-10-21 19:44:00 +0530
+date: 2023-10-21 19:44:00 UTC
 categories: [(CS) Learning Note, Software Modelling and Design]
 tags: [software engineering, UML, OOP]
 pin: false

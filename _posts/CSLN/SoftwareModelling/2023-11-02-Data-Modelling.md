@@ -1,6 +1,6 @@
 ---
 title: Data Modelling
-date: 2023-11-03 16:45:00 +0530
+date: 2023-11-03 16:45:00 UTC
 categories: [(CS) Learning Note, Software Modelling and Design]
 tags: [software engineering, Database]
 pin: false

@@ -1,6 +1,6 @@
 ---
 title: Initiating Projects (Process Groups)
-date: 2023-10-20 18:03:00 +0530
+date: 2023-10-20 18:03:00 UTC
 categories: [ (CS) Learning Note, Software Project Management ]
 tags: [ computer science, software engineering, project management, process groups ]
 pin: false

@@ -1,6 +1,6 @@
 ---
 title: Academic Essay Conclusions
-date: 2023-08-27 22:44:00 +0530
+date: 2023-08-27 22:44:00 UTC
 categories: [Learning Note, academic writing]
 tags: [academic writing]
 pin: false

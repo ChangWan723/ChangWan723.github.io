@@ -1,6 +1,6 @@
 ---
 title: Relations and Functions in Event-B
-date: 2023-11-19 20:20:00 +0530
+date: 2023-11-19 20:20:00 UTC
 categories: [ (CS) Learning Note, Software Modelling and Design ]
 tags: [computer science, Event-B ]
 pin: false

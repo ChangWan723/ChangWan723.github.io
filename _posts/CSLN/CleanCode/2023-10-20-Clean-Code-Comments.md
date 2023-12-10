@@ -1,6 +1,6 @@
 ---
 title: "Clean Code: Comments"
-date: 2023-10-18 00:01:00 +0530
+date: 2023-10-18 00:01:00 UTC
 categories: [(CS) Learning Note, Clean Code]
 tags: [software engineering, Clean Code, code]
 pin: false
