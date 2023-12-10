@@ -70,8 +70,7 @@ public List<int[]> fetch() {
 }
 ```
 
-There are no complex expressions. Spacing and indentation are reasonable. **This code is already so simple, but you still might see it and say: "WTF?"** It is hard to tell what this code is doing. **Why?** The problem isn’t the simplicity of the code but the **implicity** of the code (to coin a
-phrase, implicity: the degree to which the context is not explicit in the code itself).
+There are no complex expressions. Spacing and indentation are reasonable. **This code is already very simple, but you still can't read it quickly to understand what it's doing, much less what business it's handling. Why?** The problem isn’t the simplicity of the code but the **implicity** of the code (implicity: the degree to which the context is not explicit in the code itself).
 
 What this code is doing? What is the significance of `arraySet`, the value `1`, `y`, etc.? The answers to these questions are not present in the code sample, **but they could have been.**
 
