@@ -155,6 +155,10 @@ In Java, abstract classes and interfaces are used for different purposes and hav
   - Abstract Class: Members can have any access modifier (private, protected, public).
   - Interface: Before Java 9, all methods were implicitly public; Java 9 introduced private methods in interfaces.
 
+> - If we want to represent an `is-a` relationship, and we're solving a code reuse problem, we'll use an `abstract class`. 
+> - If we want to represent a `has-a` relationship, and we're defining an abstract contract, we'll use an `interface`.
+{: .prompt-tip }
+
 ## What is generic in Java? Why do we need to use it?
 
 Generics in Java are a feature that allows you to write classes, interfaces, and methods where the **type of data is specified as a parameter**. 
