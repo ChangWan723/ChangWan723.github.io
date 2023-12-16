@@ -67,7 +67,7 @@ All quotations must be **referenced in the text** and in the **reference list** 
 
 ### What is a Paraphrasing?
 
-**Paraphrasing** involves putting a ** passage from source material into your own words**. A paraphrase must also be attributed to the original source. Paraphrased material is usually shorter than the original passage, taking a somewhat broader segment of the source and condensing it slightly.
+**Paraphrasing** involves putting a **passage from source material into your own words**. A paraphrase must also be attributed to the original source. Paraphrased material is usually shorter than the original passage, taking a somewhat broader segment of the source and condensing it slightly.
 
 * If you paraphrase something from an outside source and include it in your own work it should always have an in-text reference.
 * When paraphrasing you should aim to keep the same idea as the original but express it in a different way.
@@ -81,8 +81,8 @@ Paraphrasing is what you should do most commonly in academic writing. Paraphrasi
 
 #### Paraphrasing Technique
 1. Divide up the sentence in its original form into chunks of meaning, and start your paraphrase with a different part of the sentence
-2. Consider changing nouns   verbs 
-3. Consider changing active  passive
+2. Consider changing nouns ← → verbs 
+3. Consider changing active ← → passive
 4. Consider adding a linking word/phrase
 5. Finally, when you have chosen a structure, change the vocabulary
 6. Remember to add a reference!
