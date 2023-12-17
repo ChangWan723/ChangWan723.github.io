@@ -20,6 +20,9 @@ Refactoring isn't just about cleaning up code; it's a vital process for maintain
   * [Why Refactor?](#why-refactor)
   * [When Refactor?](#when-refactor)
   * [How Refactor?](#how-refactor)
+    * [The Most Important Thing for Refactoring: Unit Testing](#the-most-important-thing-for-refactoring-unit-testing)
+      * [What is Unit Testing?](#what-is-unit-testing)
+      * [Why do We Need Unit Testing?](#why-do-we-need-unit-testing)
 <!-- TOC -->
 
 ---
@@ -49,6 +52,8 @@ Refactoring is the process of **restructuring existing code without changing its
         - Breaking down large methods into smaller
         - Remove duplicate code
       
+---
+
 - **Big Refactoring**
     - **Definition**: Big refactoring, in contrast, involves significant changes to the codebase. It’s a more comprehensive approach that may involve altering the software's architecture, design patterns, or overall structure.
     - **Characteristics**:
@@ -117,7 +122,51 @@ Refactoring involves a series of small, controlled steps:
 1. **Identify Code Smells**: These are indicators of problems in the code, like duplications, large classes, or long methods.
 2. **Choose the Right Refactoring Techniques**: Apply specific refactoring techniques like extracting methods, simplifying conditional expressions, or renaming variables.
 3. **Ensure Behavior Preservation**: Use tests to ensure that the refactored code still behaves as expected.
-4. **Repeat**: Refactoring is an iterative process. It’s done in small steps, and each step is tested.
+4. **Repeat**: Refactoring is an iterative process. **It’s done in small steps, and each step is tested.**
+
+### The Most Important Thing for Refactoring: Unit Testing
+
+> Whenever I do refactoring, the first step is always the same. I need to build a solid set of tests for
+that section of code. The tests are essential because even though I follow refactorings structured
+to avoid most of the opportunities for introducing bugs, I'm still human and still make mistakes.
+Thus I need solid tests.
+
+#### What is Unit Testing?
+
+- **Unit tests are written by the development engineers themselves to test the correctness of the code they have written.** We often compare it with **Integration Testing**. **Unit testing** is less granular than **Integration Testing**. 
+  - The test object of **integration testing** is the **whole system or a functional module**, such as testing whether the user registration or login function is normal, it is a kind of **end to end testing**.
+  - **Unit testing**, on the other hand, **tests a class or a function**, and is used to test whether a class or a function is executed according to the expected logic. This is **code level testing**.
+
+#### Why do We Need Unit Testing?
+
+1. Unit tests can effectively **help you find bugs** in the code. 
+   - unit tests also often find a lot of incomplete considerations in the code.
+2. Write unit tests can **help you find the code design problems**.
+   - If it is difficult to write unit tests for a piece of code (e.g. need to rely on advanced features in the unit testing framework), it often means that the code is not well-designed. For example, not using dependency injection, using a lot of static functions, global variables, highly coupled code, and so on.
+3. Unit Testing is a **powerful complement to Integration Testing**
+   - For some complex systems, integration testing cannot cover comprehensively.
+4. The process of writing unit tests is **the process of code refactoring**. 
+   -  When designing and implementing code, it is difficult to think through all the issues. And writing unit tests is the same as a self **Code Review** of the code.
+5. Good unit tests can **act as code documentation**.
+   - Unit tests tell you how the original authors intended their code to be used. With the help of unit tests, we can know what functions the code implements, what special cases need to be considered, what boundary conditions need to be dealt with and so on.
+6. Unit testing is an **important part of TDD**. 
+   - Test-Driven Development (TDD) is a frequently mentioned but rarely implemented development model. TDD requires a lot of extra effort at the code development stage. It is difficult for most programmers to completely accept and get used to this development model. **Writing unit tests for existing code is a good compromise for TDD.** Based on the unit test feedback, and then go back to refactor the code, this development process is more acceptable, easier to implement, and also take into account the advantages of TDD!
+
+> **TDD (Test-Driven Development)**:
+> 
+> **TDD** is a software development approach where tests are written before the actual code. **TDD** is a part of the Agile development methodology.
+> 
+> - Robert C. Martin (“Uncle Bob”) provides a concise set of rules for practicing TDD:
+>   1. You are not allowed to write any production code unless it is to make a failing unit test pass (If there are no failed unit tests now).
+>   2. You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.
+>   3. You are not allowed to write any more production code than is sufficient to pass the one failing unit test (If there are failed unit tests now).
+> 
+> - The benefits of TDD include:
+>   1. **Early Bug Detection**: Since tests are written before the code, it helps in identifying issues at an early stage. 
+>   2. **Better Design**: It often leads to better software design, as developers have to consider how to structure their code to make it testable.
+>   3. **Confidence in Code Changes**: With a comprehensive test suite, developers can make changes or refactor with confidence, knowing that they'll quickly find out if they break something.
+{: .prompt-tip }
+
 
 <br>
 
