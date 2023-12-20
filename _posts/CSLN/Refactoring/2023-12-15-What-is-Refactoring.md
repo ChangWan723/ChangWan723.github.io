@@ -20,6 +20,7 @@ Refactoring isn't just about cleaning up code; it's a vital process for maintain
   * [Why Refactor?](#why-refactor)
   * [When Refactor?](#when-refactor)
   * [How Refactor?](#how-refactor)
+    * [Reference for the Specific Refactoring Process](#reference-for-the-specific-refactoring-process)
     * [The Most Important Thing for Refactoring: Unit Testing](#the-most-important-thing-for-refactoring-unit-testing)
       * [What is Unit Testing?](#what-is-unit-testing)
       * [Why do We Need Unit Testing?](#why-do-we-need-unit-testing)
@@ -120,9 +121,38 @@ So the strategy we should adopt is **Continuous Refactoring**:
 Refactoring involves a series of small, controlled steps:
 
 1. **Identify Code Smells**: These are indicators of problems in the code, like duplications, large classes, or long methods.
-2. **Choose the Right Refactoring Techniques**: Apply specific refactoring techniques like extracting methods, simplifying conditional expressions, or renaming variables.
-3. **Ensure Behavior Preservation**: Use tests to ensure that the refactored code still behaves as expected.
-4. **Repeat**: Refactoring is an iterative process. **It’s done in small steps, and each step is tested.**
+2. **Check Unit Tests (UTs)**: Before refactoring the code, make sure that this code is protected by Unit Tests. This ensures that changes to existing code do not introduce bugs. 
+   - Typically, when the code is first written, the corresponding Unit Tests need to be completed at the same time.
+   - These UTs must be self-checking.
+   - Sometimes the code to be refactored for some reason doesn't have UTs, and it's difficult to add unit tests to it. We can try to do some refactoring first before adding UTs for it.
+3. **Choosing the Right Refactoring Tools**: Refactoring can be very simple with the right tool. Using a tool can speed up refactoring considerably and can avoid silly mistakes that can only be made manually.
+   - Many IDEs provide tools for refactoring code, such as IntelliJ IDEA. For example, if we want to extract a method, all we need to do is highlight the code, select "Extract Method" from the menu, and type in the method name.
+4. **Undertake Refactoring**: Apply specific refactoring techniques like extracting methods, simplifying conditional expressions, or renaming variables.
+5. **Repeat**: Refactoring is an iterative process. **It’s done in small steps, and each step is tested.**
+
+> Refactoring changes the programs in small steps. If you make a mistake, it is easy to find the bug.
+{: .prompt-tip }
+
+### Reference for the Specific Refactoring Process
+
+1. **Decomposing and redistributing the large methods**
+   - We can try to break up the big method into several smaller ones. Unmodified variables in the large method can be passed as parameters into the small methods. Modified variables require more care. We can use them as return values of the smaller methods.
+   - Big methods are generally hard to understand. Smaller code pieces tend to make things more manageable. The responsibilities of the smaller methods are clearer, which are easier to handle and move around.
+2. **Handling split methods separately**
+   - Now that we've broken the original methods into smaller pieces, we can deal with them separately. For example, renaming meaningless names, eliminating unnecessary variables, etc.
+3. **Moving methods**
+   - You may find some methods that don't fit into the responsibilities of the Class (e.g. the method doesn't use information from the class at all), and you'll need to move those methods to the appropriate Class (Sometimes, you may need to create a new Class).
+4. **Handling the large methods being split up**
+   - For example, renaming meaningless names, eliminating unnecessary variables, etc.
+5. **Trying to replace Conditional Logic in code with Polymorphism**
+   - Too many conditional logic judgements (such as, `if` and `switch`) can make code ugly, leading to high Cyclomatic Complexity and deep Nesting Levels. Instead of Conditional Logic, we can use Polymorphic and Design Patterns (e.g. the Strategy Pattern).
+   - This step generally takes more effort and time. We need to determine if it's worth doing this based on the specific project (it's worth doing this in most cases).
+
+> **Testing Changes**: After each small change, run UTs to make sure the change didn't introduce a bug.
+> 
+> **Committing Changes**: In a version-controlled environment, do `git commit` after each small change has been tested. Make sure all changes are recorded.
+{: .prompt-tip }
+
 
 ### The Most Important Thing for Refactoring: Unit Testing
 
@@ -175,3 +205,5 @@ Thus I need solid tests.
 **Reference:**
 
 - Wang, Zheng (2019) _The Beauty of Design Patterns_. Geek Time.
+
+- Fowler, M. and Beck, K. (1999) _Refactoring : improving the design of existing code._ Reading, MA: Addison-Wesley (The Addison-Wesley object technology series).

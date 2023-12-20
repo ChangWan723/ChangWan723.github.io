@@ -14,6 +14,9 @@ image:
 
 In the vast world of software development, where technologies evolve rapidly and coding paradigms shift, one principle remains timeless: **write Clean Code**.
 
+> Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+{: .prompt-tip }
+
 ---
 <center><font size='5'> Contents </font></center>
 
