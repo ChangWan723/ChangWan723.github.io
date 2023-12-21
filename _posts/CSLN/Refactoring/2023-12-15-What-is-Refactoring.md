@@ -90,6 +90,10 @@ Refactoring is the process of **restructuring existing code without changing its
 5. **Optimising Performance**
    - **Sometimes, refactoring can lead to more efficient code**, although performance optimisation isn’t its primary goal.
 
+> In fact, Performance Optimisation is a good **contrast** to Refactoring: 
+>    - Like Refactoring, Performance Optimisation usually doesn't change the behaviour of a component (except for speed), it only changes the internal structure. 
+>    - But the purpose is different. **Performance Optimisation usually makes the code more difficult to understand**, but you have to do it in order to get the required performance. (In real development, we need to measure which is more important, readability or performance, depending on the specific project.)
+
 > **Refactoring ability is also an essential measure of an engineer's code ability**. 
 > 
 > The so-called "**junior engineers maintain the code, senior engineers design the code, expert engineers refactor the code**", this sentence means that: 
