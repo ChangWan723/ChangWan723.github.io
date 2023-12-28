@@ -192,7 +192,7 @@ String streetName = order.getCustomer().getAddress().getStreet();
 ---
 
 The various refactoring techniques in the above (like `Extract Method`, `Hide Method`, `Replace Inheritance with Delegation`, etc.) can be found at the following links:
-   - [Refactoring Techniques](https://refactoring.guru/refactoring/techniques).
+   - [Refactoring Techniques](https://refactoring.guru/refactoring/techniques)
 
 <br>
 
