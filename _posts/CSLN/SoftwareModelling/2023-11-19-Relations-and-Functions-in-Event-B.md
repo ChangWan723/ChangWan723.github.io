@@ -168,7 +168,7 @@ for `f ∈ X⇸Y ∧ dom(f) = X`
 > Total Function: A total function is a function that is defined for every possible input in its domain. For Example: `f(x) = x + 2`, where the domain is all real numbers. For every real number you input into this function, you get a valid output (another real number).
 > 
 > Partial Function: A partial function, on the other hand, is only defined for some inputs in its domain. For Example: `f(x) = 1/x`, where the domain could be considered as all real numbers. However, this function is not defined for the input x = 0 (since division by zero is undefined).
-{: .prompt-tip }
+> {: .prompt-tip }
 
 
 #### Example of Modelling with Total functions
@@ -283,9 +283,9 @@ Assume `R ∈ S ↔ T` and `A ⊆ S` and `B ⊆ T`
 | Predicate     | Definition          |                    |
 |---------------|---------------------|--------------------|
 | x ↦ y ∈ A ◁ R | x ↦ y ∈ R  ∧  x ∈ A | domain restriction |
-| x ↦ y ∈ A ⩤ R | x ↦ y ∈ R  ∧  x ∉ A | domain restriction |
-| x ↦ y ∈ R ▷ B | x ↦ y ∈ R  ∧  y ∈ B | domain restriction |
-| x ↦ y ∈ R ⩥ B | x ↦ y ∈ R  ∧  y ∉ B | domain restriction |
+| x ↦ y ∈ A ⩤ R | x ↦ y ∈ R  ∧  x ∉ A | domain subtraction |
+| x ↦ y ∈ R ▷ B | x ↦ y ∈ R  ∧  y ∈ B | range restriction  |
+| x ↦ y ∈ R ⩥ B | x ↦ y ∈ R  ∧  y ∉ B | range subtraction  |
 
 ### Example of Removing Entries from the Directory
 
