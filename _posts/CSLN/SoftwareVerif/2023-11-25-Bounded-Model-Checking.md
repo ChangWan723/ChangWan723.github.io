@@ -302,13 +302,13 @@ i1 = 0;
 g1 = i1 <= n1
     p2 = p1 * m1; // g1
     i2 = i1 + 1;  // g1
-    g1 = i2 <= n1
+    g2 = i2 <= n1
         p3 = p2*m1  //g1 && g2
         i3 = i2 + 1;  //g1 && g2
         assume(!(i3 <= n1));
 p4 = g1 ? (g2 ? p3 ? p2) : p1;
 i4 = g1 ? (g2 ? i3 : i2) : i1;  // i4 unused
-assert(p >= 5);
+assert(p4 >= 5);
 ```
 
 Convert to logical expression (if UNSAT, then assertion holds):

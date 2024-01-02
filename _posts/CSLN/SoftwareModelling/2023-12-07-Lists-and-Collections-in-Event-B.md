@@ -34,6 +34,10 @@ pin: false
     * [Ordering within a queue](#ordering-within-a-queue)
       * [Adding a job to a queue](#adding-a-job-to-a-queue-1)
       * [Remove a job from a queue](#remove-a-job-from-a-queue-1)
+  * [Partition](#partition)
+    * [Representing States using Partition Operator](#representing-states-using-partition-operator)
+    * [Partition](#partition-1)
+      * [Examples of Partition](#examples-of-partition)
 <!-- TOC -->
 
 ---
@@ -49,10 +53,10 @@ pin: false
 
 ### Modelling a list of items
 
-- Position as natural number: first item has lowest position number and more recent items have higher position number
+- Position as natural number: first item has the lowest position number, and more recent items have a higher position number
   - @inv1: `item ⊆ ITEM`
   - @inv2: `position ∈ item ⟶ POSITION`
-- BUT this allows two different items to have the same position
+- BUT: this allows two different items to have the same position
 
 ---
 
@@ -67,8 +71,8 @@ pin: false
 - Queues are useful for managing access to shared resources in a fair way.
 - Physical queue, e.g., queue for check-in desk at airport
 - Virtual queue, e.g., queue for aircraft landing slot
-- Queue can be viewed as a list
-- Queues are very common in computing to manage access to shared resources such as a CPU, memory, disk, communications channel
+- Queue can be viewed as a **list**
+- **Queues** are very common in computing to manage access to shared resources such as a CPU, memory, disk, communications channel
 
 ### Modelling a Printer Queue
 
@@ -108,6 +112,10 @@ event QueueJob
   end
 ```
 
+- `@grd4: p ∉ ran(position)` and `@grd5 position ≠ ∅ ⇒ p>max(ran(position))` means: 
+  - `p` is greater than all current positions in the list
+  - We need `@grd4` and `@grd5` because we have to keep the Queue **in order**
+
 #### Adding a job to the queue. Second version
 
 ```
@@ -124,6 +132,10 @@ event QueueJob
     @act3: position(j) ≔ p
   end
 ```
+
+- We can replace previous `@grd4` and `@grd5` with: 
+  - `@grd4: ∀ k · k ∈ job ⇒ p > position(k)`
+
 
 #### Removal of a job from queue
 
@@ -155,6 +167,10 @@ event DeQueueJob
   end
 ```
 
+- `@grd2: ∀ k · k ∈ job ⇒ position(j) ≤ position(k)` means:
+  - `j` is at the lowest position in the list
+  - We need `@grd2` because we have to keep **FIFO** (First-in first-out) in the Queue
+
 ## Stack
 
 - First-in first-out (FIFO): items that arrive earlier in the queue are removed earlier
@@ -178,14 +194,18 @@ event DeQueueJob
   end
 ```
 
+- `@grd2:  ∀ k · k ∈ job ⇒ position(j) ≥ position(k)` means:
+  - `j` is at the highest position in the list
+  - We need `@grd2` because we have to keep **LIFO** (Last-in first-out) in the Stack
+
 ## Managing multiple queues
 
 - Rather than managing a single print queue, we want to model a system that manages a collection of queues
 - Introduce carrier set QUEUE to distinguish queues
 - Associate each job with a queue as well as a position q
 - Now the position is based not just on the job `j` but also on the queue `q`
-  - Instead of position(j)
-  - We need position(q, j)
+  - Instead of `position(j)`
+  - We need `position(q, j)`
 
 ### Curried version of position
 
@@ -195,9 +215,9 @@ event DeQueueJob
 
 ---
 
-- Give a queue q,
-  - position(q) is the **position table** for `q`
-  - position(q)(j) is the **position** of job `j` on `q`
+- Give a queue `q`,
+  - `position(q)` is the **position table** for `q`
+  - `position(q)(j)` is the **position** of job `j` on `q`
 
 #### Disjointness of queues
 
@@ -287,3 +307,49 @@ event DeQueueJob
     @act4: j_queue ≔ { j } ⩤ j_queue
   end
 ```
+
+## Partition
+
+### Representing States using Partition Operator
+
+- Entities can only be in **one state at a time**
+  - so, states of a state machine are **disjoint**
+
+---
+
+- **sets** 
+  - `USER`
+- **variables** 
+  - `user in out`
+- **invariants**
+  - `user ⊆ USER`
+  - `user = in ∪ out`
+  - `in ∩ out = ∅`
+
+---
+
+We can use **partition** operator to simplify **invariants**:
+
+- **invariants**
+  - `user ⊆ USER`
+  - `partition(user, in, out)`
+
+The **partition** operator provides a shorthand way of declaring that user is **partitioned** into **disjoint** subsets(in and out).
+
+### Partition
+
+- `S` is partitioned into n disjoint subsets `Ti` where `i ∈ 1..n`
+  - `partition( S, T1, …, Tn )`
+- More precisely:
+  - `S` = `T1 ∪ … ∪ Tn`
+  - `Ti ∩ Tk` = `∅` each `i, k` where `i≠k`
+- Note that the number of arguments for the partition operator is not fixed
+
+#### Examples of Partition
+
+- Switches:
+  - `partition(switch, off, on)`
+- Assignments:
+  - `partition(assignment, open, pending, passed, failed)`
+- Printers:
+  - `partition(printers, offline, ready, busy)`

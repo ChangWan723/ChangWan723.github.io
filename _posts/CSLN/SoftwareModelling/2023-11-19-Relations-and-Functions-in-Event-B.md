@@ -12,30 +12,30 @@ pin: false
 ---
 
 <!-- TOC -->
-  * [Ordered Pairs and Cartesian Products](#ordered-pairs-and-cartesian-products)
+  * [Ordered Pairs (↦) and Cartesian Products (×)](#ordered-pairs--and-cartesian-products-)
     * [Cartesian Products: Definition and Examples](#cartesian-products-definition-and-examples)
     * [Cartesian Product is a Type Constructor](#cartesian-product-is-a-type-constructor)
     * [Sets of Order Pairs](#sets-of-order-pairs)
-  * [Relations](#relations)
+  * [Relations (↔)](#relations-)
     * [Domain and Range](#domain-and-range)
     * [Relational Image](#relational-image)
   * [Partial and Total Functions](#partial-and-total-functions)
-    * [Partial Functions](#partial-functions)
+    * [Partial Functions (⇸)](#partial-functions-)
       * [Function Application](#function-application)
       * [Well-definedness](#well-definedness)
       * [Example of Birthday Book](#example-of-birthday-book)
-    * [Total Functions](#total-functions)
+    * [Total Functions (→)](#total-functions-)
       * [Example of Modelling with Total functions](#example-of-modelling-with-total-functions)
   * [Injective and Surjective Functions](#injective-and-surjective-functions)
-    * [Injective Functions](#injective-functions)
-      * [Total Injective Functions](#total-injective-functions)
-    * [Surjective Functions](#surjective-functions)
-      * [Total Surjective Functions](#total-surjective-functions)
-    * [Bijective Functions](#bijective-functions)
+    * [Injective Functions (⤔)](#injective-functions-)
+      * [Total Injective Functions (↣)](#total-injective-functions-)
+    * [Surjective Functions (⤀)](#surjective-functions-)
+      * [Total Surjective Functions (↠)](#total-surjective-functions-)
+    * [Bijective Functions (⤖)](#bijective-functions-)
   * [Restriction and Substraction](#restriction-and-substraction)
-    * [Domain Restriction](#domain-restriction)
-    * [Domain Subtraction](#domain-subtraction)
-    * [Domain and Range](#domain-and-range-1)
+    * [Restriction (◁)](#restriction-)
+    * [Subtraction (⩤)](#subtraction-)
+    * [Domain and Range, Restriction and Subtraction](#domain-and-range-restriction-and-subtraction)
     * [Example of Removing Entries from the Directory](#example-of-removing-entries-from-the-directory)
   * [Function Overriding](#function-overriding)
     * [Example of Modifying a birthday](#example-of-modifying-a-birthday)
@@ -46,7 +46,7 @@ pin: false
 
 ---
 
-## Ordered Pairs and Cartesian Products
+## Ordered Pairs (↦) and Cartesian Products (×)
 
 - An **ordered pair** is an element consisting of two parts: a **first** part and a **second** part.
   - An ordered pair with first part x and second part y is written: `x↦y`
@@ -75,7 +75,7 @@ Given `x ∈ S`, `y ∈ T`, we have `x ↦ y ∈ S × T`
 
 `directory` has type: `directory ∈ P(Person × PhoneNum)`
 
-## Relations
+## Relations (↔)
 
 - A **relation** is a set of **ordered pairs**.
 - A relation is a common modelling structure, so Event-B has a special notation for it: `T ↔ S = P(T × S)`
@@ -111,7 +111,7 @@ Assume `R ∈ S ↔ T `and `A ⊆ S`, the **relational image** of set `A` under 
 
 ## Partial and Total Functions
 
-### Partial Functions
+### Partial Functions (⇸)
 
 Special kind of relation: each domain element has **at most one range element** associated with it. `f ∈ X⇸Y`
 
@@ -147,6 +147,8 @@ The following definition of function application assumes that `f(x)` **is well-d
 | y = f(x)  | x ↦ y ∈ f  |
 
 > In mathematics, a **well-defined** expression or **unambiguous** expression is an expression whose definition assigns it a unique interpretation or value. Otherwise, the expression is said to be **not well defined, ill defined or ambiguous**. A function is well defined if it gives the **same result** when the representation of the input is changed **without changing the value** of the input.
+{: .prompt-tip }
+
 
 #### Example of Birthday Book
 
@@ -158,7 +160,7 @@ The following definition of function application assumes that `f(x)` **is well-d
 
 ![](https://i.postimg.cc/GpzHDmzP/rf7.png){: .w-10 .shadow .rounded-10 }
 
-### Total Functions
+### Total Functions (→)
 
 A total function **is a special kind of partial function**. To declare `f` as a total function: `f ∈ X → Y`.
 
@@ -168,7 +170,7 @@ for `f ∈ X⇸Y ∧ dom(f) = X`
 > Total Function: A total function is a function that is defined for every possible input in its domain. For Example: `f(x) = x + 2`, where the domain is all real numbers. For every real number you input into this function, you get a valid output (another real number).
 > 
 > Partial Function: A partial function, on the other hand, is only defined for some inputs in its domain. For Example: `f(x) = 1/x`, where the domain could be considered as all real numbers. However, this function is not defined for the input x = 0 (since division by zero is undefined).
-> {: .prompt-tip }
+{: .prompt-tip }
 
 
 #### Example of Modelling with Total functions
@@ -181,7 +183,7 @@ We can re-write the invariant for the birthday book to use total functions:
 
 ## Injective and Surjective Functions
 
-### Injective Functions
+### Injective Functions (⤔)
 
 **One-to-one function**: different _domain_ elements are mapped to different range elements.
 In other words, in **inverse is also a function**.
@@ -194,7 +196,7 @@ This is defined in terms of the inverse of f as follows:
 |-----------|----------------------------|
 | f ∈ X ⤔ Y     | f ∈ X ⇸ Y ∧ f⁻¹ ∈ Y ⇸ X  |
 
-#### Total Injective Functions
+#### Total Injective Functions (↣)
 
 Just as for standard total functions, we can declare an injective funciton to be total on some set.
 
@@ -206,7 +208,7 @@ This is defined i as follows:
 |-----------|---------------------------|
 | f ∈ S ↣ Y     | f ∈ S ⤔ Y ∧ dom(f) = S  |
 
-### Surjective Functions
+### Surjective Functions (⤀)
 
 Onto function: If every element of _range_ is reached from some element of domain.
 
@@ -218,7 +220,7 @@ This is defined as follows:
 |-----------|---------------------------|
 | f ∈ X ⤀ Y     | f ∈ X ⇸ Y ∧ ran(f) = Y  |
 
-#### Total Surjective Functions
+#### Total Surjective Functions (↠)
 
 Just as for standard total functions, we can declare a surjective funciton to be total on some set.
 
@@ -233,7 +235,7 @@ This is defined as follows:
 ![](https://i.postimg.cc/cJHC7szz/rf19.png){: .w-10 .shadow .rounded-10 }
 _Graphical Representation of Injective and Surjective_
 
-### Bijective Functions
+### Bijective Functions (⤖)
 
 A function which is **total**, **injective** and **surjective** is called a **bijective** function.
 
@@ -247,12 +249,12 @@ This is defined as follows:
 |-----------|---------------------------|
 | f ∈ S ⤖ Y     | f ∈ X ↣ Y ∧ f ∈ S ↠ Y  |
 
-![](hhttps://i.postimg.cc/XqG4Xqpf/rf20.png){: .w-10 .shadow .rounded-10 }
+![](https://i.postimg.cc/XqG4Xqpf/rf20.png){: .w-10 .shadow .rounded-10 }
 _Graphical Representation of Different Functions_
 
 ## Restriction and Substraction
 
-### Domain Restriction
+### Restriction (◁)
 
 Given `R ∈ S ↔ T` and `A ⊆ S`, the domain restriction of `R` by `A` is writen: `A ◁ R`
 
@@ -264,7 +266,7 @@ Restrict relation `R` so that it only contains pairs whose first part is in the 
 
 `{john, jim, jane} ◁ directory = { john ↦ 829483, jim ↦ 398620 }`
 
-### Domain Subtraction
+### Subtraction (⩤)
 
 Given `R ∈ S ↔ T` and `A ⊆ S`, the domain subtraction of `R` by `A` is written `A ⩤ R`
 
@@ -276,7 +278,7 @@ Remove those pairs from `R` whose first part is in `A`.
 
 `{john, jim, jane} ⩤ directory = { mary ↦ 287573, mary ↦ 398620 }`
 
-### Domain and Range
+### Domain and Range, Restriction and Subtraction
 
 Assume `R ∈ S ↔ T` and `A ⊆ S` and `B ⊆ T`
 
