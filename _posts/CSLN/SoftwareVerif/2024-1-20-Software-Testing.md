@@ -14,13 +14,13 @@ pin: false
 <!-- TOC -->
   * [Main Types of Testing](#main-types-of-testing)
     * [Black-Box Testing](#black-box-testing)
-      * [Advantages](#advantages-)
+      * [Advantages](#advantages)
       * [Disadvantages](#disadvantages)
     * [White-Box Testing](#white-box-testing)
-      * [Advantages](#advantages--1)
+      * [Advantages](#advantages-)
       * [Disadvantages](#disadvantages-1)
     * [Grey-box Testing](#grey-box-testing)
-      * [Advantages](#advantages--2)
+      * [Advantages](#advantages--1)
       * [Disadvantages](#disadvantages-2)
   * [Coverage Criteria for White-box Testing](#coverage-criteria-for-white-box-testing)
     * [Statement Coverage](#statement-coverage)
@@ -58,7 +58,7 @@ pin: false
   - This motivates so-called **boundary value analysis** to derive test case data for black-box testing.
   - The idea is to consider the boundaries of the equivalence classes.
 
-#### Advantages 
+#### Advantages
 
 1. **No Need for Internal Knowledge**: It does not require knowledge of the internal code structure. This allows testers to objectively test the software, focusing on inputs and outputs without any bias related to the internal code.
 2. **User Perspective**: It simulates the end-user perspective, ensuring the software is examined for real-world use cases.
