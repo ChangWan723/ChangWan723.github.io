@@ -31,6 +31,9 @@ pin: false
       * [iteration](#iteration)
   * [Examples](#examples)
     * [Programs with Loops](#programs-with-loops)
+    * [Example using Hoare Logic](#example-using-hoare-logic)
+    * [Example using Hoare Logic (If..Else)](#example-using-hoare-logic-ifelse)
+    * [Example using Hoare Logic (Loop)](#example-using-hoare-logic-loop)
 <!-- TOC -->
 
 ---
@@ -229,3 +232,15 @@ Proving correctness using loop invariants is similar to proofs by induction:
 
 > Finding loop invariants can be rather difficult in practice.
 {: .prompt-warning }
+
+### Example using Hoare Logic
+
+![](https://i.postimg.cc/yxG9rvJn/hl9.png){: .w-55 .shadow .rounded-10 }
+
+### Example using Hoare Logic (If..Else)
+
+![](https://i.postimg.cc/cL3x3XdZ/hl10.png){: .w-55 .shadow .rounded-10 }
+
+### Example using Hoare Logic (Loop)
+
+![](https://i.postimg.cc/fbhwfmbd/hl11.png){: .w-55 .shadow .rounded-10 }
