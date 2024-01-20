@@ -17,10 +17,10 @@ pin: false
       * [Advantages](#advantages)
       * [Disadvantages](#disadvantages)
     * [White-Box Testing](#white-box-testing)
-      * [Advantages](#advantages-)
+      * [Advantages](#advantages-1)
       * [Disadvantages](#disadvantages-1)
     * [Grey-box Testing](#grey-box-testing)
-      * [Advantages](#advantages--1)
+      * [Advantages](#advantages-2)
       * [Disadvantages](#disadvantages-2)
   * [Coverage Criteria for White-box Testing](#coverage-criteria-for-white-box-testing)
     * [Statement Coverage](#statement-coverage)
@@ -78,7 +78,7 @@ pin: false
   - But we are more concerned with **code coverage**, i.e. the derivation of test data sets is **based on the analysis of source code**.
 
 
-#### Advantages 
+#### Advantages
 
 1. **Thorough Testing**: Allows for a thorough testing of the application as it covers all possible paths, including branches, loops, and conditions within the code.
 2. **Optimization**: Helps in optimizing the code by identifying redundant paths and unreachable code.
@@ -96,7 +96,7 @@ pin: false
 
 - Grey-box testing combines aspects of both black-box and white-box testing.
 
-#### Advantages 
+#### Advantages
 
 1. **Balanced Approach**: Provides a good balance between internal workings (as in white-box testing) and external functionality (as in black-box testing).
 2. **Efficient Test Design**: Allows testers to design test scenarios more effectively by using both high-level (black-box) and detailed (white-box) perspectives.
