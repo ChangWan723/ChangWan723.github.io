@@ -435,7 +435,7 @@ class ExampleObject implements Cloneable{
 }
 ```
 
-``` 
+```java
 public static void main(String[] args) {
     ExampleObject original = new ExampleObject(); // primitiveValue = 1, and arrValue[0] = 1
     
@@ -459,7 +459,7 @@ result:
 {: .prompt-tip }
 
 
-``` 
+```java 
 public static void main(String[] args) throws CloneNotSupportedException {
     ExampleObject original = new ExampleObject(); // primitiveValue = 1, and arrValue[0] = 1
 
