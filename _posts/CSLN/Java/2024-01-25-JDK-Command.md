@@ -2,7 +2,7 @@
 title: Common Commands in JDK
 date: 2024-01-25 20:30:00 UTC
 categories: [(CS) Learning Note, Java]
-tags: [software engineering, Java]
+tags: [software engineering, Java, JVM]
 pin: false
 ---
 

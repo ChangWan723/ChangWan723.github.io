@@ -2,7 +2,7 @@
 title: Just-In-Time (JIT) Compilation in Java
 date: 2023-11-18 16:19:00 UTC
 categories: [(CS) Learning Note, Java]
-tags: [software engineering, Java]
+tags: [software engineering, Java, JVM]
 pin: false
 ---
 
