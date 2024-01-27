@@ -153,10 +153,12 @@ for (Order order : orders) {
 > 
 > And every time I did code review, my colleagues would always remind me if I did null-pointer checking on the variables. It was really annoying and time-wasting. 
 > 
-> So, please don't return null.
+> So, please don't use `Null`.
 {: .prompt-tip }
 
 > When we return `null`, we are essentially creating work for ourselves and foisting problems upon our callers. All it takes is **one missing `null`** check to send an application **spinning out of control**. 
+
+- More about: [Null in Java: A Bad Invention](/posts/Null/)
 
 ## Don't Pass Null
 
