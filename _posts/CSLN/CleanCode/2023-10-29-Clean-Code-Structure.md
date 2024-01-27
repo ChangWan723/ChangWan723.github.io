@@ -98,8 +98,12 @@ public class VehicleActions {
 
 ```
 
-In the procedure-oriented approach, **if we want to add new functionality** for all vehicles (e.g. to get the operation method of each vehicle), we just need to add a new function in `VehicleActions` class. **We don't need to modify any existing vehicle class**. However, if we want to add a new vehicle, we have to change all the functions related to vehicles.
+In the procedure-oriented approach, **if we want to add new functionality** for all vehicles (e.g. to get the operation method of each vehicle), we just need to add a new function in `VehicleActions` class. **We don't need to modify any existing vehicle class**(Assuming that the data structure is complete). However, if we want to add a new vehicle, we have to change all the functions related to vehicles.
 
+> **Procedure-oriented approach** emphasises the procedure and **does not divide the functions (procedures) according to different classes (data structures)**.
+> 
+> So it is easy to add new functions (procedures). But adding a new class (data structure) will be troublesome, because all functions (procedures) will be affected.
+{: .prompt-tip }
 
 **Object-oriented approach**:
 ```java
@@ -135,11 +139,19 @@ public class Bicycle implements Vehicle {
 }
 ```
 
-In the object-oriented approach, **if we want to add a new vehicle**, such as `Boat`, we simply create a new class that implements the `Vehicle` interface and define the `start` and `describe` method in that class. This way, **we don't need to modify any existing function**. However, if we need to add new functionality for all vehicles (e.g. to get the operation method of each vehicle), we have to make changes in each vehicle class.
+In the object-oriented approach, **if we want to add a new vehicle**, such as `Boat`, we simply create a new class that implements the `Vehicle` interface and define the `start` and `describe` method in that class. This way, **we don't need to modify any existing function**. However, if we need to add new functionality for all vehicles (e.g. to get the operation method of each vehicle), we have to make changes in each vehicle class. (Even then, in the object-oriented approach, we still don't need to modify any functions. **So as far as scalability is concerned, OO is better than PO.**)
+
+> **Object-oriented approach** emphasises the object, and will **divide the same function (procedure) into corresponding classes according to different data structures.**
+>
+> So it is easy to add a new class (data structure). But adding new functions (procedures) will be troublesome, because all functions (procedures) need to be divided in different classes (data structures).
+{: .prompt-tip }
+
 
 > In any complex system there are going to be times when we want to add new data types rather than new functions. For these cases objects and OO are most appropriate. On the other hand, there will also be times when we’ll want to add new functions as opposed to data types. In that case procedural code and data structures will be more appropriate.
 >
 > Mature programmers know that the idea that everything is an object is a myth. Sometimes you really do want simple data structures with procedures operating on them.
+
+
 
 ## The Law of Demeter
 

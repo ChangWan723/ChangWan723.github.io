@@ -13,8 +13,8 @@ pin: false
 
 <!-- TOC -->
   * [Object-Oriented Programming (OOP)](#object-oriented-programming-oop)
-  * [Procedural Oriented Programming (POP)](#procedural-oriented-programming-pop)
-  * [Functional Oriented Programming (FOP)](#functional-oriented-programming-fop)
+  * [Procedural-Oriented Programming (POP)](#procedural-oriented-programming-pop)
+  * [Functional-Oriented Programming (FOP)](#functional-oriented-programming-fop)
   * [Aspect-Oriented Programming (AOP)](#aspect-oriented-programming-aop)
   * [Which One is Better?](#which-one-is-better)
 <!-- TOC -->
@@ -37,7 +37,7 @@ pin: false
 
 **Relation to Others**: OOP can incorporate aspects of POP in its methods and can utilize functional programming principles. AOP can be used within OOP to further modularize cross-cutting concerns.
 
-## Procedural Oriented Programming (POP)
+## Procedural-Oriented Programming (POP)
 
 **Introduction**: POP is centered around procedures or routines, i.e., a series of computational steps to be carried out. It's one of the oldest paradigms, focusing on writing a list of instructions to tell the computer what to do step by step.
 
@@ -51,7 +51,14 @@ pin: false
 
 **Relation to Others**: POP is often seen as the foundation upon which OOP was developed, introducing more structure and modularity. It contrasts more sharply with FOP, which avoids mutable state and iterative loops.
 
-## Functional Oriented Programming (FOP)
+> **OOP emphasises flexibility offered by objects, while POP emphasises transparency of data structures.** For large, complex projects, flexibility of objects and encapsulation are certainly important. But this doesn't mean that transparency of data is worthless.
+> 
+> **In OOP, something we need to borrow the idea of POP for some designs.**
+>
+> - More about: [Data/Object Anti-Symmetry](/posts/Clean-Code-Structure/#dataobject-anti-symmetry)
+{: .prompt-tip }
+
+## Functional-Oriented Programming (FOP)
 
 **Introduction**: The core of FOP is **descriptions of mappings**. FOP treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. It emphasizes the application of functions, possibly without global state. Its main features:
   - **immutable data**: Functions are the base unit in FOP, and variables have been replaced by functions in FOP. Functions written in pure FOP have no "variables", or they are immutable. For a function, as long as the input is deterministic, the output can also be deterministic.
