@@ -50,7 +50,7 @@ This organization ensures that the class's most important aspects, its public in
 
 ### The Single Responsibility Principle
 
-- The [Single Responsibility Principle (SRP)](/posts/srp/) asserts that a class should have one, and only one, reason to change.
+- The [Single Responsibility Principle (SRP)](/posts/SRP/) asserts that a class should have one, and only one, reason to change.
 
 > At the same time, many developers fear that a large number of small, single-purpose classes makes it more difficult to understand the bigger picture. They are concerned that they must navigate from class to class in order to figure out how a larger piece of work gets accomplished.
 > 
@@ -69,7 +69,7 @@ Classes should be designed with the understanding that **software is inherently 
 
 ### Organizing for Change
 
-Classes should be open for extension but closed for modification ([Open-Closed Principle](/posts/ocp/)). **A well-designed class anticipates the likelihood of change and is structured in a way that allows for these changes without the need for modification of the class's code.**
+Classes should be open for extension but closed for modification ([Open-Closed Principle](/posts/OCP/)). **A well-designed class anticipates the likelihood of change and is structured in a way that allows for these changes without the need for modification of the class's code.**
 
 ### Isolating from Change
 
