@@ -72,7 +72,7 @@ public class Car {
 }
 
 public class Bicycle {
-    public String type;
+    public String type; // such as: Mountain, Road, Hybrid
     public boolean hasBell;
 }
 
@@ -126,7 +126,7 @@ public class Car implements Vehicle {
 }
 
 public class Bicycle implements Vehicle {
-    public String type; // 如：Mountain, Road, Hybrid
+    public String type; // such as: Mountain, Road, Hybrid
     public boolean hasBell;
 
     public void start() {
