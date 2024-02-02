@@ -1,5 +1,5 @@
 ---
-title: What is Refactoring?
+title: What is Refactoring? Why do We Need Refactoring?
 date: 2023-12-15 23:45:00 UTC
 categories: [(CS) Learning Note, Refactoring]
 tags: [software engineering, Refactoring, code]
@@ -75,6 +75,10 @@ Refactoring is the process of **restructuring existing code without changing its
 
 ## Why Refactor?
 
+> **It is a myth that we can get systems “right the first time.”** Instead, we should implement only today’s stories, then refactor and expand the system to implement new stories tomorrow. This is the essence of iterative and incremental agility. Test-driven development, refactoring, and the clean code they produce make this work at the code level.
+> 
+> --- Robert C. Martin (“Uncle Bob”)
+
 1. **refactoring code is inevitable**
     - Good code or architecture is not completely designed from the beginning, just as good products are iterated. Most real projects always have some features that need to be changed. **Code and architecture always need to be changed as the project evolves, so refactoring code is inevitable.**
 
@@ -93,6 +97,8 @@ Refactoring is the process of **restructuring existing code without changing its
 > In fact, Performance Optimisation is a good **contrast** to Refactoring: 
 >    - Like Refactoring, Performance Optimisation usually doesn't change the behaviour of a component (except for speed), it only changes the internal structure. 
 >    - But the purpose is different. **Performance Optimisation usually makes the code more difficult to understand**, but you have to do it in order to get the required performance. (In real development, we need to measure which is more important, readability or performance, depending on the specific project.)
+{: .prompt-tip }
+
 
 > **Refactoring ability is also an essential measure of an engineer's code ability**. 
 > 

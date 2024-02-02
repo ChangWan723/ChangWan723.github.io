@@ -74,3 +74,12 @@ Classes should be open for extension but closed for modification ([Open-Closed P
 ### Isolating from Change
 
 A clean class should minimize the impact of change by reducing how much a change in one class forces changes in other classes. This can be achieved through the use of interfaces and abstract classes, allowing classes to communicate and collaborate **without being tightly coupled to each other's specific implementations** ([Dependency Inversion Principle](/posts/DIP/)).
+
+
+<br>
+
+---
+
+**Reference:**
+
+- Martin, R. C. (2009) _Clean code : a handbook of agile software craftsmanship._ Upper Saddle River, NJ: Prentice Hall (Robert C. Martin series).
