@@ -150,7 +150,7 @@ Separation of concerns is an age-old principle in software engineering that advo
 
 ### Aspect-Oriented Programming (AOP) as a Solution
 
-**Aspect-Oriented Programming (AOP)** is a programming paradigm that aims to increase modularity by allowing the separation of cross-cutting concerns from business logic. 
+**Aspect-Oriented Programming (AOP)** is a programming paradigm that aims to increase modularity by **allowing the separation of cross-cutting concerns from business logic**. 
   - Cross-cutting concerns are aspects of a program that affect multiple modules, such as logging, security, transaction management, and error handling. 
   - AOP introduces the concept of "**aspects**", which encapsulate behaviors that cut across multiple classes, such as logging, error handling, or security. 
   - AOP addresses these concerns by modularising them into distinct aspects, thereby simplifying the core business logic and enhancing code readability and maintainability.
