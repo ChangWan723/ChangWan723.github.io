@@ -82,4 +82,10 @@ But remember, this rule is the lowest priority of the four rules of Simple Desig
 
 Simplicity is key. The design should be as simple as possible, with no unnecessary classes or methods. This doesn't mean the design should be minimalistic at the cost of functionality but rather that every component should have a clear, justified purpose.
 
+<br>
 
+---
+
+**Reference:**
+
+- Martin, R. C. (2009) _Clean code : a handbook of agile software craftsmanship._ Upper Saddle River, NJ: Prentice Hall (Robert C. Martin series).
