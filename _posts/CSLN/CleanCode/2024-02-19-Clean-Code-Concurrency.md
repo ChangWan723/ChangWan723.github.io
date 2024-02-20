@@ -28,40 +28,62 @@ Concurrency is not just a tool for improving performance; it's a fundamental par
   - Concurrency can sometimes improve performance, but only when there is a lot of wait time that can be shared between multiple threads or multiple processors.
 - **Writing concurrent programs does affect design.**
   - It changes algorithms and significantly impacts system structure due to the decoupling of tasks from timing.
-- Understanding concurrency issues remains crucial in systems using containers like Web or EJB containers to **avoid concurrent update issues and deadlocks.**
+- **Understanding concurrency issues remains crucial in systems using containers like Web or EJB containers to avoid concurrent update issues and deadlocks.**
 - **Concurrency introduces overhead in both performance and the complexity of the code.**
-- Implementing concurrency correctly is **challenging**, even for simple problems.
-- **Bugs in concurrent systems may not be repeatable**, leading them to be overlooked as one-offs rather than recognized as true defects.
-- Effective concurrency often requires a fundamental shift in design strategy.
+- **Implementing concurrency correctly is challenging, even for simple problems.**
+- **Bugs in concurrent systems may not be repeatable, leading them to be overlooked as one-offs rather than recognized as true defects.**
+- **Effective concurrency often requires a fundamental shift in design strategy.**
 - **Concurrency can create a significant uncertainty in the process**
   - The complexity of concurrent programming is further highlighted by considering the number of different execution paths possible in the method due to concurrency issues.
 
-## The Clean Code Approach to Concurrency
+## Concurrency Defense Principles
 
-Clean Code principles, while not explicitly designed for concurrency, provide a solid foundation for tackling concurrent programming challenges. The principles of readability, simplicity, and separation of concerns are particularly relevant. Let's delve into how these principles apply to concurrency:
+The principles, while not explicitly designed for concurrency, provide a solid foundation for tackling concurrent programming challenges.
 
-#### 1. Keep It Simple
+### Keep It Simple
 
 Concurrency introduces complexity, there's no denying it. However, the Clean Code principle of keeping things simple applies even more so here. We should strive to keep our concurrent code as straightforward as possible. This might mean preferring higher-level abstractions provided by modern languages and frameworks, such as `async/await` in JavaScript or the `Stream` API in Java, over more complex and error-prone constructs like raw threads and locks.
 
-#### 2. Limit the Scope of Data
+### Single Responsibility Principle
+
+> The SRP5 states that a given method/class/component should have a single reason to change. Concurrency design is complex enough to be a reason to change in it’s own right and therefore deserves to be separated from the rest of the code. 
+
+> Keep your concurrency-related code separate from other code.
+{: .prompt-tip }
+
+### Limit the Scope of Data
 
 In concurrent programming, shared mutable state is the root of all evil. To write clean concurrent code, we should limit the scope of mutable data as much as possible and use immutable data structures whenever feasible. This approach minimizes the chances of race conditions and makes the code easier to reason about.
 
-#### 3. Use Clear and Expressive Concurrency Constructs
+> Take data encapsulation to heart; severely limit the access of any data that may be shared.
+{: .prompt-tip }
 
-Just as we name variables and functions in a way that expresses their intent, we should use concurrency constructs that make the code's concurrent nature clear and understandable. For example, using a `ConcurrentHashMap` in Java clearly signals to the reader that this data structure is intended for use in a concurrent context.
+### Use Copies of Data
 
-#### 4. Test Thoroughly
+Avoiding shared data can simplify concurrency by copying objects and treating them as read-only or merging results from these copies in a single thread. While there may be concerns about the overhead from object creation and garbage collection, the benefits of reducing synchronization could outweigh these costs.
 
-Concurrency bugs are notoriously difficult to reproduce and debug. Therefore, thorough testing is even more critical. Clean Code principles advocate for automated testing, and in the context of concurrency, this might involve using specialized tools and techniques to simulate concurrent execution and detect race conditions.
+### Threads Should Be as Independent as Possible
 
-### Real-World Concurrency Patterns
+Design threaded code so that each thread operates independently, processing requests with its own unshared data, like local variables, to minimize synchronization issues.
 
-In my career, I've encountered and implemented various concurrency patterns that align with Clean Code principles. For instance, the **Producer-Consumer** pattern, where producers generate data and consumers process it, can be designed cleanly by using queues and ensuring that shared state access is minimized. Another example is the **Readers-Writers** pattern, where the goal is to allow multiple readers concurrent access but exclusive access for writers. Implementing such patterns cleanly involves using appropriate synchronization constructs that make the code both safe and easy to understand.
+For instance, HttpServlets in web applications behave as if isolated, using only local variables within doGet and doPost methods, thereby avoiding synchronization problems. However, shared resources, like database connections, can still present challenges for servlet-based applications.
 
-### Conclusion: Concurrency as a Discipline
+> Attempt to partition data into independent subsets than can be operated on by independent threads.
+{: .prompt-tip }
 
-Embracing concurrency in software development requires a disciplined approach, much like adhering to Clean Code principles. By keeping our concurrent code simple, limiting shared mutable state, using clear concurrency constructs, and rigorously testing, we can harness the power of concurrency while maintaining code quality and readability. As we continue to navigate the complexities of concurrent programming, let's remember that the ultimate goal is not just to make our code run faster or handle more tasks simultaneously, but to do so in a way that is clean, maintainable, and understandable.
+### Use Clear Names
 
-In the ever-evolving landscape of software engineering, concurrency remains a challenging yet rewarding domain. By applying Clean Code principles to our concurrent programming efforts, we can write code that stands the test of time, scales gracefully, and remains a joy to work with, even as it harnesses the full power of modern hardware.
+Just as we name variables and functions in a way that expresses their intent, we should make names clear and understandable when using concurrency.
+
+For example, using a `ConcurrentHashMap` in Java clearly signals to the reader that this data structure is intended for use in a concurrent context.
+
+### Know Your Library
+
+Modern programming languages and environments may provide tools to facilitate concurrent  development.
+
+For example, Java offers many improvements for concurrent development over previous versions. 
+
+> When Java was young, Doug Lea wrote the seminal book8 Concurrent Programming in Java. Along with the book he developed several thread-safe collections, which later became part of the JDK in the `java.util.concurrent` package. The collections in that package are safe for multithreaded situations and they perform well. In fact, the `ConcurrentHashMap` implementation performs better than HashMap in nearly all situations. It also allows for simultaneous concurrent reads and writes, and it has methods supporting common composite operations that are otherwise not thread safe.
+
+> Review the classes available to you. In the case of Java, become familiar with java.util.concurrent, java.util.concurrent.atomic, java.util.concurrent.locks.
+{: .prompt-tip }
