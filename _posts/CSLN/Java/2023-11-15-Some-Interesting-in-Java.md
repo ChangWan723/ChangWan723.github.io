@@ -3,7 +3,7 @@ title: Some Interesting Codes in Java
 date: 2023-11-15 23:49:00 UTC
 categories: [(CS) Learning Note, Java]
 tags: [software engineering, Java]
-pin: true
+pin: false
 ---
 
 Java has some interesting and counter-intuitive code. If you run this code, it is possible that something unexpected will happen. By understanding them, we can avoid some bugs and get a better understanding of Java.
