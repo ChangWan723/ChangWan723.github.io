@@ -10,6 +10,27 @@ image:
 
 > **Writing clean concurrent programs is hard — very hard.** It is much easier to write code that executes in a single thread. It is also easy to write multithreaded code that looks fine on the surface but is broken at a deeper level. Such code works fine until the system is placed under stress.
 
+---
+<center><font size='5'> Contents </font></center>
+
+---
+
+<!-- TOC -->
+  * [Introduction of Concurrency](#introduction-of-concurrency)
+    * [Why Concurrency?](#why-concurrency)
+    * [Some Statements about Concurrency](#some-statements-about-concurrency)
+  * [Concurrency Defense Principles](#concurrency-defense-principles)
+    * [Keep It Simple](#keep-it-simple)
+    * [Single Responsibility Principle](#single-responsibility-principle)
+    * [Limit the Scope of Data](#limit-the-scope-of-data)
+    * [Use Copies of Data](#use-copies-of-data)
+    * [Threads Should Be as Independent as Possible](#threads-should-be-as-independent-as-possible)
+    * [Use Clear Names](#use-clear-names)
+    * [Know Your Library](#know-your-library)
+<!-- TOC -->
+
+---
+
 ## Introduction of Concurrency
 
 Concurrency is not just a tool for improving performance; it's a fundamental paradigm shift in how we think about structuring and executing our code. In an era where multi-core processors are ubiquitous, understanding concurrency is indispensable. It's about doing multiple things at once, not necessarily making things faster but making applications more responsive and efficient.
@@ -85,5 +106,14 @@ For example, Java offers many improvements for concurrent development over previ
 
 > When Java was young, Doug Lea wrote the seminal book8 Concurrent Programming in Java. Along with the book he developed several thread-safe collections, which later became part of the JDK in the `java.util.concurrent` package. The collections in that package are safe for multithreaded situations and they perform well. In fact, the `ConcurrentHashMap` implementation performs better than HashMap in nearly all situations. It also allows for simultaneous concurrent reads and writes, and it has methods supporting common composite operations that are otherwise not thread safe.
 
-> Review the classes available to you. In the case of Java, become familiar with java.util.concurrent, java.util.concurrent.atomic, java.util.concurrent.locks.
+> Review the classes available to you. In the case of Java, become familiar with `java.util.concurrent`, `java.util.concurrent.atomic`, `java.util.concurrent.locks`.
 {: .prompt-tip }
+
+
+<br>
+
+---
+
+**Reference:**
+
+- Martin, R. C. (2009) _Clean code : a handbook of agile software craftsmanship._ Upper Saddle River, NJ: Prentice Hall (Robert C. Martin series).
