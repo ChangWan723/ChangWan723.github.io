@@ -6,6 +6,25 @@ tags: [software engineering, Java]
 pin: false
 ---
 
+---
+<center><font size='5'> Contents </font></center>
+
+---
+
+<!-- TOC -->
+  * [Understanding Multithreading in Java](#understanding-multithreading-in-java)
+    * [Key Benefits of Multithreading](#key-benefits-of-multithreading)
+  * [Implementing Multithreading (Thread, Runnable, and Callable) in Java](#implementing-multithreading-thread-runnable-and-callable-in-java)
+    * [Example of `Thread`](#example-of-thread)
+    * [Example of `Runnable`](#example-of-runnable)
+    * [Example of `Callable`](#example-of-callable)
+  * [Thread Pools in Java](#thread-pools-in-java)
+    * [Advantages of Thread Pools](#advantages-of-thread-pools)
+    * [Example of Thread Pools](#example-of-thread-pools)
+<!-- TOC -->
+
+---
+
 ## Understanding Multithreading in Java
 
 Multithreading is a core concept of Java programming that allows multiple threads to run concurrently within a single process. This concurrency model enables developers to perform multiple operations simultaneously, making applications more efficient and responsive.
@@ -24,8 +43,8 @@ Java provides multiple ways to implement multithreading, including extending the
   - **A `Thread` is a class that represents a thread of execution in a Java program.**
     When you extend the `Thread` class, you must override its `run()` method
     with the code you want the thread to execute.
-  - Starting the thread is done by creating an instance of your `Thread` subclass
-    and calling its `start()` method, which internally calls the `run()` method.
+  - **Starting the thread is done by creating an instance of your `Thread` subclass
+    and calling its `start()` method, which internally calls the `run()` method.**
   - Extending the `Thread` class can be limiting because it forces your class to
     inherit from `Thread` when it might actually need to inherit from another class
     (since Java does not support multiple inheritance).
@@ -34,20 +53,20 @@ Java provides multiple ways to implement multithreading, including extending the
     executed by a thread.** It has a single method called `run()`.
   - Unlike extending `Thread`, implementing `Runnable` allows your class to
     extend other classes.
-  - To execute a `Runnable`, you pass an instance of your `Runnable` class to a
-    `Thread` instance and call the `start()` method on the `Thread`. This is a
+  - **To execute a `Runnable`, you pass an instance of your `Runnable` class to a
+    `Thread` instance and call the `start()` method on the `Thread`.** This is a
     more flexible approach than extending `Thread` because it allows you to
     implement `Runnable` in classes that extend other classes.
 - **Callable**
   - **`Callable` is an interface similar to `Runnable` but with some key differences.**
     It was introduced in Java 5 to handle cases where a task needs to return a result
     and/or throw an exception.
-  - The `Callable` interface has a method called `call()` which can return a
-    value of a specified type and can throw an exception.
+  - **The `Callable` interface has a method called `call()` which can return a
+    value of a specified type and can throw an exception.**
   - `Callable` tasks need to be run by an `ExecutorService`. When you submit a
     `Callable` to an `ExecutorService`, you get a `Future` object back. This
-    `Future` can be used to retrieve the `Callable`'s result, providing a way to
-    handle the result of the asynchronous task once it completes.
+    `Future` can be used to retrieve the `Callable`'s result, **providing a way to
+    handle the result of the asynchronous task once it completes.**
   - `Callable` is more versatile than `Runnable` when it comes to exception
     handling and returning results.
 
@@ -128,9 +147,6 @@ Thread pools are a crucial feature of Java's concurrency framework, managing a p
 Java's `ExecutorService` interface provides a flexible mechanism for asynchronous task execution. The `Executors` class offers convenient factory methods for creating different types of thread pools.
 
 ```java
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 public class ThreadPoolDemo {
     public static void main(String[] args) {
         ExecutorService executor = Executors.newFixedThreadPool(5);

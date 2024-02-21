@@ -38,7 +38,7 @@ pin: false
 >* consistent use of pronouns
 >* use of transition signals
 >* logical organisation of ideas
-{: .prompt-tip }
+   The work-stealing algorithm is a scheduling strategy that dynamically redistributes work among multiple threads. Each thread in a work-stealing pool maintains its own queue of tasks. When a thread runs out of tasks, it "steals" work from the end of another thread's queue, hence the term "work-stealing". This approach helps in efficiently balancing the workload across all threads, reducing idle time and improving overall performance, especially in compute-intensive and recursive task scenarios.
 
 * **Logical** organisation of ideas
    * Chronological order (step by step, event by event)
