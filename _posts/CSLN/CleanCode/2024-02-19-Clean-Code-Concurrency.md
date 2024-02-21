@@ -27,6 +27,17 @@ image:
     * [Threads Should Be as Independent as Possible](#threads-should-be-as-independent-as-possible)
     * [Use Clear Names](#use-clear-names)
     * [Know Your Library](#know-your-library)
+    * [Keep Synchronized Sections Small](#keep-synchronized-sections-small)
+    * [Be Cautious about Shutting Down Concurrency Code](#be-cautious-about-shutting-down-concurrency-code)
+  * [Testing Threaded (Concurrent) Code](#testing-threaded-concurrent-code)
+    * [Treat Spurious Failures as Candidate Threading Issues](#treat-spurious-failures-as-candidate-threading-issues)
+    * [Get Your Nonthreaded Code Working First](#get-your-nonthreaded-code-working-first)
+    * [Make Your Threaded Code Pluggable](#make-your-threaded-code-pluggable)
+    * [Run with More Threads Than Processors](#run-with-more-threads-than-processors)
+    * [Run on Different Platforms](#run-on-different-platforms)
+    * [Instrument Your Code to Try and Force Failures](#instrument-your-code-to-try-and-force-failures)
+      * [Hand-coded](#hand-coded)
+      * [Automated](#automated)
 <!-- TOC -->
 
 ---
@@ -100,13 +111,105 @@ For example, using a `ConcurrentHashMap` in Java clearly signals to the reader t
 
 ### Know Your Library
 
-Modern programming languages and environments may provide tools to facilitate concurrent  development.
+Modern programming languages, libraries, or environments may provide tools to facilitate concurrent  development.
 
 For example, Java offers many improvements for concurrent development over previous versions. 
 
 > When Java was young, Doug Lea wrote the seminal book8 Concurrent Programming in Java. Along with the book he developed several thread-safe collections, which later became part of the JDK in the `java.util.concurrent` package. The collections in that package are safe for multithreaded situations and they perform well. In fact, the `ConcurrentHashMap` implementation performs better than HashMap in nearly all situations. It also allows for simultaneous concurrent reads and writes, and it has methods supporting common composite operations that are otherwise not thread safe.
 
 > Review the classes available to you. In the case of Java, become familiar with `java.util.concurrent`, `java.util.concurrent.atomic`, `java.util.concurrent.locks`.
+{: .prompt-tip }
+
+### Keep Synchronized Sections Small
+
+The synchronized keyword in programming introduces a lock, allowing only one thread to execute a block of code at a time. This locking mechanism, while ensuring thread safety, can be costly due to delays and added overhead. Therefore, it's important to use synchronized blocks sparingly and keep them as small as possible to avoid unnecessary performance degradation caused by extensive synchronization.
+
+### Be Cautious about Shutting Down Concurrency Code
+
+Implementing graceful shutdown procedures in systems designed to run indefinitely is challenging due to issues like deadlocks and threads that wait indefinitely for signals.
+
+Problems arise, for example, if a parent thread waits for a deadlocked child thread, causing the system to hang. These scenarios are not uncommon, and significant effort is often required to ensure that concurrent systems can shut down correctly.
+
+> Think about shut-down early and get it working early. It’s going to take longer than you expect. Review existing algorithms because this is probably harder than you think.
+{: .prompt-tip }
+
+## Testing Threaded (Concurrent) Code
+
+It's not feasible to prove that code is completely correct, but thorough testing can reduce risks. This complexity escalates when multiple threads interact with shared data. The advice given is to create tests that can uncover potential issues and to run them often under varying configurations and loads.
+
+### Treat Spurious Failures as Candidate Threading Issues
+
+Threaded code can result in rare but critical failures that are difficult to predict and replicate. These failures may occur infrequently, perhaps once in thousands or millions of executions, making them challenging to diagnose. Developers may dismiss these as flukes or attribute them to external anomalies.
+
+However, it's important to treat these failures seriously and not to disregard them as one-offs. Ignoring such issues can lead to building more code on top of an unstable foundation, compounding potential problems.
+
+> Do not ignore system failures as one-offs.
+{: .prompt-tip }
+
+### Get Your Nonthreaded Code Working First
+
+> **Nonthreading Code**: Nonthreading or non-threaded code refers to parts of the program that are designed to run sequentially on a single thread, as opposed to concurrently on multiple threads. It's the code that doesn't have to deal with synchronization issues that come with multi-threaded programming.
+
+This is a fundamental piece of advice that suggests before integrating your code with multi-threading, you should ensure that it works correctly in a single-threaded context. In other words, **make sure that the basic functionality of your code is solid and bug-free before adding the complexity of threads.**
+
+The recommendation is to **address non-threading issues separately from threading issues** to confirm that the code operates as intended without the added complexity of threads.
+
+> Do not try to chase down nonthreading bugs and threading bugs at the same time. Make sure your code works outside of threads.
+{: .prompt-tip }
+
+### Make Your Threaded Code Pluggable
+
+Design your threaded code to be adaptable, allowing it to run in various configurations such as with a single thread, multiple threads, or with changing thread counts during execution. Ensure it can interact with both actual components and test doubles, which can mimic different operation speeds.
+
+> Make your threaded code modular and flexible to facilitate testing and debugging in different scenarios.
+{: .prompt-tip }
+
+### Run with More Threads Than Processors
+
+Running the system with more threads than processors can **promote task swapping**, revealing issues such as missing critical sections or deadlocks.
+
+### Run on Different Platforms
+
+Testing threaded code on various platforms is crucial since threading behaviors can differ significantly across operating systems, as threading policies vary.
+
+### Instrument Your Code to Try and Force Failures
+
+Flaws in concurrent code can remain hidden because they don't always surface during normal operations or simple tests, potentially revealing themselves sporadically over long periods. These bugs are elusive due to the sheer number of execution paths available, making the chance of triggering a failure quite low.
+
+- It's beneficial for issues to emerge early and frequently, and there are two main approaches to code instrumentation: - Hand-coded 
+  - Automated
+
+#### Hand-coded
+
+To better detect the issues, it's recommended to instrument the code to force different execution orderings, using methods like `Object.wait()`, `Object.sleep()`, `Object.yield()`, and adjusting `Object.priority()`.
+
+For example, The inserted call to `yield()` will change the execution pathways taken by the code and
+possibly cause the code to fail where it did not fail before:
+
+```java 
+public synchronized String nextUrlOrNull() {
+    if (hasNext()) {
+       String url = urlGenerator.next();
+       Thread.yield(); // inserted for testing.
+       updateHasNext();
+       return url;
+    }
+    return null;
+}
+```
+
+However, this manual approach has several drawbacks:
+- It requires identifying the right places for insertion.
+- Determining the appropriate calls to use is not always clear.
+- Such code can slow down production environments if left in inadvertently.
+- It's a haphazard method that may not systematically uncover issues.
+
+
+#### Automated
+
+Automated tools such as Aspect-Oriented Frameworks, CGLIB, or ASM can be used to instrument code for concurrency testing. With the tools, the method could be designed to randomly induce sleeping, yielding, or doing nothing when executed, altering the thread execution order. By integrating such randomness, it's possible to expose flaws that might not surface under normal conditions. The overarching goal is to "jiggle" the execution of threads to uncover potential concurrency problems.
+
+> Use jiggling strategies to ferret out errors.
 {: .prompt-tip }
 
 
