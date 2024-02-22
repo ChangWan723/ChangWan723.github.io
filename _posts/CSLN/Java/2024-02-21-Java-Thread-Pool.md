@@ -55,6 +55,8 @@ ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
 - Suitable for applications with many short-lived asynchronous tasks.
 - Offers excellent flexibility and responsiveness to task load changes.
 - Potentially resource-intensive due to the creation and termination of many threads.
+- It tries to cache threads and reuse them, and when no cached threads are available, a new worker thread is created.
+- If a thread is idle for more than 60 seconds, it is terminated and moved out of the cache. When idle for a long period of time, this kind of thread pooling does not consume any resources.
 
 ### Single Thread Executor
 
