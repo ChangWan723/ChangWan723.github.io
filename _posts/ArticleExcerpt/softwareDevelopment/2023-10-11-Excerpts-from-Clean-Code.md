@@ -26,11 +26,6 @@ image:
 
 >That’s being attentive to every variable name. **You should name a variable using the same care with which you name a first-born child.**
 
->There are only **two hard things** in Computer Science: **cache invalidation** and **naming things**.
->
-> —— Phil Karlton
-{: .prompt-tip }
-
 >We should view our code as the beautiful articulation of noble efforts of design -- design as a process, not a static endpoint. It’s in the code that the architectural metrics of coupling and cohesion play out. If you listen to Larry Constantine describe coupling and cohesion, he speaks in terms of code -- not lofty abstract concepts that one might find in UML. Richard Gabriel advises us in his essay, “Abstraction Descant” that abstraction is evil. Code is anti-evil, and clean code is perhaps divine.
 
 >Going back to my little box of Ga-Jol, I think it’s important to note that the Danish wisdom advises us not just to pay attention to small things, **but also to be honest in small things**. This means being **honest to the code**, honest to our colleagues about the state of our code and, most of all, being honest with ourselves about our code. Did we Do our Best to “**leave the campground cleaner than we found it**”? Did we re-factor our code before checking in? 
