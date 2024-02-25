@@ -12,7 +12,7 @@ image:
 
 **Clean Code: The Art of Writing Readable and Maintainable Software**
 
-In the vast world of software development, where technologies evolve rapidly and coding paradigms shift, one principle remains timeless: **write Clean Code**.
+In the vast world of software development, where technologies evolve rapidly and coding paradigms shift, **one principle remains timeless: write Clean Code**.
 
 > Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
 {: .prompt-tip }
