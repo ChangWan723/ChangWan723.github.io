@@ -139,6 +139,9 @@ The code in [version 4](#code-example-version-4) is already quite clean and effi
 
 ## Rules for Creating Good Names
 
+> In general, a good name should **clearly** and **precisely** express its intention and **not contain redundant** information.
+{: .prompt-tip }
+
 ### Be Intention-Revealing
 
 - A name should tell you **why it exists, what it does, and how it's used**. Instead of generic names like `temp` or `data`, use names that reflect the purpose.
