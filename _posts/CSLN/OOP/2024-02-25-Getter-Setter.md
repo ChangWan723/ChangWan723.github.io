@@ -3,7 +3,7 @@ title: Getters/Setters Are Evil in OOP
 date: 2024-02-25 19:48:00 UTC
 categories: [(CS) Learning Note, OOP]
 tags: [software engineering, OOP]
-pin: false
+pin: true
 ---
 
 Many developers, after writing an OO class, will first habitually add Getter/Setter for it (many compilers or libraries, such as Lombok, will also provide the ability to quickly add Getter/Setter). This is highly unrecommended behaviour. **In fact, adding the Getter/Setter should be a last resort after considering all better alternatives.**
