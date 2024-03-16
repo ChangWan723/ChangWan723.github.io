@@ -123,4 +123,4 @@ This module aims is to give an understanding of Automated Software Verification:
 - [SAT Problem and DPLL](/posts/SAT-Solvers/)
 - [Bounded Model Checking](/posts/Bounded-Model-Checking/)
 - [Hoare Logic](/posts/Deductive-Verification/)
-- [Software Testing](/posts/software-testing/)
+- [Software Testing](/posts/Software-Testing/)
