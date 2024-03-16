@@ -275,3 +275,10 @@ The Monostate pattern achieves singleton-like behavior through static member var
 > 
 > **If the singleton class has no need for extensions and does not depend on external systems, then there is no problem in designing it as a singleton class. For some global information, sometimes it is really simple and convenient to use it directly as a singleton class.**
 {: .prompt-tip }
+
+
+---
+
+**Reference:**
+
+- Wang, Zheng (2019) _The Beauty of Design Patterns_. Geek Time. 

@@ -2,7 +2,7 @@
 title: Automated Software Verification
 date: 2023-10-01 19:39:00 UTC
 categories: [(CS) Learning Note, Automated Software Verification]
-tags: [computer science, software verification]
+tags: [computer science, software verification, Model Checking]
 pin: false
 ---
 
@@ -123,3 +123,4 @@ This module aims is to give an understanding of Automated Software Verification:
 - [SAT Problem and DPLL](/posts/SAT-Solvers/)
 - [Bounded Model Checking](/posts/Bounded-Model-Checking/)
 - [Hoare Logic](/posts/Deductive-Verification/)
+- [Software Testing](/posts/software-testing/)

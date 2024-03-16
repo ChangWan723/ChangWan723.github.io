@@ -6,14 +6,14 @@ tags: [software engineering, OOP]
 pin: true
 ---
 
-Many developers, after writing an OO class, will first habitually add Getter/Setter for it (many compilers or libraries, such as Lombok, will also provide the ability to quickly add Getter/Setter). This is highly unrecommended behaviour. **In fact, adding the Getter/Setter should be a last resort after considering all better alternatives.**
+Many compilers or libraries, such as Lombok, will also provide the ability to quickly add Getter/Setter. There's nothing wrong with these tools, they can help programmers write sample code easily. But because of these tools, it is customary for many developers to add Getters/Setters to OO classes first after writing them. This is highly unrecommended behaviour. **In fact, we should only use Getter/Setter when we have to use them (mostly, no).**
 
 > **Many developers always have the habit of writing useless or even harmful sample code. They are just used to write this way, but they never know why they write this way.**
 > 
 > Getter/Setter is such sample code.
 {: .prompt-tip }
 
-> Beans have private variables manipulated by getters and setters. The quasi-encapsulation of beans seems to **make some OO purists feel better but usually provides no other benefit.**
+> Beans have **private variables manipulated by getters and setters.** The quasi-encapsulation of beans seems to **make some OO purists feel better but usually provides no other benefit.**
 >
 > --- Robert C. ("Uncle Bob")
 
@@ -24,12 +24,12 @@ Many developers, after writing an OO class, will first habitually add Getter/Set
 
 <!-- TOC -->
   * [Why Are Getters/Setters Evil in OOP?](#why-are-getterssetters-evil-in-oop)
-    * [They Could Break Encapsulation](#they-could-break-encapsulation)
+    * [They Could Violate Encapsulation](#they-could-violate-encapsulation)
       * [Understanding Encapsulation](#understanding-encapsulation)
       * [Useless Getters and Setters](#useless-getters-and-setters)
     * [They Could Violate The Law of Demeter](#they-could-violate-the-law-of-demeter)
     * [They Could Violate Tell-Don't-Ask Principle](#they-could-violate-tell-dont-ask-principle)
-  * [Getters/Setters with Additional Functionality (like validation) Are Not Getters/Setters](#getterssetters-with-additional-functionality-like-validation-are-not-getterssetters)
+  * [Getters/Setters with Additional Functionality (like validation) Are Not Pure Getters/Setters](#getterssetters-with-additional-functionality-like-validation-are-not-pure-getterssetters)
   * [Some Situations Where Getter/Setter Cannot Be Avoided](#some-situations-where-gettersetter-cannot-be-avoided)
     * [Best Practices for Using Getters and Setters:](#best-practices-for-using-getters-and-setters)
 <!-- TOC -->
@@ -43,7 +43,10 @@ Many developers, after writing an OO class, will first habitually add Getter/Set
 - **Exposure of Implementation Details:** Getters and setters might reveal too much about an object's internal structure, leading to increased coupling between objects.
 - **Violation of Object's Integrity:** Allowing external entities to change an object's state directly can lead to invalid or inconsistent object states if proper validation is not enforced.
 
-### They Could Break Encapsulation
+> Getters and setters are not evil per se, they're evil when they're used for things they shouldn't be used for.
+{: .prompt-tip }
+
+### They Could Violate Encapsulation
 
 #### Understanding Encapsulation
 
@@ -106,7 +109,7 @@ Getters and Setters expose data in the class. It means that internal data can be
 > Remember, **DO NOT blindly follow any principles.** All the principles are to help us make the most suitable design
 {: .prompt-warning }
 
-## Getters/Setters with Additional Functionality (like validation) Are Not Getters/Setters
+## Getters/Setters with Additional Functionality (like validation) Are Not Pure Getters/Setters
 
 - Many people stick with Getters and Setters because they think they can add some additional functionality to Getters and Setters.
   - For example, in the Getter, transform the returned value, and in the setter, add correctness validation.
@@ -127,8 +130,9 @@ public void setAge(int age) {
 }
 ```
 
-The above `setAge()` is not a pure Setter. We should **give it a more appropriate name, like: `setValidatedAge()`.** This reminds the caller that the method is not a simple setter, but will validate the age.
+The above `setAge()` is not a pure Setter. We should **give it a more appropriate name, like: `updateAgeSafely()`.** This reminds the caller that the method is not a simple setter, but will validate the age.
 
+However, based on CleanCode's principles of clarity and simplicity, `setAge` seems better. Indeed, **`setAge` is by no means a bad name, and sometimes even better.** The point of my example here is to illustrate that a name like `setAge` risks being perceived by the reader as a pure setter, ignoring the additional logic involved. **Which name is better should depend on the specific project, team consensus, etc.**
 
 
 ## Some Situations Where Getter/Setter Cannot Be Avoided
@@ -138,7 +142,7 @@ The above `setAge()` is not a pure Setter. We should **give it a more appropriat
 
 - **Lazy Initialization**: Getters can be used for lazy initialization, where the object's property value is not calculated or initialized until it's needed.
 - **Thread Safety**: In multi-threaded environments, getters and setters can be used to synchronize access to mutable shared resources to ensure thread safety.
-- **Interfacing with Frameworks or Libraries**: Many frameworks and libraries expect the JavaBeans convention (getters and setters) for property access, especially in areas like serialization, ORM (Object-Relational Mapping), and bean introspection.
+- **Interfacing with Frameworks or Libraries**: Many frameworks and libraries expect the JavaBeans convention (getters and setters) for property access, especially in areas like serialization, Spring ORM (Object-Relational Mapping), and bean introspection.
 - **Supporting Data Binding**: For example, in UI frameworks, data binding often requires getters and setters to dynamically update the UI based on changes to the data model.
 - **Different Access Levels**: For example, the getter may be public, but the setter could be protected.
 

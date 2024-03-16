@@ -3,7 +3,7 @@ title: What is Clean Code?
 date: 2023-10-11 18:59:00 UTC
 categories: [(CS) Learning Note, Clean Code]
 tags: [software engineering, Clean Code, code]
-pin: true
+pin: false
 image:
   path: /assets/img/posts/cleancode.jpg
 ---

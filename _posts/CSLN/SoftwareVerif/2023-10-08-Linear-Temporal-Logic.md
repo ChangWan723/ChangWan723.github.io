@@ -2,7 +2,7 @@
 title: Linear Temporal Logic (LTL)
 date: 2023-10-08 15:49:00 UTC
 categories: [ (CS) Learning Note, Automated Software Verification ]
-tags: [computer science, software verification, LTL ]
+tags: [computer science, software verification, LTL, Model Checking]
 pin: false
 ---
 

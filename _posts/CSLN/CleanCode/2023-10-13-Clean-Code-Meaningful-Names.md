@@ -8,6 +8,11 @@ image:
   path: /assets/img/posts/name.png
 ---
 
+> **There are only two hard things in Computer Science: cache invalidation and naming things.**
+>
+> —— Phil Karlton
+{: .prompt-tip }
+
 > Names are everywhere in software. We name our variables, our functions, our arguments, classes, and packages. We name our source files and the directories that contain them. We name our jar files and war files and ear files. We name and name and name. Because we do so much of it, we’d better do it well.
 
 ---
@@ -17,11 +22,11 @@ image:
 
 <!-- TOC -->
   * [Why Are Meaningful Names Important?](#why-are-meaningful-names-important)
-  * [The Power of Meaningful Names](#the-power-of-meaningful-names)
-    * [code example, version 1](#code-example-version-1)
-    * [code example, version 2](#code-example-version-2)
-    * [code example, version 3](#code-example-version-3)
-    * [code example, version 4](#code-example-version-4)
+    * [The Power of Meaningful Names](#the-power-of-meaningful-names)
+      * [code example, version 1](#code-example-version-1)
+      * [code example, version 2](#code-example-version-2)
+      * [code example, version 3](#code-example-version-3)
+      * [code example, version 4](#code-example-version-4)
   * [Rules for Creating Good Names](#rules-for-creating-good-names)
     * [Be Intention-Revealing](#be-intention-revealing)
     * [Avoid Disinformation](#avoid-disinformation)
@@ -43,11 +48,6 @@ image:
 
 ## Why Are Meaningful Names Important?
 
-> **There are only two hard things in Computer Science: cache invalidation and naming things.**
->
-> —— Phil Karlton
-{: .prompt-tip }
-
 The significance of Meaningful Names:
 
 1. **Clarity**: Names provide a quick insight into the purpose and functionality of a piece of code.
@@ -55,7 +55,7 @@ The significance of Meaningful Names:
 3. **Ease of Maintenance**: Future developers (or even you, months down the line) can understand and modify the code with less effort.
 4. **Professionalism**: Taking the time to name things well reflects a commitment to craftsmanship and quality.
 
-## The Power of Meaningful Names
+### The Power of Meaningful Names
 
 Naming might seem like a small aspect of coding, but **it carries immense weight in the realm of Clean Code**. By adhering to these simple rules, you not only make your code more readable but also elevate the overall quality of your software.
 
@@ -63,7 +63,7 @@ Naming might seem like a small aspect of coding, but **it carries immense weight
 
 **For example**, let's take a look at the following code:
 
-### code example, version 1
+#### code example, version 1
 ```java
 public List<int[]> fetch() {
     List<int[]> lst = new ArrayList<int[]>();
@@ -81,7 +81,7 @@ What this code is doing? What is the significance of `arraySet`, the value `1`, 
 
 Suppose we later discover that this code is part of a weather application, where arraySet represents a list of daily weather data, and the third element of each array indicates if it rained that day (1 for rain, 0 for no rain). **With this context, we can make the code more understandable**:
 
-### code example, version 2
+#### code example, version 2
 ```java
 public List<int[]> getRainyDays() {
     List<int[]> rainyDays = new ArrayList<int[]>();
@@ -104,7 +104,7 @@ Notice that the **simplicity of the code has not changed**. It still has exactly
 
 We can go further and write a simple class for dailyWeather instead of using an array of `int[]`. It can include an intention-revealing function (call it `isRainy`) to hide the magic numbers. It results in a new version of the function:
 
-### code example, version 3
+#### code example, version 3
 ```java
 public List<DailyWeather> getRainyDays() {
     List<DailyWeather> rainyDays = new ArrayList<int[]>();
@@ -122,7 +122,7 @@ Is this the best code yet? Of course not! In fact, with Java code, we can **make
 
 We can use Java 8's Stream API for a **more concise and readable approach**:
 
-### code example, version 4
+#### code example, version 4
 ```java
 public List<DailyWeather> getRainyDays() {
     return weatherData.stream()
