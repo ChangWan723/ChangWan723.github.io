@@ -3,7 +3,7 @@ title: Overview of Academic Essay
 date: 2023-08-13 19:49:00 UTC
 categories: [Learning Note, academic writing]
 tags: [academic writing]
-pin: true
+pin: false
 ---
 
 

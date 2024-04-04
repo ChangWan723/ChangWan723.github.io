@@ -3,7 +3,7 @@ title: Linear Temporal Logic (LTL)
 date: 2023-10-08 15:49:00 UTC
 categories: [ (CS) Learning Note, Automated Software Verification ]
 tags: [computer science, software verification, LTL, Model Checking]
-pin: false
+pin: true
 ---
 
 When it comes to reasoning about the behavior of systems over time, especially in the domain of formal verification, **Linear Temporal Logic (LTL)** stands out as a powerful tool.
