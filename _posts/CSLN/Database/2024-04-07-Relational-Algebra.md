@@ -155,21 +155,12 @@ These operations are more specific to the relational model and are essential for
 ![](https://i.postimg.cc/MTVVjZNB/ra10.png){: .w-10 .shadow .rounded-10 }
 
 > - Algebraic laws can be useful in **query optimisation**
-    >
-
-- `σΘ1(σΘ2(R)) = σΘ1⋀Θ2(R)`
-
-> - Commutative: `σΘ1(σΘ2(R)) = σΘ2(σΘ1(R))`
-    >
-
-- `σΘ(R⨉S) = σΘ(R) ⨉ S`
-  >
-
-- if `Θ` mentions only attributes of `R`
-
->     - Cartesian product is expensive, so reducing the size of `R` (`σΘ(R) ⨉ S`) is beneficial
-
-        {: .prompt-tip }
+>   - `σΘ1(σΘ2(R)) = σΘ1⋀Θ2(R)`
+>   - Commutative: `σΘ1(σΘ2(R)) = σΘ2(σΘ1(R))`
+>   - `σΘ(R⨉S) = σΘ(R) ⨉ S`
+>     - if `Θ` mentions only attributes of `R`
+> - Cartesian product is expensive, so reducing the size of `R` (`σΘ(R) ⨉ S`) is beneficial
+{: .prompt-tip }
 
 - **Renaming (ρ):** This is used to change the name of attributes in a relation, allowing for clarity or consistency in
   query results or expressions.
@@ -495,14 +486,14 @@ FATHER x FATHER:
 | David            | Joe             |
 | Nick             | Mick            |
 
-
 ---
 
 **SQL:**
 
 - SQL **does not** support referencing columns by position number
 - Instead, **SQL supports an aliasing mechanism**
-  - **SELECT** R.father-name **AS** grandfather-name, T.child-name **AS** grandchild-name **FROM** FATHER **AS** R, FATHER **AS** T **WHERE** R.child-name = T.father-name
+  - **SELECT** R.father-name **AS** grandfather-name, T.child-name **AS** grandchild-name **FROM** FATHER **AS** R,
+    FATHER **AS** T **WHERE** R.child-name = T.father-name
 
 ## Relational Completeness of SQL
 
@@ -512,7 +503,7 @@ FATHER x FATHER:
   - SELECT DISTINCT …
   - FROM …
   - WHERE …
-- can express **Cartesian product**, **projection**, and **selection** 
+- can express **Cartesian product**, **projection**, and **selection**
 
 ---
 
@@ -520,6 +511,8 @@ FATHER x FATHER:
   - Union `R ∪ S`: (SELECT * FROM R) UNION (SELECT * FROM S)
   - INTERSECT `R ∩ S`: (SELECT * FROM R) INTERSECT (SELECT * FROM S)
   - Difference `R – S`: (SELECT * FROM R) EXCEPT (SELECT * FROM S)
-- SQL supports these operations: **UNION**, **EXCEPT**, **INTERSECT**, **UNION ALL**, **INTERSECT ALL** and **EXCEPT ALL**. (There may be some differences in specific SQL implementations (e.g. MySQL, PostgreSQL, etc.) or some database systems may not support specific operators.)
+- SQL supports these operations: **UNION**, **EXCEPT**, **INTERSECT**, **UNION ALL**, **INTERSECT ALL** and **EXCEPT ALL
+  **. (There may be some differences in specific SQL implementations (e.g. MySQL, PostgreSQL, etc.) or some database
+  systems may not support specific operators.)
   - **UNION**, **INTERSECT** and **EXCEPT** eliminates duplicates! (**Set** semantics)
   - **UNION ALL**, **INTERSECT ALL** and **EXCEPT ALL** does not (**Multiset** semantics)
