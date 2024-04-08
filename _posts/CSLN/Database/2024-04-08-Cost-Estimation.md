@@ -6,6 +6,8 @@ tags: [ computer science, Database ]
 pin: false
 ---
 
+Cost estimation provides the foundation for query optimization by estimating the resource requirements and execution time of different query execution plans. Query optimization uses these cost estimates to select the most efficient plan, leading to faster query processing and better overall system performance.
+
 - At this stage, no commitment to a particular physical plan
   - Estimate the “cost” of each operator in terms of **the size relation(s) on which it operates**
   - Choose a logical query plan that **minimises the size of the intermediate relations** (= minimises the cost of the plan)
