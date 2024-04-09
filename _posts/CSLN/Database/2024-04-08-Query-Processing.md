@@ -1,5 +1,5 @@
 ---
-title: Query Processing in Databases
+title:  Overview of Query Processing in Databases
 date: 2024-04-08 18:39:00 UTC
 categories: [ (CS) Learning Note, Database ]
 tags: [ computer science, Database ]
@@ -42,10 +42,12 @@ _Query Processing_
 
 ### Query Plans in Query Processing
 
+In general, query plans contain **Logical Query Plan** and **Physical Query Plan**.
+
 ![](https://i.postimg.cc/5NjKw8MR/qp6.png){: .w-10 .shadow .rounded-10 }
 _Query Processing_
 
-- **Logical** Query Plan
+- **Logical Query Plan**
   - algebraic representation of query
   - operators taken from relational algebra
   - abstract!
@@ -55,7 +57,7 @@ _Query Processing_
     - Cost-based plan selection
     - Join ordering
 
-- **Physical** Query Plan
+- **Physical Query Plan**
   - algorithms selected for each operator in plan
   - execution order specified for operators
   - contains:

@@ -353,6 +353,8 @@ NULL | 3 | z
   selections
   - `σ p∧q∧r (R) = σp(σq(σr(R)))`
 
+- `σp(R⨉S) = R ⨝p S`
+
 ### Relational Transformations - Commutative
 
 - **Selection** and **theta-join** are **commutative** operations
