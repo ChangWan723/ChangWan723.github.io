@@ -110,9 +110,8 @@ void insertionSort(int array[]) {
 
 > **Why is insertion sort more popular than bubble sort** since both bubble sort and insertion sort have the same time
 > complexity O(n^2) and are stable sorting algorithms?
-> - **Because data swapping in a bubbling sort is more complex** than data movement in an insertion sort (bubbling
-    requires 3 assignment operations, while insertion only requires 1)
-    {: .prompt-tip }
+> - **Because data swapping in a bubbling sort is more complex** than data movement in an insertion sort (bubbling requires 3 assignment operations, while insertion only requires 1)
+{: .prompt-tip }
 
 ### Binary Insertion Sort
 
