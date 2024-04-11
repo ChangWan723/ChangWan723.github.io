@@ -278,3 +278,11 @@ private ListNode reverse(ListNode head) {
     return prev;
 }
 ```
+
+<br>
+
+---
+
+**Reference:**
+
+- Wang, Zheng (2019) _The Beauty of Data Structures and Algorithms_. Geek Time.
