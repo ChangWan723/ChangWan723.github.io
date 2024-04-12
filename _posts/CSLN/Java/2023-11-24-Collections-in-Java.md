@@ -33,6 +33,8 @@ Java Collections Framework is a pivotal component of Java programming, designed 
 
 The Java Collections Framework provides a set of interfaces and classes for storing and manipulating groups of data as objects. The primary benefits include reduced programming effort, increased performance, and the ability to handle different types of data structures.
 
+![](https://i.postimg.cc/SsRP5dQq/collection.png){: .w-10 .shadow .rounded-10 }
+
 ## Types of Collections in Java
 
 ### List
@@ -50,7 +52,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 ### Queue
 
 - **Features**: Holds elements prior to processing. Queues typically order elements in a FIFO (first-in-first-out) manner.
-- **Implementation Classes**: `LinkedList`, `PriorityQueue`
+- **Implementation Classes**: `PriorityQueue`, `ArrayDeque`
 - **Use Case**: When you need to process elements in a specific order.
 
 ### Map
