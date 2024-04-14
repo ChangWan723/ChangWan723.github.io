@@ -6,7 +6,7 @@ tags: [ computer science, Algorithm ]
 pin: false
 ---
 
-**Linear lists**, often simply referred to as lists, are the data structure that represents a sequence of elements arranged in a linear order. In addition to [arrays](/posts/array/) and [linked lists](/posts/linked-list/), **stacks and queues are also important linear lists.**
+**Linear lists**, often simply referred to as lists, are the data structure that represents a sequence of elements arranged in a linear order. In addition to [arrays](/posts/Array/) and [linked lists](/posts/Linked-List/), **stacks and queues are also important linear lists.**
 
 ---
 <center><font size='5'> Contents </font></center>

@@ -22,6 +22,7 @@ pin: false
   * [How is the `final` applied differently between variables, methods, and classes in Java?](#how-is-the-final-applied-differently-between-variables-methods-and-classes-in-java)
   * [Access Levels of Different Modifiers in Java](#access-levels-of-different-modifiers-in-java)
   * [What is static block in Java?](#what-is-static-block-in-java)
+  * [What is the order of loading the parts of Java classes?](#what-is-the-order-of-loading-the-parts-of-java-classes)
   * [What is a Comparator and Comparable in Java?](#what-is-a-comparator-and-comparable-in-java)
   * [What are the Strong Reference，Soft Reference，Weak Reference and Phantom Reference in Java?](#what-are-the-strong-referencesoft-referenceweak-reference-and-phantom-reference-in-java)
 <!-- TOC -->
@@ -200,6 +201,14 @@ Here's why generics are important:
 ## What is static block in Java?
 
 In Java, a static block, also known as a static initialisation block, is a block of code that **is executed when the class is first loaded into the JVM** (Java Virtual Machine). Static blocks are used to initialise static variables or to perform static initializations that require more than a single line of code. 
+
+## What is the order of loading the parts of Java classes?
+
+- The order of loading the parts of Java classes:
+  1. **Parent Class Static Variables and Static Blocks**: Firstly, the static variables and static blocks of the parent class are loaded and executed in the order they are declared in the parent class.
+  2. **Child Class Static Variables and Static Blocks**: Next, the static variables and static blocks of the child class are loaded and executed in the order they are declared in the child class. These operations occur after the static initialization of the parent class, during the loading process of the child class.
+  3. **Parent Class Instance Variables, Instance (non-Static) Blocks, and Constructors**: When creating an instance of the child class, the constructor of the parent class is called first, followed by the initialization of instance variables and instance (non-Static) blocks in the parent class, in the order they are declared. Constructors are called during this stage, completing the initialization of the parent class object.
+  4. **Child Class Instance Variables, Instance (non-Static) Blocks, and Constructors**: Subsequently, the instance variables and instance (non-Static) blocks of the child class are loaded and executed in the order they are declared in the child class. Finally, the constructor of the child class is called, completing the initialization of the child class object.
 
 ## What is a Comparator and Comparable in Java?
 
