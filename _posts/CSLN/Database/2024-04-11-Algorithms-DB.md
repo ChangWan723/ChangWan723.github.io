@@ -1,6 +1,6 @@
 ---
 title: Physical Plan in Databases Query Processing
-date: 2024-04-10 17:55:00 UTC
+date: 2024-04-14 18:00:00 UTC
 categories: [ (CS) Learning Note, Database ]
 tags: [ computer science, Database ]
 pin: false
