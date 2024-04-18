@@ -8,19 +8,19 @@ image:
   path: /assets/img/posts/sort.jpg
 ---
 
-| Algorithm             | Time Complexity (Average Case) | Best Time Complexity | Worst Time Complexity | Space Complexity | Is Stable |
-|-----------------------|--------------------------------|----------------------|-----------------------|------------------|-----------|
-| Bubble Sort           | O(n^2)                         | O(n)                 | O(n^2)                | O(1)             | Yes       |
-| Direct Insertion Sort | O(n^2)                         | O(n)                 | O(n^2)                | O(1)             | Yes       |
-| Binary Insertion Sort | O(n^2)                         | O(n)                 | O(n^2)                | O(1)             | Yes       |
-| Selection Sort        | O(n^2)                         | O(n^2)               | O(n^2)                | O(1)             | No        |
-| Shell Sort            | O(n^1.3)                       | O(n)                 | O(n^2)                | O(1)             | No        |
-| Merge Sort            | O(n log n)                     | O(n log n)           | O(n log n)            | O(n)             | Yes       |
-| Quick Sort            | O(n log n)                     | O(n log n)           | O(n^2)                | O(log n)         | No        |
-| Heap Sort             | O(n log n)                     | O(n log n)           | O(n log n)            | O(1)             | No        |
-| Bucket Sort           | O(n log(n/m))                  | O(n)                 | O(n^2)                | O(n)             | Yes       |
-| Counting Sort         | O(n + k)                       | O(n + k)             | O(n + k)              | O(k)             | Yes       |
-| Radix Sort            | O(nk)                          | O(nk)                | O(nk)                 | O(n + k)         | Yes       |
+| Algorithm             | Time Complexity (Average Case) | Best Time Complexity | Worst Time Complexity | Space Complexity | Is Stable | Is In-place |
+|-----------------------|--------------------------------|----------------------|-----------------------|------------------|-----------|-------------|
+| Bubble Sort           | O(n^2)                         | O(n)                 | O(n^2)                | O(1)             | Yes       | Yes         |
+| Direct Insertion Sort | O(n^2)                         | O(n)                 | O(n^2)                | O(1)             | Yes       | Yes         |
+| Binary Insertion Sort | O(n^2)                         | O(n)                 | O(n^2)                | O(1)             | Yes       | Yes         |
+| Selection Sort        | O(n^2)                         | O(n^2)               | O(n^2)                | O(1)             | No        | Yes         |
+| Shell Sort            | O(n^1.3)                       | O(n)                 | O(n^2)                | O(1)             | No        | Yes         |
+| Merge Sort            | O(n log n)                     | O(n log n)           | O(n log n)            | O(n)             | Yes       | No          |
+| Quick Sort            | O(n log n)                     | O(n log n)           | O(n^2)                | O(log n)         | No        | Yes         |
+| Heap Sort             | O(n log n)                     | O(n log n)           | O(n log n)            | O(1)             | No        | Yes         |
+| Bucket Sort           | O(n log(n/m))                  | O(n)                 | O(n^2)                | O(n)             | Yes       | No          |
+| Counting Sort         | O(n + k)                       | O(n + k)             | O(n + k)              | O(k)             | Yes       | No          |
+| Radix Sort            | O(nk)                          | O(nk)                | O(nk)                 | O(n + k)         | Yes       | No          |
 
 ---
 <center><font size='5'> Contents </font></center>
