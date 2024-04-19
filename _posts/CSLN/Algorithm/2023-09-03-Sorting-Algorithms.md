@@ -282,7 +282,7 @@ void mergeSort(int arr[], int l, int r) {
 }
 
 // Function to merge the two haves arr[l..m] and arr[m+1..r] of array arr[]
-void merge(int arr[], int l, int m, int r) {
+void merge(int arr[], int left, int mid, int right) {
     int[] temp = new int[right - left + 1];
 
     int i = left;

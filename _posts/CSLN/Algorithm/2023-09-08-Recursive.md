@@ -19,9 +19,12 @@ Recursive algorithms are a double-edged sword in computer science—capable of r
 <!-- TOC -->
   * [What is a Recursive Algorithm?](#what-is-a-recursive-algorithm)
     * [Advantages of Recursive Algorithms](#advantages-of-recursive-algorithms)
-    * [Disadvantages of Recursive Algorithms](#disadvantages-of-recursive-algorithms)
-  * [Applications of Recursive Algorithms](#applications-of-recursive-algorithms)
+    * [Disadvantages of Recursive Algorithms (Use Iteration to Avoid)](#disadvantages-of-recursive-algorithms-use-iteration-to-avoid)
+    * [Applications of Recursive Algorithms](#applications-of-recursive-algorithms)
   * [Example: Climb Stairs](#example-climb-stairs)
+  * [Tail Recursion: a Concept to Optimise Recursion](#tail-recursion-a-concept-to-optimise-recursion)
+    * [Benefits of Tail Recursion](#benefits-of-tail-recursion)
+    * [Tail Recursion vs. Non-Tail Recursion](#tail-recursion-vs-non-tail-recursion)
 <!-- TOC -->
 
 ---
@@ -42,7 +45,7 @@ A recursive algorithm solves a problem by dividing it into smaller, more managea
 - **Simplicity:** Recursive code is often cleaner and easier to write than its iterative counterparts, especially for problems inherently recursive like tree traversals.
 - **Reduction of Code:** Recursion can reduce the necessity for complex loops and auxiliary data structures, leading to more concise code.
 
-### Disadvantages of Recursive Algorithms
+### Disadvantages of Recursive Algorithms (Use Iteration to Avoid)
 
 - **Memory Consumption:** Each recursive call adds a new layer to the stack, which can lead to significant memory use. This is particularly problematic with deep recursion that involves many recursive calls.
 - **Performance Issues:** Recursive calls can be inefficient due to overhead from repeated function calls and stack management.
@@ -54,7 +57,7 @@ A recursive algorithm solves a problem by dividing it into smaller, more managea
 >   - When feasible, converting a recursive algorithm to an iterative one can reduce memory usage and increase performance.
 {: .prompt-tip }
 
-## Applications of Recursive Algorithms
+### Applications of Recursive Algorithms
 
 Recursive algorithms are particularly suited for tasks where the problem can naturally be divided into similar sub-problems. Some common applications include:
 
@@ -120,6 +123,94 @@ public static int climbStairs(int n) {
 >   - **Don't try to break down each step of recursion with your human brain**, which only creates a barrier for yourself to understand.
 >   - There's no need to think layer by layer down to subproblems and sub-sub-problems. **Block out the recursive details**, it's much easier to understand this way.
 {: .prompt-tip }
+
+## Tail Recursion: a Concept to Optimise Recursion
+
+Tail recursion is a powerful concept in computer programming that allows for more efficient recursive function calls. **This specific setup enables compilers and interpreters to optimize the recursive calls and reduce the risk of stack overflow**, making it an essential technique for writing clean and efficient code, especially in functional programming languages.
+
+
+- In essence, **tail recursion** is a form of recursion where **the recursive call is the last operation performed by the function.** 
+  - There is **no need to keep any state from the current frame** of the function if the recursive call is the last statement because there are no operations left to perform in that frame. 
+  - This **allows for optimizations** such as tail call elimination or tail call optimization (TCO), **where the compiler optimizes the recursion to iterative loop execution that consumes less stack space.**
+
+### Benefits of Tail Recursion
+
+1. **Memory Efficiency**: Tail recursion helps in saving memory because each function call does not have to maintain its own stack frame. This is particularly beneficial in languages that support optimization for tail calls.
+
+2. **Prevent Stack Overflow**: For programming languages that support tail call optimization, tail recursion can handle larger input sizes without worrying about stack overflow.
+
+3. **Performance Improvement**: By eliminating unnecessary stack frames, tail recursion can speed up function execution compared to non-tail recursion.
+
+### Tail Recursion vs. Non-Tail Recursion
+
+To understand tail recursion better, let's compare it with non-tail recursion:
+
+- **Non-Tail Recursion**: A recursive function is considered non-tail recursive if it performs additional operations after it makes a recursive call. An example is the recursive addition function, which involves addition after the recursive call:
+
+```c
+int recursiveAdd(int n) {
+    if (n == 1)
+        return 1;
+    else
+        return n + recursiveAdd(n - 1);
+}
+```
+
+When we call `recursiveAdd(5)`, the stack frame needs to store the following information:
+
+``` 
+recursiveAdd(5)
+5 + recursiveAdd(4)
+5 + (4 + recursiveAdd(3))
+5 + (4 + (3 + recursiveAdd(2)))
+5 + (4 + (3 + (2 + recursiveAdd(1))))
+5 + (4 + (3 + (2 + 1)))
+5 + (4 + (3 + 3))
+5 + (4 + 6)
+5 + 10
+15
+```
+
+---
+
+
+- **Tail Recursion**: If the recursive call is the last thing executed by the function, then it is tail recursive. For instance, an accumulator can be used to maintain the state, and the final operation is the recursive call:
+
+```c
+int recursiveAdd(int n, int acc) {
+    if (n == 0)
+        return acc;
+    else
+        return recursiveAdd(n - 1, n + acc);
+}
+
+int recursiveAdd(int n) {
+    return recursiveAdd(n, 0);
+}
+```
+
+When we call `recursiveAdd(5)`, the stack frame needs to store the following information:
+
+``` 
+recursiveAdd(5, 0)
+recursiveAdd(4, 5)
+recursiveAdd(3, 9)
+recursiveAdd(2, 12)
+recursiveAdd(1, 14)
+recursiveAdd(0, 15)
+15
+```
+
+In the tail recursive version of `recursiveAdd`, the state is carried through an additional parameter `acc`, allowing the function to be optimized by the compiler.
+
+> The core idea of tail recursion is to **pass changing arguments to the recursive function's variables**
+{: .prompt-tip }
+
+> - **Not all programming languages are capable of optimizing tail recursion.** 
+>   - Functional programming languages like Haskell and Scheme natively support and optimize tail recursive functions. 
+>   - In contrast, languages like Python and Java do not automatically optimize tail recursion.
+> - **So tail recursion is not important, just need to understand the concept in general.**
+>   - To optimise the performance of recursion or to prevent stack overflow, **it is best to replace recursion with iteration.**
 
 
 <br>
