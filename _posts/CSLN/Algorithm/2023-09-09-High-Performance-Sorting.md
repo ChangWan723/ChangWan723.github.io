@@ -9,7 +9,8 @@ pin: false
 
 In the quest for efficiency and versatility in software development, the design of sorting algorithms plays a pivotal role. A well-crafted sorting algorithm can significantly enhance the performance of applications, especially those involving complex data management tasks.
 
-> **Sorting** functions are very **frequently used** and very basic functions in every system or language (like C, Java), and **performance should be optimised to the extreme.**
+> **Sorting functions are very frequently used** and very basic functions in every system or language (like C, Java), and **performance should be optimised to the extreme.**
+{: .prompt-tip }
 
 ---
 <center><font size='5'> Contents </font></center>
@@ -111,3 +112,11 @@ This example provides a basic framework for TimSort, demonstrating the practical
 
 > The above is just the most basic implementation of TimSort, showing its basic idea. Actual TimSort is more complex than this.
 {: .prompt-warning }
+
+<br>
+
+---
+
+**Reference:**
+
+- Wang, Zheng (2019) _The Beauty of Data Structures and Algorithms_. Geek Time.

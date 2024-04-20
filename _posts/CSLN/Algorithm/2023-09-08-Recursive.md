@@ -211,7 +211,7 @@ In the tail recursive version of `recursiveAdd`, the state is carried through an
 >   - In contrast, languages like Python and Java do not automatically optimize tail recursion.
 > - **So tail recursion is not important, just need to understand the concept in general.**
 >   - To optimise the performance of recursion or to prevent stack overflow, **it is best to replace recursion with iteration.**
-
+{: .prompt-tip }
 
 <br>
 

@@ -232,14 +232,9 @@ void selectionSort(int array[]) {
 
 > **Is selection sort a stable sorting algorithm?**
 >
-> - **No.** Selection sort has to find the smallest of the remaining unsorted elements each time and swap places with
-    the previous element, which breaks stability. For example, if you sort a set of 5, 8, 5, 2, 9 using the selection
-    sort algorithm, the first time you find the smallest element, 2, and swap places with the first 5, the order of the
-    first 5 and the middle 5 changes, so it is unstable.
-    >
-
-- **It is for this reason that Selection Sort is slightly inferior to Bubble Sort and Insertion Sort.**
-  {: .prompt-tip }
+> - **No.** Selection sort has to find the smallest of the remaining unsorted elements each time and swap places with the previous element, which breaks stability. For example, if you sort a set of 5, 8, 5, 2, 9 using the selection sort algorithm, the first time you find the smallest element, 2, and swap places with the first 5, the order of the first 5 and the middle 5 changes, so it is unstable.
+>   - **It is for this reason that Selection Sort is slightly inferior to Bubble Sort and Insertion Sort.**
+{: .prompt-tip }
 
 ## Merge Sort
 
