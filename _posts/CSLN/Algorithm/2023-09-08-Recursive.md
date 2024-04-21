@@ -1,7 +1,7 @@
 ---
 title: Recursive
 date: 2023-09-08 12:45:00 UTC
-categories: [ (CS) Learning Note, Algorithm ]
+categories: [ (CS) Learning Note, Algorithm and Data Structure ]
 tags: [ computer science, Algorithm ]
 pin: false
 ---

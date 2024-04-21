@@ -1,8 +1,8 @@
 ---
 title: "Stacks and Queues: Operation-Constrained Linear Lists"
 date: 2023-09-07 15:45:00 UTC
-categories: [ (CS) Learning Note, Algorithm ]
-tags: [ computer science, Algorithm ]
+categories: [ (CS) Learning Note, Algorithm and Data Structure ]
+tags: [ computer science, Data Structure ]
 pin: false
 ---
 

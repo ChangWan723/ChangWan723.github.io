@@ -1,7 +1,7 @@
 ---
 title: "Binary Search: The Power of O(log n)"
 date: 2023-09-10 12:00:00 UTC
-categories: [ (CS) Learning Note, Algorithm ]
+categories: [ (CS) Learning Note, Algorithm and Data Structure ]
 tags: [ computer science, Algorithm ]
 pin: false
 ---

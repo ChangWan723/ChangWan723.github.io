@@ -1,7 +1,7 @@
 ---
 title: Designing a Generic, High-Performance Sorting Algorithm
 date: 2023-09-09 12:30:00 UTC
-categories: [ (CS) Learning Note, Algorithm ]
+categories: [ (CS) Learning Note, Algorithm and Data Structure ]
 tags: [ computer science, Algorithm ]
 pin: false
 ---

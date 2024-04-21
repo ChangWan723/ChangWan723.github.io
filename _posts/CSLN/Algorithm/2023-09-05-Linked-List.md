@@ -1,8 +1,8 @@
 ---
 title: "Linked Lists: The Opposite of Arrays"
 date: 2023-09-05 11:45:00 UTC
-categories: [ (CS) Learning Note, Algorithm ]
-tags: [ computer science, Algorithm ]
+categories: [ (CS) Learning Note, Algorithm and Data Structure ]
+tags: [ computer science, Data Structure ]
 pin: false
 ---
 
