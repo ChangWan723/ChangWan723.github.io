@@ -9,8 +9,9 @@ pin: false
 
 Binary search is a classic algorithm in computer science with time complexity `O(log n)`, renowned for its efficiency in searching sorted arrays. Unlike linear search, which scans each element sequentially, binary search halves the search space with each step, making it a much faster alternative for large datasets.
 
-> - **Sometimes, algorithms of `O(log n)` time complexity are more efficient than `O(1)`.**
->   - This is because for `O(log n)`, even if `n` is very very large, the corresponding `log n` is small. And the Big O notation method for time complexity omits constants, factors, and lower order terms. So, `O(1)` It is possible to represent a relatively large constant value, such as `O(1000)`, `O(10000)`.
+> - **Sometimes, algorithms of `O(log n)` time complexity are more efficient than `O(1)`.** This is because:
+>   - **For `O(log n)`, even if `n` is very very large, the corresponding `log n` is small.** 
+>   - And the Big O notation method for time complexity **omits constants**, factors, and lower order terms. So, **`O(1)` It is possible to represent a relatively large constant value, such as `O(1000)`, `O(10000)`.**
 {: .prompt-tip }
 
 ---

@@ -9,6 +9,30 @@ pin: false
 
 Hash tables are one of the most fundamental data structures in computer science, pivotal for enabling rapid data retrieval. Their efficiency and performance in accessing data make them indispensable in a wide range of applications, from language interpreters to database indexing.
 
+---
+<center><font size='5'> Contents </font></center>
+
+---
+
+<!-- TOC -->
+  * [What is a Hash Table?](#what-is-a-hash-table)
+    * [How Hash Tables Work](#how-hash-tables-work)
+    * [Advantages of Hash Tables](#advantages-of-hash-tables)
+    * [Challenges with Hash Tables](#challenges-with-hash-tables)
+    * [Practical Uses of Hash Tables](#practical-uses-of-hash-tables)
+  * [Handling Hash Collisions](#handling-hash-collisions)
+    * [Open Addressing](#open-addressing)
+      * [Common Probing Techniques](#common-probing-techniques)
+      * [Example (Linear Probing)](#example-linear-probing)
+      * [Advantages of Open Addressing](#advantages-of-open-addressing)
+      * [Disadvantages of Open Addressing](#disadvantages-of-open-addressing)
+    * [Chaining](#chaining)
+      * [Advantages of Chaining](#advantages-of-chaining)
+      * [Disadvantages of Chaining](#disadvantages-of-chaining)
+<!-- TOC -->
+
+---
+
 ## What is a Hash Table?
 
 A hash table, also known as a hash map, is a **data structure that implements an associative array**, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
