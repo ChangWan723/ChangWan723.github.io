@@ -78,13 +78,13 @@ Open addressing resolves collisions by **probing for the next available slot** w
 #### Example (Linear Probing)
 
 ![](https://i.postimg.cc/3NYxMstM/image2.png){: .w-10 .shadow .rounded-10 }
-_insert x to hash table (Linear Probing) _
+_insert `x` to hash table (Linear Probing)_
 
 ![](https://i.postimg.cc/NMbWMZgv/image3.png){: .w-10 .shadow .rounded-10 }
-_search for y when y is in hash table(Linear Probing)_
+_search for `y` when `y` is in hash table(Linear Probing)_
 
 ![](https://i.postimg.cc/BvRCCgMP/image4.png){: .w-10 .shadow .rounded-10 }
-_search for y when y is not in hash table(Linear Probing)_
+_search for `y` when `y` is not in hash table(Linear Probing)_
 
 For hash tables that use Linear Probing to resolve conflicts, **the delete operation is slightly more complicated.** We cannot simply set a deleted element to null.
 
@@ -93,11 +93,12 @@ As you can see from the above figure, during the search, **once we have found a 
 To solve this problem we can specially mark deleted elements as `deleted`, and when a linear search encounters a space marked as deleted, it doesn't stop, but continues to search down the list.
 
 ![](https://i.postimg.cc/yYJYMyP8/image5.png){: .w-10 .shadow .rounded-10 }
-_search for y in hash table when there is a deleted element(Linear Probing)_
+_search for `y` in hash table when there is a deleted element(Linear Probing)_
 
 > - No matter which probing method is used, when there are **not many free slots** in the hash table, **the probability of a hash conflict is greatly increased.** In order to ensure the operation efficiency of hash table as much as possible, in general, we will try to ensure that there is a certain percentage of free slots in the hash table.
 >   - We use **load factor** to indicate the number of free slots. 
 >   - `load factor = number of elements / length of the hash table`
+{: .prompt-tip }
 
 #### Advantages of Open Addressing
 
