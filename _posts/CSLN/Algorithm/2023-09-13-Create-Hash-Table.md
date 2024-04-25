@@ -29,7 +29,7 @@ Designing a good hash table involves not just implementing the basic functionali
     * [Proactive Monitoring](#proactive-monitoring)
     * [Elastic Resizing](#elastic-resizing)
   * [Example of an Industrial Grade Hash Table: HashMap in Java](#example-of-an-industrial-grade-hash-table-hashmap-in-java)
-    * [Initial size](#initial-size)
+    * [Initial Size](#initial-size)
     * [Load Factor and Dynamic Expansion](#load-factor-and-dynamic-expansion)
     * [Handling Collisions](#handling-collisions-1)
     * [Hash Function](#hash-function)
@@ -111,10 +111,12 @@ Consider implementing an elastic resizing mechanism that adjusts the resizing be
 
 `HashMap` in Java uses an array and linked lists (or trees for large lists) to store map entries. It uses hashing to convert keys to indexes of arrays. This design allows it to offer constant time performance for `get` and `put` operations under ideal conditions.
 
-### Initial size
+### Initial Size
 
 - The default initial size (capacity) of HashMap is 16, and it is the number of buckets in the hash table. 
-  - This default value can be modified.
+  - This default value can be modified. **But the value is always a power of 2.**
+    - **The power of 2 allows the use of bitwise `AND` to calculate the bucket index appropriately.**
+    - For example, if you specify a capacity of 100, Java will adjust it to 128, which is the next power of two after 100.
   - If you know the approximate amount of data in advance, you can reduce the number of dynamic resizes by modifying the default initial size, which will greatly improve the performance of HashMap.
 
 ### Load Factor and Dynamic Expansion
@@ -139,7 +141,7 @@ The design of the hash function in HashMap is not complex and pursues simplicity
 ```java 
 int hash(Object key) {
     int h = key.hashCode()；
-    return (h ^ (h >>> 16)) & (capitity - 1); //capicity
+    return (h ^ (h >>> 16)) & (capacity - 1);
 }
 ```
 
@@ -153,6 +155,7 @@ Let's break down how it works:
    - This step is intended to mix the bits of the hash code in order to **improve the distribution of hash values.**
 
 3. **Bitwise `AND`**: Finally, it performs a bitwise `AND` (`&`) operation with (`capacity - 1`). 
+   - `& (capacity - 1)`: This is why the capacity must always be a power of 2 (since all bits of `capacity - 1` are set to `1`, which is appropriate for `AND (&)`).
    - This operation ensures that the resulting hash code falls within the range of valid bucket indices by masking out the higher bits.
    - This is done by keeping only the lower bits of the hash code, discarding any higher bits that might cause the index to exceed the capacity of the hash table.
 
