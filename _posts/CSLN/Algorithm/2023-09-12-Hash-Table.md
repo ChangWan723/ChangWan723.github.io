@@ -102,13 +102,13 @@ _search for `y` in hash table when there is a deleted element(Linear Probing)_
 
 #### Advantages of Open Addressing
 
-- **Space Efficiency**: Open addressing does not require additional structures as all data is stored within the initial array.
 - **Better Cache Performance**: This method often benefits from better cache performance due to data contiguity.
+- **Space Efficiency**: Open addressing does not require additional structures as all data is stored within the initial array.
 
 #### Disadvantages of Open Addressing
 
 - **Clustering**: Certain probing techniques, especially linear probing, can lead to clustering where many consecutive elements become filled, slowing down the insertion and search processes.
-- **Load Factor Limitations**: To ensure efficient operation, open addressing schemes require careful management of the load factor, usually keeping it below 0.7 or 0.8.
+- **Load Factor Limitations**: Using this method leads to a more costly conflict. To ensure efficient operation, open addressing schemes require careful management of the load factor, usually keeping it below 0.7 or 0.8.
 
 
 
@@ -128,7 +128,7 @@ Chaining is a straightforward and widely used method to handle collisions. In th
 
 - **Memory Overhead**: Each entry requires additional memory for pointers in the linked lists or trees.
 - **Cache Performance**: Chaining can lead to poor cache performance due to non-contiguous memory storage of the entries.
-
+- **Not Suitable for Serialisation**: The Chaining method contains pointers, which are not as easy to serialise.
 
 <br>
 
