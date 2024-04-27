@@ -1,7 +1,7 @@
 ---
 title: How to Design a Hash Table
 date: 2023-09-13 12:00:00 UTC
-categories: [ (CS) Learning Note, Algorithm and Data Structure ]
+categories: [ (CS) Learning Note, Data Structure ]
 tags: [ computer science, Data Structure ]
 pin: false
 ---

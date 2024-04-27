@@ -26,6 +26,7 @@ This blog shows some common computer terminology in English and Chinese. To faci
   * [Software](#software)
   * [Software Modelling](#software-modelling)
   * [algorithm, 算法](#algorithm-算法)
+    * [拓扑, topology](#拓扑-topology)
     * [matching, 匹配](#matching-匹配)
     * [searching, 查找](#searching-查找)
     * [hash table, 散列表](#hash-table-散列表)
@@ -194,6 +195,38 @@ Transition Systems, 转换系统(变迁系统)
 
 
 ## algorithm, 算法
+
+分治算法：Divide and Conquer Algorithm
+
+递归算法：Recursive Algorithm
+
+贪心算法：Greedy Algorithm
+
+动态规划算法：Dynamic Programming Algorithm
+
+回溯算法：Backtracking Algorithm
+
+搜索算法：Search Algorithm
+
+图论算法：Graph Algorithm
+
+字符串匹配算法：String Matching Algorithm
+
+### 拓扑, topology
+
+拓扑是数学中的一个分支，研究的是**空间的形状和结构特征**。拓扑主要关注对象之间的相对位置关系而不考虑具体的度量或距离。
+
+拓扑排序：topological sort
+
+偏序：partical order
+
+拓扑有序：topological order
+
+AOV网：activity on vertex network
+
+AOE网：activity on edge network
+
+关键路径：critical path
 
 ### matching, 匹配
 

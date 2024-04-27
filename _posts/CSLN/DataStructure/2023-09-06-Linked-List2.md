@@ -1,7 +1,7 @@
 ---
 title: "Mastering Linked Lists: Avoiding Common Pitfalls"
 date: 2023-09-06 13:45:00 UTC
-categories: [ (CS) Learning Note, Algorithm and Data Structure ]
+categories: [ (CS) Learning Note, Data Structure ]
 tags: [ computer science, Data Structure ]
 pin: false
 ---

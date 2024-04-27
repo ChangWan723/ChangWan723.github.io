@@ -1,7 +1,7 @@
 ---
 title: "Hash Tables: The Backbone of Efficient Data Searching"
 date: 2023-09-12 12:00:00 UTC
-categories: [ (CS) Learning Note, Algorithm and Data Structure ]
+categories: [ (CS) Learning Note, Data Structure ]
 tags: [ computer science, Data Structure ]
 pin: false
 ---
