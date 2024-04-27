@@ -1,9 +1,9 @@
 ---
-title: Synergy of Hash Tables and Linked Lists
+title: "LRU Cache: Synergy of Hash Tables and Linked Lists"
 date: 2023-09-13 12:00:00 UTC
 categories: [ (CS) Learning Note, Algorithm and Data Structure ]
 tags: [ computer science, Data Structure ]
-pin: false
+pin: true
 ---
 
 Hash tables and linked lists are two fundamental data structures commonly used in software development. **While each has its distinct advantages, combining them often yields a data structure that leverages the strengths of both.**
@@ -70,7 +70,7 @@ While hash tables do not inherently support ordered iteration due to their natur
 
 A **Least Recently Used (LRU) cache** is a popular caching algorithm used to manage a set of data in memory that **optimises the application's speed by keeping the most recently accessed items ready for use and discarding the least recently used items when the memory is full.** 
 
-I have previously discussed [how to implement LRU with a linked list](/posts/linked-list/#examples-of-the-advantages-of-linked-lists-implementing-lru-cache). But the time complexity of the LRU implemented using only linked lists is high (`O(n)`) because looking up the data requires traversing the linked list.
+I have previously discussed [how to implement LRU with a linked list](/posts/Linked-List/#examples-of-the-advantages-of-linked-lists-implementing-lru-cache). But the time complexity of the LRU implemented using only linked lists is high (`O(n)`) because looking up the data requires traversing the linked list.
 
 The following section explores how to implement an LRU using hash tables combined with linked lists, a method that offers efficient `O(1)` complexity for cache operations.
 
