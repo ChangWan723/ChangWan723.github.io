@@ -25,8 +25,8 @@ Binary trees form the basis of many complex data structures and algorithms, incl
       * [Advantages](#advantages)
       * [Disadvantages](#disadvantages)
     * [Array-Based Representation](#array-based-representation)
-    * [Advantages](#advantages-1)
-    * [Disadvantages](#disadvantages-1)
+      * [Advantages](#advantages-1)
+      * [Disadvantages](#disadvantages-1)
   * [Traversal of Binary Trees](#traversal-of-binary-trees)
 <!-- TOC -->
 
@@ -138,12 +138,12 @@ _Array-Based Representation (Complete Binary Tree)_
 ![](https://i.postimg.cc/GhkjwmXV/image18.png){: .w-10 .shadow .rounded-10 }
 _Array-Based Representation (Non-Complete Binary Tree)_
 
-### Advantages
+#### Advantages
 
 - **Memory Efficiency**: No extra memory is used for pointers.
 - **Data Locality**: Better cache performance due to contiguous memory allocation, which can speed up traversal and other operations.
 
-### Disadvantages
+#### Disadvantages
 
 - **Fixed Size**: The size of the tree is generally fixed after the initial declaration, which can lead to wasted space or limitations on the growth of the tree.
 - **Complexity in Operations**: Inserting or deleting nodes (especially in the middle of the array) can be complex and require significant data movement.
