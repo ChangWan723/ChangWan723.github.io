@@ -118,7 +118,10 @@ _converting the above 2-3-4 tree into a red-black tree (omit the black `NIL` lea
 >     - The process of restore has a fixed adjustment strategy. When you encounter a specific different situation, turn the corresponding few times. You just need to follow this restore step, and you will surely be able to restore the Magic Cube.
 {: .prompt-tip }
 
-Just like restore the Magic Cube, there are different adjustment strategies when encountering different situations. **The corresponding strategies are many and complex.** The following only describes the general approach to adjustment.
+![](https://i.postimg.cc/nr0ggRQh/rb7.png){: .w-10 .shadow .rounded-10 }
+_one of the adjustment strategies of restoring the Magic Cube_
+
+Just like the adjustment strategies of restoring the Magic Cube, there are different adjustment strategies when encountering different situations. **The corresponding strategies are many and complex.** The following only describes the general approach to adjustment.
 
 ### Insertion
 
