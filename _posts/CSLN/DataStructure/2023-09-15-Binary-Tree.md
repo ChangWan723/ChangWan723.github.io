@@ -83,7 +83,6 @@ A binary tree is a tree data structure in which each node has at most two childr
 ![](https://i.postimg.cc/HxF6xCtc/image15.png){: .w-10 .shadow .rounded-10 }
 
 > - If a tree is a Perfect Binary Tree, it must be both a Complete Binary Tree and a Full Binary Tree.
-> - If a tree is a Complete Binary Tree, it must be both a Balanced Binary Tree.
 {: .prompt-tip }
 
 ### Applications of Binary Trees
