@@ -437,6 +437,12 @@ void heapify(int array[], int n, int i) {
 }
 ```
 
+> **In practice, why does Quick Sort perform better than Heap Sort?**
+>    1. **Data access** of Heap Sort is **worse** than Quick Sort.
+>       - For quick sort, data is accessed sequentially. Whereas, for heap sort, the data is accessed in jumps. This is not friendly to the CPU cache.
+>    2. In general, Heap Sort has **more data swaps** than Quick Sort.
+{: .prompt-tip }
+
 ## Linear Sort
 
 Linear Sort refers to a **sorting algorithm that has a linear time complexity  (`O(n)`, `O(n + k)`, `O(nk)`)**.
