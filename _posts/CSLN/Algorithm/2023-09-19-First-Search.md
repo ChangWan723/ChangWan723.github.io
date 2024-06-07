@@ -50,8 +50,6 @@ Breadth-First Search (BFS) is a traversal algorithm that starts at a specified r
 Here’s a simple example of BFS in Python:
 
 ```python
-from collections import deque
-
 def bfs(graph, start):
     visited = set()
     queue = deque([start])
