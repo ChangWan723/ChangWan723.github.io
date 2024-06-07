@@ -155,7 +155,7 @@ Traversing a binary tree means visiting all the nodes in some order. Typically, 
 - **Preorder** (Root, Left, Right): Visit the root, the left subtree, and then the right subtree.
 - **Postorder** (Left, Right, Root): Visit the left subtree, the right subtree, and then the root.
 
-![](https://i.postimg.cc/brjdPpJN/image19.png){: .w-10 .shadow .rounded-10 }
+![](https://i.postimg.cc/RFnPDJjQ/image19.png){: .w-10 .shadow .rounded-10 }
 
 ```c 
 void preOrder(Node* root) {
