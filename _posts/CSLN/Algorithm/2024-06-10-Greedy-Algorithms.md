@@ -31,7 +31,7 @@ A **greedy algorithm** is an approach to **solving problems by making the locall
 
 > **More precisely, the greedy algorithm is not a specific algorithm, but an algorithmic thinking (or algorithmic idea)** that can be used to guide us in designing specific algorithms and coding.
 > 
-> Besides this, other similar algorithmic thinking includes: partitioning, backtracking, dynamic programming.
+> Besides this, other similar algorithmic thinking includes: divide and conquer, backtracking, dynamic programming.
 {: .prompt-tip }
 
 ### Key Principles
