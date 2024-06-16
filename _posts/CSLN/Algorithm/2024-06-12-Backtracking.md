@@ -21,6 +21,7 @@ pin: false
     * [Steps](#steps)
     * [Implementation in Java](#implementation-in-java)
   * [Example 2: 0/1 Knapsack](#example-2-01-knapsack)
+    * [Problem Statement](#problem-statement)
     * [Steps](#steps-1)
     * [Implementation in Java](#implementation-in-java-1)
 <!-- TOC -->
@@ -46,6 +47,8 @@ A backtracking algorithm tries to build a solution to a problem incrementally. I
 > **Backtracking algorithms are usually suitable for search-solution scenarios where the regularity is not known** (e.g., the Eight Queens problem).
 > - Because we don't know the regularity of these scenarios, we have to traverse all the solutions.
 > - However, when we encounter a step that does not satisfy the condition, we should backtrack to the previous step to avoid useless calculations.
+> 
+> For problems with regularity, of course, we can also use backtracking to solve them. But this is not suitable because we can take a more efficient approach. For problems with regularity, we don't need to solve it by brute force, and we can reduce some unnecessary computations by regularity (e.g., by using dynamic programming).
 {: .prompt-tip }
 
 ### Advantages of Backtracking
@@ -150,14 +153,23 @@ So, you see, using backtracking, the apparently complex N-Queen problem has been
 
 ## Example 2: 0/1 Knapsack
 
-In the 0/1 Knapsack problem, we are given a set of items, each with a weight and a value, and a knapsack with a maximum weight capacity. The objective is to determine the maximum value that can be obtained by selecting a subset of the items such that the total weight does not exceed the knapsack's capacity. Each item can either be included in the knapsack (1) or not included (0), hence the name 0/1 Knapsack.
+The 0/1 Knapsack problem involves selecting items with given weights and values to maximize the total value without exceeding the weight capacity of the knapsack. Each item can either be included in the knapsack (1) or not included (0), hence the name 0/1 Knapsack.
 
-The classic solution to the 0/1 Knapsack problem is dynamic programming. However, **we can solve this problem using backtracking algorithms. This would be very simple, but not efficient**:
+### Problem Statement
+
+Given:
+- `n` items, each with a weight `w[i]` and a value `v[i]`
+- A knapsack with a maximum weight capacity `W`
+
+Find:
+- The maximum total value that can be obtained without exceeding the weight capacity `W`
+
+### Steps
+
+The classic solution to the 0/1 Knapsack problem is dynamic programming. However, **we can solve this problem using backtracking algorithms. This would be very simple, but not efficient (time complexity is exponential: `O(2^n)`)**:
 - We can arrange the `n` items in order, and the whole problem is broken down into `n` stages.
 - Each stage corresponds to how an item is chosen (two choices: pack it in, or don't pack it in).
 - Just process all items recursively.
-
-### Steps
 
 1. **Start**: Begin with an empty knapsack and zero value.
 2. **Include/Exclude**: For each item, recursively include it in the knapsack (if it does not exceed the capacity) or exclude it.
@@ -166,6 +178,8 @@ The classic solution to the 0/1 Knapsack problem is dynamic programming. However
 ### Implementation in Java
 
 ```java
+private static int maxValue = 0; // To store the maximum profit
+
 // Begin with: knapsack(weights, values, capacity, 0, 0, 0);
 public static void knapsack(int[] weights, int[] values, int capacity, int index, int currentWeight, int currentValue) {
     if (index == weights.length) {
