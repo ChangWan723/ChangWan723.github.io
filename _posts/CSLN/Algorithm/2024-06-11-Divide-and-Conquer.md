@@ -234,6 +234,8 @@ private static double distance(Point p1, Point p2) {
 }
 ```
 
+<br>
+
 ---
 
 **Reference:**

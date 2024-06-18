@@ -40,10 +40,21 @@ Dynamic Programming (DP) is a powerful algorithmic technique used to solve compl
 2. **Optimal Substructure**: The optimal solution to the problem can be constructed from the optimal solutions of its subproblems.
 3. **Memoization or Tabulation**: Use a table to store the results of subproblems to avoid redundant computations.
 
+> **What kind of problems are suitable to be solved by dynamic programming?**
+> 
+> - **One model with three features**
+>   - **One model: Multi-Stage Optimal Decision-Making Model**
+>     - We generally use dynamic programming to solve optimal problems. And the process of solving a problem involves multiple decision-making stages. Each decision stage corresponds to some states. We then look for a set of states among them that produce the final optimal value.
+>   - **Three features: Optimal Sub-Structure, No After-Effects, and Repeated Sub-Problems**
+>      1. **Optimal Sub-Structure**: The optimal solution of a problem contains the optimal solutions of the sub-problems. This means that the later stage's state can be deduced from the previous stage's state.
+>     2. **No After-Effects**: This has two implications. The first implication is that when deducing later stage's states, we are only concerned with the previous stage's state value, regardless of how the state was deduced. The second implication is that once the stage state is determined, it is not affected by subsequent stages. (No After-Effects does not mean that the subproblems do not affect each other.)
+>     3. **Repeated Sub-Problems**: Different decisions may generate duplicate states.
+{: .prompt-tip }
+
 > **The problems that are suitable for Dynamic Programming are similar to those for Divide-and-Conquer algorithms:**
 > - **They are both able to split a big problem into smaller problems.**
 > - The difference is: 
->   - the **subproblems of Divide-and-Conquer** are **independent**.
+>   - the **subproblems of Divide-and-Conquer** must be **independent**.
 >   - the **subproblems of Dynamic Programming** are **interdependent** (So the results of the subproblem need to be saved for other subproblems. Otherwise, there would be a lot of repeated calculations).
 {: .prompt-tip }
 
@@ -182,3 +193,11 @@ public static int knapsack(int[] weights, int[] values, int capacity) {
     return dp[n][capacity];
 }
 ```
+
+<br>
+
+---
+
+**Reference:**
+
+- Wang, Zheng (2019) _The Beauty of Data Structures and Algorithms_. Geek Time.
