@@ -55,7 +55,7 @@ Dynamic Programming (DP) is a powerful algorithmic technique used to solve compl
 > - **They are both able to split a big problem into smaller problems.**
 > - The difference is: 
 >   - the **subproblems of Divide-and-Conquer** must be **independent**.
->   - the **subproblems of Dynamic Programming** are **interdependent** (So the results of the subproblem need to be saved for other subproblems. Otherwise, there would be a lot of repeated calculations).
+>   - the **subproblems of Dynamic Programming** are **interdependent** (This means that each subproblem needs the results of the previous subproblem to make a decision. So the results of the subproblem need to be saved for other subproblems. Otherwise, there would be a lot of repeated calculations).
 {: .prompt-tip }
 
 ### Advantages of Dynamic Programming
