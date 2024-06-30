@@ -195,3 +195,11 @@ public static void knapsack(int[] weights, int[] values, int capacity, int index
     }
 }
 ```
+
+<br>
+
+---
+
+**Reference:**
+
+- Wang, Zheng (2019) _The Beauty of Data Structures and Algorithms_. Geek Time.

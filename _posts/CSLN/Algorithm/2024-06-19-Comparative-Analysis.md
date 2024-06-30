@@ -1,9 +1,9 @@
 ---
-title: Comparative Analysis of Four Algorithmic Thinking
+title: Comparison of Four Algorithmic Thinking
 date: 2024-06-19 20:00:00 UTC
 categories: [ (CS) Learning Note, Algorithm ]
 tags: [ computer science, Algorithm ]
-pin: false
+pin: true
 ---
 
 The four algorithmic thinking (Greedy, Divide-and-Conquer, Backtracking, and Dynamic Programming) is essential for solving complex problems efficiently. But what's the difference between them? Which algorithm should we choose if we encounter a complex problem?
@@ -58,7 +58,7 @@ Therefore, if you find a complex problem difficult to solve, and it can be broke
 - **Greedy**: It is suitable for the problems where the **decisions (choices)** of subproblems do **not affect** each other. 
   - This means that we can choose the optimal solution at each stage without worrying about influencing the choice of subsequent optimal solutions
 - **Divide-and-Conquer**: It is suitable for the problems where the subproblems are not connected and **independent** of each other. And each subproblem is usually not about making decisions (choices).
-  - This means that we cannot break the problem down into multi-stage subproblems. And each subproblem is on the same level, not derived in stages (the final result is usually merged out).
+  - This means that we cannot break the problem down into multi-stage subproblems. And each subproblem is on the same level (and the final result is usually merged out), not derived in stages.
 - **Backtracking**: It is suitable the problems where the subproblems with **no regularity**.
   - The backtracking algorithm is equivalent to the exhaustive search. Because we don’t know the regularity of the scenario, we have to traverse all the solutions.
 - **Dynamic programming**: It is suitable for the problems where the subproblems are **interdependent** of each other. And the decisions (choices) of each subproblem can interfere with each other.
@@ -83,3 +83,11 @@ Therefore, if you find a complex problem difficult to solve, and it can be broke
 
 > **The Greedy algorithm is actually a special case of a Dynamic Programming**: where decisions (choices) of subproblems do not affect each other. In this case, each subproblem does not need the results of the previous subproblem to make a decision. So the results of the subproblem do not need to be saved.
 {: .prompt-tip }
+
+---
+
+- **More about:**
+  - [Algorithmic Thinking: Greedy](/posts/Greedy-Algorithms/)
+  - [Algorithmic Thinking: Divide-and-Conquer](/posts/Divide-and-Conquer/)
+  - [Algorithmic Thinking: Backtracking](/posts/Backtracking/)
+  - [Algorithmic Thinking: Dynamic Programming](/posts/Dynamic-Programming/)
