@@ -28,7 +28,7 @@ With the ever-changing business, emerging technologies, and diverse design conce
   * [Principle of Evolution](#principle-of-evolution)
     * [Definition](#definition-2)
     * [Key Aspects](#key-aspects-2)
-    * [Example](#example-)
+    * [Example](#example-2)
 <!-- TOC -->
 
 ---
@@ -90,7 +90,7 @@ The Principle of Evolution recognizes that software systems need to adapt to cha
 - **Scalability**: The system should be able to scale in response to increasing loads and new requirements. This involves designing for both horizontal and vertical scaling.
 - **Continuous Improvement**: The architecture should support ongoing development and refinement, allowing for the incorporation of new technologies and best practices.
 
-### Example 
+### Example
 
 In a rapidly evolving technology landscape, an e-commerce platform must be able to integrate new payment methods, support increased traffic during sales events, and adapt to changing consumer behaviors. An evolutionary architecture might use microservices, containerization, and continuous deployment pipelines to ensure the system can adapt and grow over time.
 
