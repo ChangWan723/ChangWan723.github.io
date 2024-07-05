@@ -25,6 +25,7 @@ pin: false
   * [What is the order of loading the parts of Java classes?](#what-is-the-order-of-loading-the-parts-of-java-classes)
   * [What is a Comparator and Comparable in Java?](#what-is-a-comparator-and-comparable-in-java)
   * [What are the Strong Reference，Soft Reference，Weak Reference and Phantom Reference in Java?](#what-are-the-strong-referencesoft-referenceweak-reference-and-phantom-reference-in-java)
+  * [Why do we have to override `hashCode()` when we override `equals()`?](#why-do-we-have-to-override-hashcode-when-we-override-equals)
 <!-- TOC -->
 
 ---
@@ -295,3 +296,25 @@ WeakReference<Object> weakReference = new WeakReference<>(new Object());
 PhantomReference<Object> phantomReference = new PhantomReference<>(new Object(), referenceQueue);
 ```
 
+## Why do we have to override `hashCode()` when we override `equals()`?
+
+In simple words, this is because we need to **maintain the contract between the two methods.**
+
+> - **The contracts between `hashCode()` and `equals()`:**
+>   - In Java, we use `equals()` to detect whether an object is equal to another object.
+>   - **If two objects are equal (`equals()`), their hash codes (`hashCode()`) must also be equal.**
+>   - If two objects are not equal (`equals()`), there is no requirement that hash codes (`hashCode()`) must be different. (This is because hash conflicts are generally unavoidable, i.e. different content hashes out the same value.)
+>
+> Based on the above contract, **in Java, if two objects have different hash codes (`hashCode()`), they must not be equal (`equals()`).** If two objects have the same hash code (`hashCode()`), they are not necessarily equal (`equals()`). 
+{: .prompt-tip }
+
+
+**Failing to adhere to these contracts can lead to unexpected results when using various Java APIs.** 
+
+For example, collections like `HashSet`, `HashMap`, or `Hashtable` rely on the `hashCode()` to organise and search for objects efficiently. 
+
+- `HashSet`, `HashMap`, and `Hashtable` compare hash codes first to determine if two Objects are the same:
+  - If two objects have different hash codes (`hashCode()`), they can be directly determined to be different.
+  - If two objects have the same hash code (`hashCode()`), call `equals()` further to determine if they are the same.
+
+**So, if we don’t override `equals()` and `hashCode()` correctly, Objects that should be the same are recognised as different in Java (For example, two same Objects are stored in a HashSet).**
