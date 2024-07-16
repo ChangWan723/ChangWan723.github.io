@@ -1,9 +1,9 @@
 ---
 title: "High Performance Architecture: Load Balancing"
-date: 2024-07-05 19:55:00 UTC
+date: 2024-07-06 20:00:00 UTC
 categories: [ (CS) Learning Note, Architecture ]
 tags: [ software engineering , architecture]
-pin: false
+pin: true
 ---
 
 Single server, no matter how optimised, no matter how good hardware is used, there will always be a performance ceiling. When the performance of a single server cannot meet the business needs, it is necessary to design high-performance clusters (multiple servers) to improve the overall processing performance of the system.
@@ -11,6 +11,7 @@ Single server, no matter how optimised, no matter how good hardware is used, the
 Load balancing is a crucial technique in network and application infrastructure, ensuring that workloads are distributed evenly across multiple servers. This helps enhance performance, improve resource utilization, and ensure high availability and reliability.
 
 ---
+
 <center><font size='5'> Contents </font></center>
 
 ---
