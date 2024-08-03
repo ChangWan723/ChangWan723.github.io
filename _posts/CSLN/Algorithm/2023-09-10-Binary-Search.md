@@ -61,7 +61,7 @@ public int binarySearch(int[] arr, int target) {
     int high = arr.length - 1;
 
     while (low <= high) {
-        int mid = low + (high - low) / 2; // Here we can use bit operations (int mid = low + ((high - low) >> 2)) to get a more efficient operation
+        int mid = low + (high - low) / 2; // Here we can use bit operations (int mid = low + ((high - low) >> 1)) to get a more efficient operation
         if (arr[mid] == target) {
             return mid;
         } else if (arr[mid] < target) {
