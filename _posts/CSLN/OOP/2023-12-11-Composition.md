@@ -68,6 +68,21 @@ While inheritance is a fundamental OOP concept, its overuse can lead to various 
 >   - **You delegate someone to do something for you.**
 {: .prompt-tip }
 
+> **Delegation vs. Interface Inheritance:**
+> 
+> - **Delegation:**
+>    - Allows the behaviour of an object to be changed **dynamically** at runtime.
+>    - **Lower coupling**. Compliance with the DIP.
+>    - Each class has clearer responsibilities. Compliance with the SRP. In this way, the more complex the system, the more **reusable** the code will be.
+>    - Better **Scalability**, **Flexibility** and **Maintainability**
+> - **Interface Inheritance:**
+>    - In **simple scenarios**, it can **avoid over-engineerin**g and keep the code simple.
+>    - It allows the class itself to provide specific behaviour **without relying on other objects.**
+> 
+> **Delegations** generally provide more flexibility and maintainability, especially in complex systems that require dynamic behaviour and low coupling.
+> 
+> **Interface inheritance**, on the other hand, may be more straightforward and easier to understand in scenarios where the structure is simple and the behaviour is stable.
+{: .prompt-tip }
 
 ## Practical Example
 
@@ -137,7 +152,6 @@ public class Pigeon {
 ```
 
 In this composition-based approach, `Ostrich` is more flexible and not tied to a specific behaviour.
-
 
 ## Is Composition Always Better Than Inheritance?
 
