@@ -3,7 +3,7 @@ title: Symbolic Model Checking
 date: 2023-11-05 18:51:00 UTC
 categories: [ (CS) Learning Note, Automated Software Verification ]
 tags: [computer science, software verification, Model Checking, LTL]
-pin: false
+pin: true
 ---
 
 In the realms of computer science and formal verification, Symbolic Model Checking stands as a crucial technique, especially in verifying complex systems like digital circuits and software programs. 

@@ -3,7 +3,7 @@ title: "High Performance Architecture: Load Balancing"
 date: 2024-07-06 20:00:00 UTC
 categories: [ (CS) Learning Note, Architecture ]
 tags: [ software engineering , architecture]
-pin: true
+pin: false
 ---
 
 Single server, no matter how optimised, no matter how good hardware is used, there will always be a performance ceiling. When the performance of a single server cannot meet the business needs, it is necessary to design high-performance clusters (multiple servers) to improve the overall processing performance of the system.
