@@ -2,7 +2,7 @@
 title: Why do We Need to Use More Composition and Less Inheritance?
 date: 2023-12-11 00:10:00 UTC
 categories: [(CS) Learning Note, OOP]
-tags: [software engineering, OOP, SOLID]
+tags: [software engineering, OOP, SOLID, Design Principles]
 pin: false
 ---
 

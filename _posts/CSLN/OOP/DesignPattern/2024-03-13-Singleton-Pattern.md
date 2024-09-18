@@ -1,5 +1,5 @@
 ---
-title: Why I Don't Recommend Using the Singleton Pattern
+title: Why I Don't Recommend Using the Singleton Pattern?
 date: 2024-03-13 18:36:00 UTC
 categories: [(CS) Learning Note, OOP]
 tags: [software engineering, OOP, Design Patterns]
