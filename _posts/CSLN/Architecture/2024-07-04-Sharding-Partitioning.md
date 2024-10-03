@@ -2,7 +2,7 @@
 title: "High Performance Architecture: Database Sharding & Partitioning"
 date: 2024-07-04 18:50:00 UTC
 categories: [ (CS) Learning Note, Architecture ]
-tags: [ software engineering , architecture]
+tags: [ software engineering , architecture, Database]
 pin: false
 ---
 
