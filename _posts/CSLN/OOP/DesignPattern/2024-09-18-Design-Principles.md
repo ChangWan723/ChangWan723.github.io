@@ -3,7 +3,7 @@ title: Why I Think Design Principles Are More Important Than Design Patterns?
 date: 2024-09-18 15:36:00 UTC
 categories: [(CS) Learning Note, OOP]
 tags: [software engineering, OOP, Design Patterns, Design Principles, SOLID]
-pin: true
+pin: false
 image:
   path: /assets/img/posts/principles.jpg
 ---
@@ -25,6 +25,7 @@ These patterns are complex and nerdy, and you may often suffer from mastering th
 {: .prompt-tip }
 
 ---
+
 <center><font size='5'> Contents </font></center>
 
 ---
@@ -119,5 +120,5 @@ For example, **Single Responsibility Principles** and **Interface Segregation Pr
 
 **Over-engineering is a common pitfall in software development, where developers introduce unnecessary complexity into the code.** Focusing on design principles helps developers maintain simplicity and avoid adding layers of abstraction or patterns that aren’t required by the problem at hand.
 
-For example, the **Visitor Pattern**, born of flaws, is often overused and introduces unnecessary complexity.
+For example, the **Visitor Pattern**, born for the defect, is often overused and introduces unnecessary complexity.
 
