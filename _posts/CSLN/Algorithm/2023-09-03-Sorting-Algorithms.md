@@ -50,7 +50,7 @@ image:
 **Mechanism:** Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent
 elements, and swaps them if they are in the wrong order. The process is repeated until the list is sorted.
 
-![](https://i.postimg.cc/MZRYgpnQ/sort1.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/algorithm/sort1.jpg){: .w-10 .shadow .rounded-10 }
 
 **Advantages:**
 
@@ -81,7 +81,7 @@ void bubbleSort(int arr[]) {
 **Mechanism:** This algorithm iteratively takes one element from the unsorted portion and finds its appropriate place in
 the sorted portion of the array.
 
-![](https://i.postimg.cc/wjRkhXSn/sort2.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/algorithm/sort2.jpg){: .w-10 .shadow .rounded-10 }
 
 **Advantages:**
 
@@ -118,7 +118,7 @@ void insertionSort(int array[]) {
 **Mechanism:** Similar to direct insertion but uses binary search to find the proper location for insertion, reducing
 comparisons.
 
-![](https://i.postimg.cc/wjRkhXSn/sort2.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/algorithm/sort2.jpg){: .w-10 .shadow .rounded-10 }
 _same as the direct insertion sort (except that it's faster to find the insertion position)_
 
 **Advantages:**
@@ -167,7 +167,7 @@ int binarySearch(int array[], int start, int end, int key) {
 sort improves the efficiency of insertion sort by moving larger elements in advance to reduce the number of reverse
 order pairs.
 
-![](https://i.postimg.cc/0j5rFBJr/sort7.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/algorithm/sort7.jpg){: .w-10 .shadow .rounded-10 }
 _from: http://stoimen.com/2012/02/27/computer-algorithms-shell-sort/_
 
 **Advantages:**
@@ -202,7 +202,7 @@ void shellSort(int array[]) {
 **Mechanism:** Repeatedly finding the minimum element (considering ascending order) from the unsorted part and putting
 it at the beginning.
 
-![](https://i.postimg.cc/BQgKj4J8/sort3.png){: .w-20 .shadow .rounded-10 }
+![](/assets/img/note/algorithm/sort3.jpg){: .w-20 .shadow .rounded-10 }
 
 **Advantages:**
 
@@ -241,7 +241,7 @@ void selectionSort(int array[]) {
 **Mechanism:** Merge Sort is a **divide-and-conquer** algorithm that divides the input array into two halves, calls
 itself for the two halves, and then merges the two sorted halves.
 
-![](https://i.postimg.cc/W3gJbdGQ/sort4.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/algorithm/sort4.jpg){: .w-10 .shadow .rounded-10 }
 
 **Advantages:**
 
@@ -311,7 +311,7 @@ void merge(int arr[], int left, int mid, int right) {
 **Mechanism:** Quick Sort is a **divide-and-conquer** algorithm. It picks an element as a pivot and partitions the given
 array around the picked pivot. There are different versions of quickSort that pick pivot in different ways.
 
-![](https://i.postimg.cc/Qt3nMTL7/sort5.png){: .w-20 .shadow .rounded-10 }
+![](/assets/img/note/algorithm/sort5.jpg){: .w-20 .shadow .rounded-10 }
 
 **Advantages:**
 
@@ -363,7 +363,7 @@ int partition(int arr[], int low, int high) {
 }
 ```
 
-![](https://i.postimg.cc/yxd5q3Sz/sort6.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/algorithm/sort6.jpg){: .w-10 .shadow .rounded-10 }
 _partition(int arr[], int low, int high)_
 
 ---
@@ -394,7 +394,7 @@ private static int quickSelect(int[] nums, int left, int right, int k) {
 **Mechanism:** Builds a max heap from the data, then repeatedly extracts the maximum element from the heap and rebuilds
 the heap until all elements are sorted.
 
-![](https://i.postimg.cc/76qHmPh0/sort8.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/algorithm/sort8.jpg){: .w-10 .shadow .rounded-10 }
 
 **Advantages:**
 
@@ -451,7 +451,7 @@ Linear Sort refers to a **sorting algorithm that has a linear time complexity  (
 
 **Mechanism:** Distributes elements into several "buckets" and sorts these individually.
 
-![](https://i.postimg.cc/Ss8ZN8hb/sort9.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/algorithm/sort9.png){: .w-10 .shadow .rounded-10 }
 
 **Advantages:**
 
@@ -509,7 +509,7 @@ public static void bucketSort(int[] arr, int bucketSize) {
 sorting (Assign a bucket to each possible value so that the data values in each bucket are the same, eliminating the
 need to sort the buckets).
 
-![](https://i.postimg.cc/5t5brsPZ/sort10.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/algorithm/sort10.jpg){: .w-10 .shadow .rounded-10 }
 
 **Advantages:**
 
@@ -550,7 +550,7 @@ public static void countingSort(int[] arr) {
 
 **Mechanism:** Sorts numbers digit by digit, starting from the least significant digit to the most significant.
 
-![](https://i.postimg.cc/Hsj5CM1S/sort11.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/algorithm/sort11.jpg){: .w-10 .shadow .rounded-10 }
 
 **Advantages:**
 
