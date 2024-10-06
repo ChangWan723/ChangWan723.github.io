@@ -45,6 +45,14 @@ Backtracking algorithms build solutions incrementally and backtrack as soon as a
 
 Dynamic programming (DP) is an optimisation technique that solves problems by breaking them down into simpler subproblems, storing the results of these subproblems to avoid redundant calculations. DP is effective for problems with overlapping subproblems and optimal substructure.
 
+---
+
+- **More about:**
+  - [Algorithmic Thinking: Greedy](/posts/Greedy-Algorithms/)
+  - [Algorithmic Thinking: Divide-and-Conquer](/posts/Divide-and-Conquer/)
+  - [Algorithmic Thinking: Backtracking](/posts/Backtracking/)
+  - [Algorithmic Thinking: Dynamic Programming](/posts/Dynamic-Programming/)
+
 ## Similarities and Differences
 
 ### Similarities: Breaking Down the Problem into Subproblems
@@ -83,11 +91,3 @@ Therefore, if you find a complex problem difficult to solve, and it can be broke
 
 > **The Greedy algorithm is actually a special case of a Dynamic Programming**: where decisions (choices) of subproblems do not affect each other. In this case, each subproblem does not need the results of the previous subproblem to make a decision. So the results of the subproblem do not need to be saved.
 {: .prompt-tip }
-
----
-
-- **More about:**
-  - [Algorithmic Thinking: Greedy](/posts/Greedy-Algorithms/)
-  - [Algorithmic Thinking: Divide-and-Conquer](/posts/Divide-and-Conquer/)
-  - [Algorithmic Thinking: Backtracking](/posts/Backtracking/)
-  - [Algorithmic Thinking: Dynamic Programming](/posts/Dynamic-Programming/)

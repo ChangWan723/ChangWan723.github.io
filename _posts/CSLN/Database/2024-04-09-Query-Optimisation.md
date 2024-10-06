@@ -4,11 +4,11 @@ date: 2024-04-09 17:43:00 UTC
 categories: [ (CS) Learning Note, Database ]
 tags: [ computer science, Database ]
 pin: true
+image:
+  path: /assets/img/posts/database.png
 ---
 
-When we know how to do [cost estimation](/posts/Cost-Estimation/), we have a way of determining whether one plan is better than another. Our next step is to compare all possible plans to find the optimal plan.
-
-But here's the problem: **How many possible plans are there?**
+In this blog, I will discuss **how a database engine optimises a SQL query statement with multiple relations (tables)**, from the **database execution plan** perspective.
 
 ---
 <center><font size='5'> Contents </font></center>
@@ -38,17 +38,23 @@ But here's the problem: **How many possible plans are there?**
 
 ## How Many Query Trees in a Relational Query?
 
+When we know how to do [cost estimation](/posts/Cost-Estimation/), we have a way of determining whether one plan is better than another. Our next step is to compare all possible plans to find the optimal plan.
+
+But here's the problem: **How many possible plans are there?**
+
+---
+
 **Considering plans with only `×` or `⋈`, and with `n` relations:**
 
-![](https://i.postimg.cc/qRk9FqCz/qo1.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo1.jpg){: .w-10 .shadow .rounded-10 }
 
-![](https://i.postimg.cc/25dsThys/qo2.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo2.png){: .w-10 .shadow .rounded-10 }
 
-![](https://i.postimg.cc/5yyDxrgJ/qo3.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo3.png){: .w-10 .shadow .rounded-10 }
 
-![](https://i.postimg.cc/LXNrFSzv/qo4.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo4.png){: .w-10 .shadow .rounded-10 }
 
-![](https://i.postimg.cc/BbzktC7K/qo5.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo5.jpg){: .w-10 .shadow .rounded-10 }
 
 ### The Main Determinant of Query Cost: Joining Order
 
@@ -76,7 +82,7 @@ But here's the problem: **How many possible plans are there?**
 
 Assuming, we have the following 3 tables:
 
-![](https://i.postimg.cc/W4Wzf32S/qo6.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo6.jpg){: .w-10 .shadow .rounded-10 }
 
 ```sql
 SELECT PNUMBER, DNUM, LNAME, ADDRESS, DATE
@@ -86,11 +92,11 @@ WHERE DNUM=DNUMBER AND MGRSSN=SSN AND PLOCATION='Stafford'
 
 For the above SQL, we can get the following undirected graph:
 
-![](https://i.postimg.cc/nV5c6z6w/qo7.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo7.jpg){: .w-10 .shadow .rounded-10 }
 
 ### Different Query Graphs
 
-![](https://i.postimg.cc/FzxLbCb8/qo8.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo8.jpg){: .w-10 .shadow .rounded-10 }
 _Query graph shapes_
 
 - Different query graph structures serve specific use cases:
@@ -120,7 +126,7 @@ _Query graph shapes_
 - Possible right-deep trees: `n!`
 - Possible zig-zag trees: `n! * 2^(n-2)`
 
-![](https://i.postimg.cc/281FqQrY/qo9.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo9.jpg){: .w-10 .shadow .rounded-10 }
 
 #### Bushy Join Trees
 
@@ -130,7 +136,7 @@ _Query graph shapes_
 - Possible bushy trees: `n! * C(n-1) = (2n)!/n!`
 - Linear Join Trees is a special type of Bushy Join Trees
 
-![](https://i.postimg.cc/WpWwbWRS/qo10.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo10.jpg){: .w-10 .shadow .rounded-10 }
 
 
 ## Optimising Query Trees (Optimised Logical Query Plan)
@@ -151,7 +157,7 @@ _Query graph shapes_
 
 ### Example (Heuristic)
 
-![](https://i.postimg.cc/sf8mqx3f/qo11.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo11.jpg){: .w-10 .shadow .rounded-10 }
 
 #### Transforms into Left-Deep Tree
 
@@ -165,7 +171,7 @@ _Query graph shapes_
   - a conjunctive selection above the products and
   - a projection (of the output attributes) above the selection
 
-![](https://i.postimg.cc/bJKTDYY9/qo12.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo12.jpg){: .w-10 .shadow .rounded-10 }
 _Transforms into left-deep tree_
 
 #### Move `σ` down
@@ -176,7 +182,7 @@ _Transforms into left-deep tree_
   - A selection of the form `σ (a = b)` can be pushed down to the product above the
     subtree containing the relations that contain `a` and `b`
 
-![](https://i.postimg.cc/BvVMxBQ3/qo13.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo13.png){: .w-10 .shadow .rounded-10 }
 _Move `σ` down_
 
 #### Reorder Joins
@@ -188,7 +194,7 @@ _Move `σ` down_
 
 Assuming that tuples of `PNAME = "Aquarius"` is less than `BDATE > "1957-12-31"`:
 
-![](https://i.postimg.cc/y8VgdtRG/qo14.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo14.jpg){: .w-10 .shadow .rounded-10 }
 _Reorder Joins_
 
 #### Combine Products to Create joins
@@ -197,12 +203,12 @@ _Reorder Joins_
   - Combine `×` with adjacent `σ` to form `⋈`
   - Much cheaper than product followed by selection (eliminating a lot of unnecessary data)
 
-![](https://i.postimg.cc/RZVHkpz1/qo15.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo15.jpg){: .w-10 .shadow .rounded-10 }
 _Combine Products to Create joins_
 
 #### Move `π` down
 
 If intermediate relations are to be kept in buffers (i.e. materialised), **reducing the degree of those relations** (number of attributes) allows us to use fewer buffer frames。
 
-![](https://i.postimg.cc/HszwkZbx/qo16.png){: .w-10 .shadow .rounded-10 }
+![](/assets/img/note/database/qo16.jpg){: .w-10 .shadow .rounded-10 }
 _Move `π` down_

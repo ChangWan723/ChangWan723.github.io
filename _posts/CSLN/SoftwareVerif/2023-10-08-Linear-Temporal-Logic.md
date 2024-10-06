@@ -96,7 +96,7 @@ LTL formulas are of two kinds:
 - **state formulas:**
   - `A f` : along **A**ll computation paths, f holds
 
-![](https://i.postimg.cc/cHKJsSqL/ltl4.png){: .w-55 .shadow .rounded-10 }
+![](/assets/img/note/verification/ltl4.jpg){: .w-55 .shadow .rounded-10 }
 
 ### Applications of LTL
 
@@ -114,7 +114,7 @@ LTL is widely used in the field of formal verification, especially in:
 
 ---
 
-![](https://i.postimg.cc/85pdcxJb/ltl1.png){: .w-55 .shadow .rounded-10 }
+![](/assets/img/note/verification/ltl1.png){: .w-55 .shadow .rounded-10 }
 
 ---
 
@@ -122,7 +122,7 @@ LTL is widely used in the field of formal verification, especially in:
 
 ---
 
-![](https://i.postimg.cc/nVYz0MWM/ltl2.png){: .w-55 .shadow .rounded-10 }
+![](/assets/img/note/verification/ltl2.jpg){: .w-55 .shadow .rounded-10 }
 
 ---
 
@@ -130,7 +130,7 @@ LTL is widely used in the field of formal verification, especially in:
 
 ---
 
-![](https://i.postimg.cc/zX2qchFD/ltl3.png){: .w-55 .shadow .rounded-10 }
+![](/assets/img/note/verification/ltl3.jpg){: .w-55 .shadow .rounded-10 }
 
 | Semantics of LTL  | Matching Node             | Annotation                                                                                                                                                                                                                                                             |
 |:------------------|:--------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -191,7 +191,7 @@ LTL is widely used in the field of formal verification, especially in:
 - **starvation freedom**: whenever a process tries to enter its critical section, it will eventually succeed (along every computation path)
 - **no strict sequencing**: processes need not enter their critical section in strict sequence (i.e. there exists a computation path along which they don’t)
 
-![](https://i.postimg.cc/QxBpXmY1/trans5.png){: .w-75 .shadow .rounded-10 }
+![](/assets/img/note/verification/trans5.jpg){: .w-75 .shadow .rounded-10 }
 
 ### Mutual Exclusion: Checking Correctness
 
