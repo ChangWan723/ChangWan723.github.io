@@ -1,6 +1,6 @@
 ---
 title: Best Practice of Microservices Architecture
-date: 2024-10-07 11:12:00 UTC
+date: 2024-10-11 12:07:00 UTC
 categories: [ (CS) Learning Note, Architecture ]
 tags: [ software engineering , architecture, microservices ]
 pin: false
