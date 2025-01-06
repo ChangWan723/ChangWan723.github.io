@@ -19,7 +19,7 @@ timezone: Europe/London
 # ↓ --------------------------
 
 title: Chang Wan # the main title
-subtitle: 行到水穷处，坐看云起时
+subtitle:
 
 tagline: Welcome to My Website! # it will display as the sub-title
 
@@ -48,12 +48,18 @@ author_logo: myCat.jpg
 author: Chang Wan
 author_bio: My Chinese name is Chang.
 author_email: "wan723@outlook.com"
-author_location: China
+author_location: Shanghai
 author_website_url: "https://www.cwblogs.com"
 typewrite-text: Welcome to my website.
 
 # Experiences
 author_work_experiences:
+  - company_name: Trip.com Group
+    company_logo: trip-intl.png
+    company_url: https://group.trip.com/
+    designation: Software Engineer
+    description: "Work period: 2024.11 - present <br> Worked in the Hotel R&D Department"
+    visibility: true
   - company_name: Huawei
     company_logo: huawei.jpg
     company_url: https://www.huawei.com/en/corporate-information
@@ -67,7 +73,7 @@ author_education_details:
     college_name: University of Southampton
     college_url: https://www.southampton.ac.uk/
     college_degree: Software Engineering (MSc)
-    description: "Study period: 2023.9 - 2024.11 (expected)"
+    description: "Study period: 2023.6 - 2024.12"
     visibility: true
   - college_logo: xidian.jpg
     college_name: Xidian University
