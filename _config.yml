@@ -55,7 +55,7 @@ typewrite-text: Welcome to my website.
 # Experiences
 author_work_experiences:
   - company_name: Trip.com Group
-    company_logo: trip-intl.png
+    company_logo: trip.png
     company_url: https://group.trip.com/
     designation: Software Engineer
     description: "Work period: 2024.11 - present <br> Worked in the Hotel R&D Department"
